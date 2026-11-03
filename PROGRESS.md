@@ -12,6 +12,8 @@
 - 所有橘底 hover 一律黑字。CSS/JS 網址帶內容雜湊（避免快取舊檔）。
 - 後台設定 `.pages.yml`（Pages CMS）已寫好：可編作品（標題、slug、分類、封面、作品圖、中英文介紹、外部連結）與首頁文字。
 - GitHub：私人 repo https://github.com/taiwankiss/wei-portfolio 已推上。
+- Pages CMS 已授權並實測存檔（2026-11-03）。rich-text 欄位設 `format: html`（預設會把全部介紹改存成 Markdown）；CMS 存檔會用 `<strong>`、段落間不換行，`content/projects.json` 已統一成這個格式。
+- Cloudflare Pages 專案 `wei-portfolio` 已上線：https://wei-portfolio.pages.dev ，push 到 `main`（含後台存檔）會自動重新部署。注意建立時要走「Pages」而不是「Workers」流程（Workers 流程會多一欄 `npx wrangler deploy`）。
 
 ## 分支
 - `main`：目前定版（= `about-style`）
@@ -20,11 +22,8 @@
 - `about-style`：同 `main`
 
 ## 下一步
-1. **Pages CMS**：到 https://app.pagescms.org 用 GitHub 登入、安裝授權給 `wei-portfolio` repo，確認能開啟「作品 Projects」「首頁設定 Site」。（需本人操作）
-2. **Cloudflare Pages**：Create project → Connect to Git → 選 `wei-portfolio`，Production branch `main`，Framework None，Build command `python3 build.py`，Output `public`。（需本人登入 Cloudflare）
-3. 部署成功後測 `*.pages.dev` 網址：首頁、作品頁、About、舊網址轉址（`/contact/`、`/blog/`、`/portfolio-category/branding/`）。
-4. **網域**：把 weilee01.com 的 DNS 移到 Cloudflare（在 Hostinger 改 nameserver），於 Pages 加上自訂網域；確認上線後再取消 Hostinger 方案。
-5. 從後台上傳的新圖片不會自動壓縮 — 若常上傳，可在 `build.py` 加自動縮圖。
+1. **網域**：把 weilee01.com 的 DNS 移到 Cloudflare（在 Hostinger 改 nameserver），於 Pages 加上自訂網域；確認上線後再取消 Hostinger 方案。
+2. 從後台上傳的新圖片不會自動壓縮 — 若常上傳，可在 `build.py` 加自動縮圖。
 
 ## 重要檔案
 - `content/projects.json`、`content/site.json`：內容
