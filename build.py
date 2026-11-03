@@ -219,7 +219,7 @@ def build_home():
     <ul class="hero-stats">{stats}</ul>
   </div>
   <div class="hero-card">
-    <img class="hero-portrait" src="/assets/img/wei-camera.webp" width="1200" height="1149" alt="Wei Lee holding a camera" fetchpriority="high">
+    <img class="hero-portrait" src="/assets/img/wei-camera.webp" width="1170" height="1643" alt="Wei Lee holding a camera" fetchpriority="high">
     <span class="hero-noise" aria-hidden="true"></span>
     <svg class="sr-filter" width="0" height="0" aria-hidden="true">
       <filter id="warp" x="-5%" y="-5%" width="110%" height="110%">
