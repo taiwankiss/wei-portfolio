@@ -121,9 +121,11 @@ def page(path, title, body, desc=None, image=None, active=""):
 <div class="glow" aria-hidden="true"></div>
 <div class="cursor" aria-hidden="true">View</div>
 <header class="site-header">
-  <a class="brand" href="/" aria-label="Wei Lee, home">{MARK}<span>Wei Lee</span></a>
-  <nav class="nav">{nav}</nav>
-  <p class="status"><i></i>{escape(site['location'])} · Open to work</p>
+  <div class="site-header__inner">
+    <a class="brand" href="/" aria-label="Wei Lee, home">{MARK}<span>Wei Lee</span></a>
+    <nav class="nav">{nav}</nav>
+    <a class="status" href="mailto:{site['email']}"><span class="dot"></span>Open to work</a>
+  </div>
   <span class="progress" aria-hidden="true"></span>
 </header>
 <main id="main">
@@ -162,10 +164,7 @@ def card(p, i):
     return f"""<li class="card s{span}" data-cats="{cats}">
   <a href="/portfolio/{p['slug']}/">
     <div class="card-media">{media(p['cover'], eager=i < 2)}</div>
-    <div class="card-meta">
-      <div><h3>{escape(p['title'])}</h3><p>{" · ".join(p['categories'])}</p></div>
-      <span class="card-arrow">{ARROW}</span>
-    </div>
+    <div class="card-tag"><h3>{escape(p['title'])}</h3><p>{" · ".join(p['categories'])}</p></div>
   </a>
 </li>"""
 
@@ -273,14 +272,14 @@ def build_about():
         ".pf-brand { display: flex; align-items: center; gap: 10px; color: inherit; text-decoration: none; font-weight: 700; font-size: 17px; letter-spacing: -.02em; }\n"
         ".pf-brand img { width: 34px; height: 34px; transition: transform .5s; }\n"
         ".pf-brand:hover img { transform: rotate(-12deg) scale(1.06); }\n"
-        ".pf-nav { display: flex; gap: 2px; padding: 4px; border-radius: 999px; background: color-mix(in srgb, currentColor 9%, transparent); }\n"
-        ".pf-nav a { color: inherit; text-decoration: none; padding: 10px 16px; border-radius: 999px; }\n"
-        ".pf-nav a:hover { background: color-mix(in srgb, currentColor 10%, transparent); }\n"
+        ".pf-nav { display: flex; gap: 2px; padding: 3px; border-radius: 999px; background: color-mix(in srgb, currentColor 9%, transparent); font-size: 11.2px; }\n"
+        ".pf-nav a { color: inherit; text-decoration: none; padding: 8px 13px; border-radius: 999px; transition: background .2s, color .2s; }\n"
+        ".pf-nav a:hover { background: var(--acc); color: var(--ink); }\n"
         ".pf-nav a[aria-current] { background: var(--ink); color: var(--paper); }\n"
         "body.is-dark .pf-nav a[aria-current] { background: var(--paper); color: var(--ink); }\n"
-        ".pf-status { justify-self: end; display: flex; align-items: center; gap: 8px; font-size: 13px; color: inherit; text-decoration: none; }\n"
+        ".pf-status { justify-self: end; display: flex; align-items: center; font-size: 13px; color: inherit; text-decoration: none; }\n"
         "@media (max-width: 1100px) { .chrome__inner.pf { grid-template-columns: auto 1fr; } .pf-nav { justify-self: end; } .pf-status { display: none; } }\n"
-        "@media (max-width: 720px) { .pf-brand span { display: none; } .pf-nav a { padding: 10px 12px; } }\n"
+        "@media (max-width: 720px) { .pf-brand span { display: none; } }\n"
     )
     (dest / "assets/style.css").write_text(css)
 

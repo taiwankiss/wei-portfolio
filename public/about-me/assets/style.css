@@ -319,11 +319,11 @@ body.is-hot .chrome .dot, body.is-hot .chrome__prog { background: var(--ink); }
 .pf-brand { display: flex; align-items: center; gap: 10px; color: inherit; text-decoration: none; font-weight: 700; font-size: 17px; letter-spacing: -.02em; }
 .pf-brand img { width: 34px; height: 34px; transition: transform .5s; }
 .pf-brand:hover img { transform: rotate(-12deg) scale(1.06); }
-.pf-nav { display: flex; gap: 2px; padding: 4px; border-radius: 999px; background: color-mix(in srgb, currentColor 9%, transparent); }
-.pf-nav a { color: inherit; text-decoration: none; padding: 10px 16px; border-radius: 999px; }
-.pf-nav a:hover { background: color-mix(in srgb, currentColor 10%, transparent); }
+.pf-nav { display: flex; gap: 2px; padding: 3px; border-radius: 999px; background: color-mix(in srgb, currentColor 9%, transparent); font-size: 11.2px; }
+.pf-nav a { color: inherit; text-decoration: none; padding: 8px 13px; border-radius: 999px; transition: background .2s, color .2s; }
+.pf-nav a:hover { background: var(--acc); color: var(--ink); }
 .pf-nav a[aria-current] { background: var(--ink); color: var(--paper); }
 body.is-dark .pf-nav a[aria-current] { background: var(--paper); color: var(--ink); }
-.pf-status { justify-self: end; display: flex; align-items: center; gap: 8px; font-size: 13px; color: inherit; text-decoration: none; }
+.pf-status { justify-self: end; display: flex; align-items: center; font-size: 13px; color: inherit; text-decoration: none; }
 @media (max-width: 1100px) { .chrome__inner.pf { grid-template-columns: auto 1fr; } .pf-nav { justify-self: end; } .pf-status { display: none; } }
-@media (max-width: 720px) { .pf-brand span { display: none; } .pf-nav a { padding: 10px 12px; } }
+@media (max-width: 720px) { .pf-brand span { display: none; } }

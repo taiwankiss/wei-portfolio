@@ -7,7 +7,6 @@ const header = document.querySelector(".site-header");
 const portrait = document.querySelector(".hero-portrait");
 let ticking = false;
 const onScroll = () => {
-  header.classList.toggle("scrolled", scrollY > 8);
   const max = document.documentElement.scrollHeight - innerHeight;
   header.style.setProperty("--p", max > 0 ? Math.min(scrollY / max, 1) : 0);
   if (portrait && !calm && scrollY < innerHeight * 1.2) portrait.style.setProperty("--py", `${scrollY * 0.08}px`);
