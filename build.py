@@ -85,7 +85,7 @@ def page(path, title, body, desc=None, image=None, active=""):
 <header class="site-header">
   <a class="brand" href="/" aria-label="Wei Lee, home">{MARK}<span>Wei Lee</span></a>
   <nav class="nav">{nav}</nav>
-  <p class="status"><i></i>{escape(site['location'])} · Open to projects</p>
+  <p class="status"><i></i>{escape(site['location'])} · Open to work</p>
 </header>
 <main id="main">
 {body}
@@ -145,10 +145,6 @@ def build_home():
     stats = "".join(
         f'<li><b><sup>+</sup>{s["value"]}</b><span>{escape(s["label"])}</span></li>' for s in hero["stats"]
     )
-    thumbs = "".join(
-        f'<a class="thumb" href="/portfolio/{p["slug"]}/" aria-label="{escape(p["title"])}">{media(p["cover"])}</a>'
-        for p in (projects[0], projects[5])
-    )
     body = f"""
 <section class="hero wrap">
   <div class="hero-copy">
@@ -165,9 +161,7 @@ def build_home():
   </div>
   <div class="hero-card">
     <span class="signature" aria-hidden="true">Wei Lee</span>
-    <img class="hero-portrait" src="/assets/img/wei-cutout.webp" width="900" height="900" alt="Portrait of Wei Lee" fetchpriority="high">
-    <a class="notch-btn hero-mark" href="/about-me/" aria-label="About Wei">{MARK}</a>
-    <div class="hero-notch">{thumbs}<a class="notch-btn" href="#work" aria-label="See selected work">{ARROW}</a></div>
+    <img class="hero-portrait" src="/assets/img/wei-camera.webp" width="695" height="1104" alt="Wei Lee holding a camera" fetchpriority="high">
   </div>
 </section>
 <section class="work wrap" id="work">
@@ -235,6 +229,13 @@ def build_about():
     )
     skills = "".join(f"<li>{escape(s)}</li>" for s in site["skills"])
     cf = "".join(f"<li>{escape(s)}</li>" for s in site["crowdfunding"])
+    traits = "".join(f"<li>{escape(s)}</li>" for s in site["traits"])
+    nums = "".join(
+        f'<li><b>{n["value"]}<sup>{n["suffix"]}</sup></b><span>{escape(n["zh"])}</span><small>{escape(n["en"])}</small></li>'
+        for n in site["numbers"]
+    )
+    statement = "<br>".join(escape(x) for x in site["statement"]["zh"])
+    off = "<br>".join(escape(x) for x in site["off_clock"]["zh"])
     body = f"""
 <section class="about wrap">
   <div class="about-intro">
@@ -254,16 +255,25 @@ def build_about():
       </dl>
     </aside>
     <div class="about-main">
-      <p class="about-lede">{escape(site['hero']['lede'])}</p>
+      <h2 class="statement">{statement}</h2>
+      <p class="statement-en">{escape(site['statement']['en'])}</p>
+      <ul class="nums">{nums}</ul>
       {"".join(f"<p class='lead'>{escape(x)}</p>" for x in site['about'])}
+      <ul class="traits">{traits}</ul>
       <h2 class="label section-label">Experience</h2>
       <ol class="jobs">{exp}</ol>
       <div class="about-cols">
-        <div><h2 class="label section-label">Skills</h2><ul class="pills">{skills}</ul></div>
+        <div>
+          <h2 class="label section-label">Skills</h2><ul class="pills">{skills}</ul>
+          <p class="ai-note"><b>+ AI Workflow</b>{escape(site['ai_note'])}</p>
+        </div>
         <div><h2 class="label section-label">Education</h2><ul class="edu">{edu}</ul></div>
       </div>
       <h2 class="label section-label">Crowdfunding campaigns</h2>
       <ul class="pills pills-outline">{cf}</ul>
+      <h2 class="label section-label">Off the clock</h2>
+      <p class="off-zh">{off}</p>
+      <p class="statement-en">{escape(site['off_clock']['en'])}</p>
     </div>
   </div>
 </section>"""
