@@ -108,7 +108,7 @@ def page(path, title, body, desc=None, image=None, active=""):
 <meta property="og:image" content="{og}">
 <meta property="og:url" content="{site['url']}{path}">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#efebe3">
+<meta name="theme-color" content="#0f0e0d">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/favicon.png" type="image/png" sizes="32x32">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -295,12 +295,24 @@ def build_about():
         ".pf-brand:hover img { transform: rotate(-12deg) scale(1.06); }\n"
         ".pf-nav { display: flex; gap: 2px; padding: 3px; border-radius: 999px; background: color-mix(in srgb, currentColor 9%, transparent); font-size: 11.2px; }\n"
         ".pf-nav a { color: inherit; text-decoration: none; padding: 8px 13px; border-radius: 999px; transition: background .2s, color .2s; }\n"
-        ".pf-nav a:hover { background: var(--acc); color: var(--ink); }\n"
+        ".pf-nav a:hover { background: var(--acc); }\n"
         ".pf-nav a[aria-current] { background: var(--ink); color: var(--paper); }\n"
         "body.is-dark .pf-nav a[aria-current] { background: var(--paper); color: var(--ink); }\n"
         ".pf-status { justify-self: end; display: flex; align-items: center; font-size: 13px; color: inherit; text-decoration: none; }\n"
         "@media (max-width: 1100px) { .chrome__inner.pf { grid-template-columns: auto 1fr; } .pf-nav { justify-self: end; } .pf-status { display: none; } }\n"
         "@media (max-width: 720px) { .pf-brand span { display: none; } }\n"
+    )
+    css += (
+        "\n/* dark theme */\n"
+        ":root { --paper: #0f0e0d; --ink: #efebe3; --muted: #8d877c; --line: rgba(239, 235, 227, 0.1); }\n"
+        ".sec--dark { --ink: #1a1815; --paper: #efebe3; }\n"
+        ".sec--hot { --ink: #121212; --paper: #efebe3; }\n"
+        "main::before { mix-blend-mode: soft-light; opacity: .5; }\n"
+        ".grain { mix-blend-mode: screen; filter: invert(1); opacity: .09; }\n"
+        "body.is-dark .chrome { background: color-mix(in srgb, #1a1815 85%, transparent); color: #efebe3; }\n"
+        "body.is-hot .chrome { color: #121212; }\n"
+        "body.is-dark .pf-nav a[aria-current] { background: #efebe3; color: #121212; }\n"
+        ".pf-nav a:hover { color: #121212; }\n"
     )
     (dest / "assets/style.css").write_text(css)
 
