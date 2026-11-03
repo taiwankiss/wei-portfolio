@@ -167,7 +167,7 @@ body::after {
   background: var(--ink); color: var(--paper); text-decoration: none;
   transition: transform .35s var(--ease), background .2s, color .2s;
 }
-.notch-btn:hover { transform: rotate(45deg); background: var(--acc); color: var(--ink); }
+.notch-btn:hover { transform: rotate(45deg); background: var(--acc); color: var(--on-acc); }
 .notch-btn svg { width: 22px; height: 22px; }
 
 /* Hero */
@@ -186,7 +186,7 @@ body::after {
   border: 1.5px solid var(--ink); background: var(--paper); font: 400 10px/1 var(--mono); letter-spacing: .08em; text-transform: uppercase; text-decoration: none;
   transition: background .2s, transform .25s var(--ease);
 }
-.circles a:hover { background: var(--acc); transform: translateY(-3px); position: relative; }
+.circles a:hover { background: var(--acc); border-color: var(--acc); color: var(--on-acc); transform: translateY(-3px); position: relative; }
 .hero-lede { margin: 0; font: 500 clamp(15px, 1.25vw, 18px)/1.5 var(--sans); max-width: 26em; text-align: right; justify-self: end; }
 .hero-stats { list-style: none; margin: 0; padding: 28px 0 0; border-top: 1px solid var(--line); display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
 .hero-stats li { display: grid; gap: 10px; }
@@ -264,15 +264,22 @@ body::after {
 /* Project page */
 .project-head { padding-top: clamp(24px, 4vw, 48px); padding-bottom: clamp(32px, 4vw, 56px); }
 .back { display: inline-flex; font: 500 14px/1 var(--sans); text-decoration: none; color: var(--ink-2); padding: 10px 16px; border-radius: 999px; background: var(--paper-2); margin-bottom: clamp(32px, 5vw, 64px); transition: background .2s; }
-.back:hover { background: var(--acc); }
+.back:hover { background: var(--acc); color: var(--on-acc); }
 .project-head { container-type: inline-size; }
 /* one line for every title: the longest (小瓦掃地機器人募資頁) is ~9.8em wide */
 .project-title { font: 400 min(10cqi, 116px)/1.1 var(--serif); letter-spacing: -.02em; white-space: nowrap; }
-.project-meta { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin: clamp(32px, 4vw, 56px) 0 0; padding-top: 20px; border-top: 1px solid var(--ink); }
-.project-meta dt { font: 400 11px/1.2 var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
-.project-meta dd { margin: 0; font: 500 16px/1.4 var(--sans); }
-.project-meta a { text-decoration-color: var(--acc); text-decoration-thickness: 3px; text-underline-offset: 4px; }
-.project-meta a:hover { background: var(--acc); }
+.project-top { display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-bottom: clamp(32px, 5vw, 64px); }
+.project-top .back { margin-bottom: 0; }
+.project-tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 8px; }
+.project-tags a {
+  display: inline-block; padding: 9px 14px; border-radius: 999px; text-decoration: none;
+  font: 400 11px/1 var(--mono); letter-spacing: .12em; text-transform: uppercase;
+  border: 1.5px solid color-mix(in srgb, var(--ink) 75%, transparent); transition: background .2s, border-color .2s, color .2s;
+}
+.project-tags a:hover { background: var(--acc); border-color: var(--acc); color: var(--on-acc); }
+.project-rule { margin-top: clamp(32px, 4vw, 56px); padding-top: 18px; border-top: 1px solid var(--ink); min-height: 1px; }
+.project-link { font: 500 15px/1.4 var(--sans); text-decoration: underline; text-decoration-color: var(--acc); text-decoration-thickness: 3px; text-underline-offset: 5px; }
+.project-link:hover { color: var(--acc); }
 
 .desc { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(28px, 5vw, 96px); padding-bottom: clamp(48px, 6vw, 88px); }
 .desc-col .label { margin-bottom: 16px; }
@@ -336,7 +343,7 @@ body::after {
   display: inline-flex; align-items: center; gap: 8px; font: 600 15px/1 var(--sans); text-decoration: none;
   padding: 14px 22px; border-radius: 999px; background: var(--ink); color: var(--paper);
 }
-.btn:hover { background: var(--acc); color: var(--ink); }
+.btn:hover { background: var(--acc); color: var(--on-acc); }
 .hero-404 { min-height: 60vh; padding-top: 10vh; display: grid; align-content: start; gap: 24px; }
 .hero-404 .hero-lede { text-align: left; justify-self: start; }
 
@@ -360,7 +367,6 @@ body::after {
   .hero-row { grid-template-columns: 1fr; }
   .hero-lede { text-align: left; justify-self: start; }
   .desc { grid-template-columns: 1fr; }
-  .project-meta { grid-template-columns: 1fr 1fr; }
   .pager { grid-template-columns: 1fr; }
   .pager a { min-height: 140px; }
   .pager a.pager-next { padding-right: 28px; padding-top: 216px; }

@@ -246,8 +246,8 @@ def build_project(i, p):
     prev = projects[i - 1]
     link = ""
     if (p.get("link") or {}).get("url"):
-        link = f'<div><dt>Live</dt><dd><a href="{escape(p["link"]["url"])}" target="_blank" rel="noopener">{escape(p["link"]["label"])} ↗</a></dd></div>'
-    tags = ", ".join(f'<a href="/?filter={slugify(c)}#work">{c}</a>' for c in p["categories"])
+        link = f'<a class="project-link" href="{escape(p["link"]["url"])}" target="_blank" rel="noopener">{escape(p["link"]["label"])} <span aria-hidden="true">↗</span></a>'
+    tags = "".join(f'<li><a href="/?filter={slugify(c)}#work">{c}</a></li>' for c in p["categories"])
     en = f'<div class="desc-col" lang="en"><h2 class="label">Overview</h2>{p["en"]}</div>' if p["en"] else ""
     gallery = "".join(
         f'<figure class="shot" data-index="{n}">{media(m, eager=n == 0)}</figure>' for n, m in enumerate(p["gallery"])
@@ -255,13 +255,12 @@ def build_project(i, p):
     body = f"""
 <article class="project">
   <header class="project-head wrap">
-    <a class="back" href="/#work">← All work</a>
+    <div class="project-top">
+      <a class="back" href="/#work">← All work</a>
+      <ul class="project-tags" aria-label="Discipline">{tags}</ul>
+    </div>
     <h1 class="project-title">{escape(p['title'])}</h1>
-    <dl class="project-meta">
-      <div><dt>Discipline</dt><dd>{tags}</dd></div>
-      <div><dt>Project</dt><dd>{i + 1:02d} / {len(projects):02d}</dd></div>
-      {link}
-    </dl>
+    <div class="project-rule">{link}</div>
   </header>
   <section class="desc wrap">
     <div class="desc-col"><h2 class="label">專案介紹</h2>{p['zh']}</div>
