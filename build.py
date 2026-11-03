@@ -160,8 +160,7 @@ def build_home():
     <ul class="hero-stats">{stats}</ul>
   </div>
   <div class="hero-card">
-    <span class="signature" aria-hidden="true">Wei Lee</span>
-    <img class="hero-portrait" src="/assets/img/wei-camera.webp" width="695" height="1104" alt="Wei Lee holding a camera" fetchpriority="high">
+    <img class="hero-portrait" src="/assets/img/wei-camera.webp" width="1200" height="1149" alt="Wei Lee holding a camera" fetchpriority="high">
   </div>
 </section>
 <section class="work wrap" id="work">
