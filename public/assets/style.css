@@ -208,6 +208,7 @@ body::after {
 .chip[aria-pressed="true"] sup { color: var(--acc); }
 
 .grid {
+  container-type: inline-size;
   list-style: none; margin: 0; padding: 0; display: grid; grid-auto-flow: dense;
   grid-template-columns: repeat(12, minmax(0, 1fr)); gap: clamp(36px, 4vw, 56px) clamp(14px, 1.6vw, 24px);
 }
@@ -218,7 +219,8 @@ body::after {
 .card[hidden] { display: none; }
 .card a { display: block; text-decoration: none; }
 .card-media { position: relative; aspect-ratio: 4 / 3; overflow: hidden; border-radius: var(--r); background: var(--paper-2); }
-.card.s5 .card-media, .card.s7 .card-media { aspect-ratio: auto; height: clamp(300px, 36vw, 560px); }
+/* the wide card lands at about 16:10, the narrow one a little taller than square */
+.card.s5 .card-media, .card.s7 .card-media { aspect-ratio: auto; height: 36cqi; }
 .grid.filtered .card .card-media { aspect-ratio: 4 / 3; height: auto; }
 .card-media img, .card-media video { width: 100%; height: 100%; object-fit: cover; transition: transform 1s var(--ease); }
 /* Title and categories rise in over the image on hover; always shown on touch screens */
