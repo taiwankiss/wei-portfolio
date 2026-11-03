@@ -265,7 +265,9 @@ body::after {
 .project-head { padding-top: clamp(24px, 4vw, 48px); padding-bottom: clamp(32px, 4vw, 56px); }
 .back { display: inline-flex; font: 500 14px/1 var(--sans); text-decoration: none; color: var(--ink-2); padding: 10px 16px; border-radius: 999px; background: var(--paper-2); margin-bottom: clamp(32px, 5vw, 64px); transition: background .2s; }
 .back:hover { background: var(--acc); }
-.project-title { font: 400 clamp(48px, 8vw, 136px)/1.02 var(--serif); letter-spacing: -.02em; max-width: 15em; }
+.project-head { container-type: inline-size; }
+/* one line for every title: the longest (小瓦掃地機器人募資頁) is ~9.8em wide */
+.project-title { font: 400 min(10cqi, 116px)/1.1 var(--serif); letter-spacing: -.02em; white-space: nowrap; }
 .project-meta { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin: clamp(32px, 4vw, 56px) 0 0; padding-top: 20px; border-top: 1px solid var(--ink); }
 .project-meta dt { font: 400 11px/1.2 var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
 .project-meta dd { margin: 0; font: 500 16px/1.4 var(--sans); }

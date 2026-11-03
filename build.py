@@ -5,6 +5,7 @@ Usage: python3 build.py
 No dependencies. Media files live in public/media/<slug>/ and are referenced
 from content/projects.json.
 """
+import hashlib
 import json
 import os
 import re
@@ -33,6 +34,14 @@ ARROW = (
     '<path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2.2" '
     'stroke-linecap="round" stroke-linejoin="round"/></svg>'
 )
+
+
+def asset(path):
+    """URL with a content hash, so a new deploy never shows a cached old file."""
+    digest = hashlib.md5((OUT / path.lstrip("/")).read_bytes()).hexdigest()[:8]
+    return f"{path}?v={digest}"
+
+
 # Grid rhythm on the home page: a wide/narrow pair, then a row of three.
 SPANS = [7, 5, 4, 4, 4, 5, 7, 4, 4, 4]
 
@@ -114,8 +123,8 @@ def page(path, title, body, desc=None, image=None, active=""):
 <link rel="icon" href="/favicon.png" type="image/png" sizes="32x32">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 {FONTS}
-<link rel="stylesheet" href="/assets/style.css">
-<script src="/assets/main.js" defer></script>
+<link rel="stylesheet" href="{asset("/assets/style.css")}">
+<script src="{asset("/assets/main.js")}" defer></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
