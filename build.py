@@ -208,6 +208,13 @@ def build_home():
   </div>
   <div class="hero-card">
     <img class="hero-portrait" src="/assets/img/wei-camera.webp" width="1200" height="1149" alt="Wei Lee holding a camera" fetchpriority="high">
+    <span class="hero-noise" aria-hidden="true"></span>
+    <svg class="sr-filter" width="0" height="0" aria-hidden="true">
+      <filter id="warp" x="-5%" y="-5%" width="110%" height="110%">
+        <feTurbulence id="warp-noise" type="fractalNoise" baseFrequency="0.008 0.02" numOctaves="2" seed="3" result="n"/>
+        <feDisplacementMap id="warp-map" in="SourceGraphic" in2="n" scale="0" xChannelSelector="R" yChannelSelector="G"/>
+      </filter>
+    </svg>
     <svg class="hero-badge" viewBox="0 0 120 120" aria-hidden="true">
       <defs><path id="badge-ring" d="M60 60m-44 0a44 44 0 1 1 88 0a44 44 0 1 1-88 0"/></defs>
       <text textLength="274" lengthAdjust="spacing"><textPath href="#badge-ring" textLength="274" lengthAdjust="spacing">VISUAL DESIGNER • DESIGN MANAGER • </textPath></text>

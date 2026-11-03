@@ -59,6 +59,34 @@ if (heroCard && finePointer) {
   });
 }
 
+// Hero: photo warps and grains up on hover; faster pointer movement means stronger distortion
+const warpMap = document.getElementById("warp-map");
+const warpNoise = document.getElementById("warp-noise");
+if (heroCard && warpMap && finePointer) {
+  let current = 0, target = 0, frame = 0, tick = 0, running = false;
+  const loop = () => {
+    current += (target - current) * 0.12;
+    warpMap.setAttribute("scale", current.toFixed(2));
+    warpNoise.setAttribute("baseFrequency", `${(0.008 + current * 0.0003).toFixed(4)} ${(0.02 + current * 0.0006).toFixed(4)}`);
+    if (++tick % 4 === 0) warpNoise.setAttribute("seed", String(tick % 97));
+    if (target === 0 && current < 0.3) {
+      warpMap.setAttribute("scale", "0");
+      heroCard.classList.remove("warping");
+      running = false;
+      return;
+    }
+    frame = requestAnimationFrame(loop);
+  };
+  const start = () => { if (!running) { running = true; frame = requestAnimationFrame(loop); } };
+  heroCard.addEventListener("pointerenter", () => { heroCard.classList.add("warping"); target = 26; start(); });
+  heroCard.addEventListener("pointermove", (e) => {
+    const speed = Math.min(Math.hypot(e.movementX, e.movementY) / 30, 1);
+    target = 8 + speed * 34;
+    start();
+  });
+  heroCard.addEventListener("pointerleave", () => { target = 0; start(); });
+}
+
 // Hero: letters near the pointer lift and turn orange; the circle links lean toward it
 const letters = [...document.querySelectorAll(".hero-title .ch")];
 const magnets = [...document.querySelectorAll(".circles a")];
