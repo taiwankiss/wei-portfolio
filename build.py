@@ -165,9 +165,11 @@ def card(p, i):
   <a href="/portfolio/{p['slug']}/">
     <div class="card-media">
       {media(p['cover'], eager=i < 2)}
-      <ul class="card-tags">{"".join(f"<li>{c}</li>" for c in p['categories'])}</ul>
+      <div class="card-info">
+        <h3>{escape(p['title'])}</h3>
+        <p>{" / ".join(p['categories'])}</p>
+      </div>
     </div>
-    <h3 class="card-title">{escape(p['title'])}</h3>
   </a>
 </li>"""
 
