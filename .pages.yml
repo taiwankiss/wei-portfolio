@@ -16,10 +16,6 @@ content:
     format: json
     list: true
     fields:
-      - name: title
-        label: 標題
-        type: string
-        required: true
       - name: slug
         label: 網址代稱（英文小寫與 -，例如 my-project）
         type: string
@@ -27,6 +23,10 @@ content:
         pattern:
           regex: "^[a-z0-9-]+$"
           message: 只能用英文小寫、數字和 -
+      - name: title
+        label: 標題
+        type: string
+        required: true
       - name: categories
         label: 分類
         type: select
@@ -50,9 +50,13 @@ content:
       - name: zh
         label: 專案介紹（中文）
         type: rich-text
+        options:
+          format: html
       - name: en
         label: Project Overview（英文）
         type: rich-text
+        options:
+          format: html
       - name: link
         label: 外部連結（可留空）
         type: object
@@ -70,6 +74,18 @@ content:
     path: content/site.json
     format: json
     fields:
+      - name: name
+        type: string
+        hidden: true
+      - name: title
+        type: string
+        hidden: true
+      - name: url
+        type: string
+        hidden: true
+      - name: tagline
+        label: 頁尾標語
+        type: string
       - name: hero
         label: 首頁 Hero
         type: object
@@ -98,18 +114,6 @@ content:
       - name: email
         label: Email
         type: string
-      - name: tagline
-        label: 頁尾標語
-        type: string
-      - name: name
-        type: string
-        hidden: true
-      - name: title
-        type: string
-        hidden: true
-      - name: url
-        type: string
-        hidden: true
       - name: phone
         type: string
         hidden: true
