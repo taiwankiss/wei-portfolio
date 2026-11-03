@@ -124,11 +124,11 @@ body::after {
 }
 .hero-card.tilting::after { opacity: 1; }
 .hero-badge {
-  position: absolute; z-index: 3; left: 22px; bottom: 22px; width: 116px; height: 116px; border-radius: 50%;
+  position: absolute; z-index: 3; right: 22px; top: 22px; width: 116px; height: 116px; border-radius: 50%;
   background: var(--paper); fill: var(--ink); font: 600 9px/1 var(--sans);
   animation: spin 22s linear infinite; box-shadow: 0 10px 30px -12px rgba(0, 0, 0, .35);
 }
-.hero-badge-mark { position: absolute; z-index: 4; left: 62px; bottom: 62px; width: 36px; height: 36px; transition: transform .5s var(--ease); }
+.hero-badge-mark { position: absolute; z-index: 4; right: 56px; top: 56px; width: 48px; height: 48px; transition: transform .5s var(--ease); }
 .hero-card:hover .hero-badge { animation-duration: 8s; }
 .hero-card:hover .hero-badge-mark { transform: rotate(-20deg) scale(1.1); }
 @keyframes spin { to { transform: rotate(360deg); } }
@@ -329,8 +329,8 @@ body::after {
   .hero { grid-template-columns: 1fr; }
   .hero-copy { padding-top: 8px; }
   .hero-card { min-height: 0; aspect-ratio: 1 / 1.02; }
-  .hero-badge { width: 92px; height: 92px; left: 16px; bottom: 16px; }
-  .hero-badge-mark { width: 28px; height: 28px; left: 48px; bottom: 48px; }
+  .hero-badge { width: 92px; height: 92px; right: 16px; top: 16px; }
+  .hero-badge-mark { width: 38px; height: 38px; right: 43px; top: 43px; }
   .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .card, .card.s5, .card.s7, .grid.filtered .card { grid-column: span 1; }
   .card.s5 .card-media, .card.s7 .card-media { aspect-ratio: 4 / 3; height: auto; }
