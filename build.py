@@ -3,7 +3,7 @@
 
 Usage: python3 build.py
 No dependencies. Media files live in public/media/<slug>/ and are referenced
-from content/projects.json.
+from content/projects/*.json.
 """
 import hashlib
 import json
@@ -19,7 +19,11 @@ OUT = ROOT / "public"
 RESUME = ROOT.parent / "Resume"
 ACCENT = "#F4A711"
 site = json.loads((ROOT / "content/site.json").read_text())
-projects = json.loads((ROOT / "content/projects.json").read_text())["projects"]
+# One file per project (Pages CMS collection); newest first.
+projects = sorted(
+    (json.loads(f.read_text()) for f in (ROOT / "content/projects").glob("*.json")),
+    key=lambda p: p["date"], reverse=True,
+)
 
 FONTS = (
     '<link rel="preconnect" href="https://fonts.googleapis.com">'
@@ -231,7 +235,7 @@ def build_home():
       <defs><path id="badge-ring" d="M60 60m-44 0a44 44 0 1 1 88 0a44 44 0 1 1-88 0"/></defs>
       <text textLength="274" lengthAdjust="spacing"><textPath href="#badge-ring" textLength="274" lengthAdjust="spacing">VISUAL DESIGNER • DESIGN MANAGER • </textPath></text>
     </svg>
-    <img class="hero-badge-mark" src="/assets/img/mark.svg" width="36" height="36" alt="">
+    <a class="hero-badge-mark" href="https://app.pagescms.org/taiwankiss/wei-portfolio/main/collection/projects" target="_blank" rel="noopener" aria-label="後台登入 / Admin"><img src="/assets/img/mark.svg" width="36" height="36" alt=""></a>
   </div>
 </section>
 <section class="work wrap" id="work">

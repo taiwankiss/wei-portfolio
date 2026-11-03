@@ -1,0 +1,19 @@
+{
+  "slug": "landmarks",
+  "title": "Landmarks of Taiwan",
+  "categories": [
+    "Graphic"
+  ],
+  "cover": "/media/landmarks/cover.webp",
+  "gallery": [
+    "/media/landmarks/01.webp",
+    "/media/landmarks/02.webp",
+    "/media/landmarks/03.webp",
+    "/media/landmarks/04.webp",
+    "/media/landmarks/05.webp",
+    "/media/landmarks/06.webp"
+  ],
+  "zh": "<p>本系列專案以 「精準向量結構」 與 「扁平微縮風格（Flat Vector Style）」 為核心，重新詮釋台灣具代表性的地標建築。作品透過 Illustrator 的幾何圖形與嚴謹的等比結構，在保有建築原貌結構特徵的同時，賦予其現代、俐落且具親和力的視覺風格。</p>",
+  "en": "<p>Taiwan Landmarks is a vector illustration series celebrating Taiwan’s rich architectural heritage. Designed in Adobe Illustrator, each illustration simplifies complex architectural structures into clean vector geometry while retaining delicate original details, created for versatile digital and print applications.</p>",
+  "date": "2026-09-26T00:00"
+}

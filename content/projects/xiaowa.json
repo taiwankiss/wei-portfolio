@@ -1,0 +1,22 @@
+{
+  "slug": "xiaowa",
+  "title": "小瓦掃地機器人募資頁",
+  "categories": [
+    "Graphic",
+    "Website"
+  ],
+  "cover": "/media/xiaowa/cover.webp",
+  "gallery": [
+    "/media/xiaowa/01.webp",
+    "/media/xiaowa/02.webp",
+    "/media/xiaowa/03.webp",
+    "/media/xiaowa/04.webp"
+  ],
+  "zh": "<p>本專案為消費性電子熱銷產品「小瓦掃地機器人」所規劃的 <strong>群眾募資與銷售一頁式網頁（Crowdfunding Landing Page）</strong>。</p><p>設計以「高轉化率商業漏斗」為核心，將複雜的硬體規格轉化為直覺的「痛點共鳴 &gt; 功能解方 &gt; 實測情境 &gt;&nbsp;規格對比」視覺動線。採用品牌經典活力橘搭配乾淨明亮的居家風格，結合產品實拍情境圖、動態賣點圖標與清晰的對比表格，打造高説服力且具極佳閱讀體驗的電商銷售頁面。</p>",
+  "en": "<p>A high-converting crowdfunding landing page designed for the <strong>Xiaowa Robot Vacuum Cleaner</strong>.</p><p>Structured around a proven e-commerce sales funnel, the long-form landing page seamlessly guides users from problem identification to product features, real-world usage scenarios, and feature comparison tables. Utilizing a vibrant orange accent alongside clean home-lifestyle imagery, the design optimizes narrative flow and user engagement to boost campaign conversion rates.</p>",
+  "link": {
+    "url": "https://s923446.wixsite.com/xiaowa",
+    "label": "小瓦掃地機器人頁面"
+  },
+  "date": "2026-10-29T00:00"
+}

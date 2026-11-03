@@ -1,0 +1,18 @@
+{
+  "slug": "jpbc",
+  "title": "USPACE JP 名片",
+  "categories": [
+    "Branding"
+  ],
+  "cover": "/media/jpbc/cover.webp",
+  "gallery": [
+    "/media/jpbc/01.webp",
+    "/media/jpbc/02.webp",
+    "/media/jpbc/03.webp",
+    "/media/jpbc/04.webp",
+    "/media/jpbc/05.webp"
+  ],
+  "zh": "<p>本專案為共享智慧出行品牌「USPACE」日本分部所使用的名片系統設計。</p><p>設計針對日本商務市場注重「嚴謹秩序」與「專業信賴」的文化特性，建立「極致黑（Black）」與「純粹白（White）」雙色名片體系。排版上融合日英文資訊的網格架構（Grid System），精準呈現株式會社名稱、職銜與聯絡細節，並透過極簡的幾何線條與現代留白，展現 USPACE 作為跨國科技品牌高雅、前瞻且值得信賴的商業形象。</p>",
+  "en": "<p>A corporate business card and identity extension designed for USPACE as part of its brand expansion into the Japanese market.</p><p>Tailored specifically to the refined corporate etiquette of Japan, the design features a dual colorway—Sleek Black and Minimalist White. Utilizing a structured grid system, the layout effortlessly balances bilingual information (Japanese &amp; English) with ample white space. The result is a clean, modern, and highly professional touchpoint that reinforces USPACE’s credibility as an innovative global mobility platform.</p>",
+  "date": "2026-10-15T00:00"
+}

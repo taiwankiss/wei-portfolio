@@ -1,0 +1,19 @@
+{
+  "slug": "helix2h-icon-system",
+  "title": "Helix2h Icon System",
+  "categories": [
+    "Branding",
+    "Graphic"
+  ],
+  "cover": "/media/helix2h-icon-system/cover.webp",
+  "gallery": [
+    "/media/helix2h-icon-system/01.webp",
+    "/media/helix2h-icon-system/02.webp",
+    "/media/helix2h-icon-system/03.webp",
+    "/media/helix2h-icon-system/04.webp",
+    "/media/helix2h-icon-system/05.webp"
+  ],
+  "zh": "<p>本專案為基因檢測品牌「華生智慧科技（HELIX2h）」所建構的 <strong>系統化圖標庫（Iconography System）</strong>。針對基因檢測報告、UI 介面與健康評估系統中龐大的生醫數據，設計了數十款涵蓋「器官、疾病風險、飲食營養、生活型態與檢測流程」的專屬圖標。</p><p>視覺語彙延續品牌 VIS 的**「科技藍與極簡深灰」**雙色組合，採用一致的線條粗細（Stroke Weight）、幾何圓角與雙色點綴（Duo-tone Highlight）。不僅大幅提升了檢測報告的閱讀體驗，更建立起可跨平台（Web / App / 印刷報告）延伸的視覺資產。</p>",
+  "en": "<p>A comprehensive custom icon system crafted for <strong>HELIX2h</strong>‘s genetic testing reports and digital platforms. To simplify complex biomedical data, this system categorizes key metrics into intuitive visual symbols including internal organs, health risks, nutrition, lifestyle habits, and lab procedures.</p><p>Designed with consistent stroke weight, uniform corner radius, and the brand’s signature duo-tone palette (BioTech Blue &amp; Charcoal Gray), the icon collection ensures optimal legibility and visual coherence across both print reports and UI/UX digital interfaces.</p>",
+  "date": "2026-10-03T00:00"
+}

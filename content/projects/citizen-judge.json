@@ -1,0 +1,19 @@
+{
+  "slug": "citizen-judge",
+  "title": "全民法官懶人包",
+  "categories": [
+    "Graphic"
+  ],
+  "cover": "/media/citizen-judge/cover.webp",
+  "gallery": [
+    "/media/citizen-judge/01.webp",
+    "/media/citizen-judge/02.webp",
+    "/media/citizen-judge/03.webp",
+    "/media/citizen-judge/04.webp",
+    "/media/citizen-judge/05.webp",
+    "/media/citizen-judge/06.webp"
+  ],
+  "zh": "<p>本專案為推廣法律普及知識所規劃的 <strong>社群多圖懶人包（Social Media Carousel）</strong> 視覺設計。以「大法庭制度」為核心議題，將生硬嚴肅的司法改革內容，轉化為親和力極高且具幽默感的圖像與插畫。透過首頁吸睛標題、問題引導、視覺對比與卡片式資訊排版，大幅降低大眾閱讀門檻，提升社群傳播力與互動觸及率。</p>",
+  "en": "<p>An educational social media carousel designed to translate complex legal topics—specifically Taiwan’s Grand Bench system—into digestible, engaging visual content. By integrating witty typography, custom vector illustrations, and structured information architecture, the series lowers reading barriers, turning dense policy information into an approachable and shareable social media asset.</p>",
+  "date": "2026-10-13T00:00"
+}

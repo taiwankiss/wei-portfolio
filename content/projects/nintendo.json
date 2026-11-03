@@ -1,0 +1,16 @@
+{
+  "slug": "nintendo",
+  "title": "Consoles of Nintendo",
+  "categories": [
+    "Graphic"
+  ],
+  "cover": "/media/nintendo/cover.webp",
+  "gallery": [
+    "/media/nintendo/01.webp",
+    "/media/nintendo/02.webp",
+    "/media/nintendo/03.webp"
+  ],
+  "zh": "<p>本專案為出於對資深玩家情懷與電玩文化的致敬，所獨立創作的 <strong>個人自主設計專案</strong>。</p><p>以 2.5D 等角軸線風格（Isometric Style），精心繪製了任天堂自 1983 年至今的歷代核心家用與混合型主機（FC 紅白機、SFC、N64、GameCube、Wii、Wii U 至 Switch）。作品結合黃藍強烈對比的幾何分割排版，搭配精準的線稿結構與歷史資訊介紹，將 40 年的主機演進史轉化為兼具復古美學與現代視覺張力的資訊圖表海報。</p>",
+  "en": "<p>A passion-driven side project celebrating the rich hardware history of Nintendo.</p><p>Crafted in a detailed <strong>2.5D Isometric Vector Style</strong>, this project illustrates Nintendo’s iconic home consoles—from the 1983 Famicom (NES), Super Famicom, N64, GameCube, Wii, Wii U, to the Nintendo Switch. Featuring a striking diagonal grid with contrasting blue and yellow hues, the design seamlessly bridges retro gaming nostalgia with modern infographic aesthetics.</p>",
+  "date": "2026-10-05T00:00"
+}

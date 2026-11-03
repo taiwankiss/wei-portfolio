@@ -1,0 +1,20 @@
+{
+  "slug": "usjp",
+  "title": "USPACE 日本官方網站",
+  "categories": [
+    "Graphic",
+    "Website"
+  ],
+  "cover": "/media/usjp/cover.webp",
+  "gallery": [
+    "/media/usjp/01.webp",
+    "/media/usjp/02.webp"
+  ],
+  "zh": "<p>本專案為台灣智慧共享停車品牌 <strong>USPACE</strong>&nbsp;進軍日本市場打造的 <strong>官方網站 UI/UX 設計與品牌客製化插畫系統</strong>。</p><p>因應日本市場對於新創服務的高度品質需求與信任門檻，設計策略以「親和力」與「清晰直觀」為核心。透過繪製專屬品牌角色與活潑的向量插畫，將複雜的 IoT 智慧地鎖與共享經濟模式轉化為生動易懂的圖像語言；介面上精準梳理「C 端車主預約 App」與「B 端地主空地加盟（JOIN USPACE）」雙向商業模式，打造具備在地化信任感的跨國網頁體驗。</p>",
+  "en": "<p>A tailored website UI/UX redesign and custom illustration system created for <strong>USPACE Japan</strong>, a leading IoT smart parking sharing platform expanding into the Japanese market.</p><p>To bridge the gap between complex smart hardware and user trust in Japan, the visual strategy utilizes <strong>vibrant custom character illustrations and intuitive step-by-step workflows</strong>. The interface effectively balances two distinct user journeys: B2C app engagement for drivers (Search, Book, Pay) and B2B partnership acquisition for property owners (Space Sharing &amp; Monetization). The result is a highly accessible, trustworthy, and converted landing page experience optimized for market entry.</p>",
+  "link": {
+    "url": "https://japan.uspace.city/user/",
+    "label": "USPACE JP 官網"
+  },
+  "date": "2026-10-30T00:00"
+}

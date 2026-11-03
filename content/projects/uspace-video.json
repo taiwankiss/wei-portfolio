@@ -1,0 +1,20 @@
+{
+  "slug": "uspace-video",
+  "title": "USPACE Intro Video",
+  "categories": [
+    "Graphic",
+    "Motion"
+  ],
+  "cover": "/media/uspace-video/cover.webp",
+  "gallery": [
+    "/media/uspace-video/01.webp",
+    "/media/uspace-video/02.webp"
+  ],
+  "zh": "<p>本專案為共享停車品牌「USPACE 」所製作的官方 2D 動態宣傳影片（Motion Graphics Commercial）。</p><p>全片使用 Adobe After Effects 進行動畫編排與節奏掌控，以「找不到停車位嗎？」作為開頭痛點引導。影片結合手持智慧型手機的 UI 介面操作動態、向量插畫元素、智慧地鎖與車牌辨識情境，並以「時鐘與存錢筒」直觀視覺化「以分計費」的省錢優勢。在短短 20 秒之內，以高節奏感的視覺轉換，建立起科技、高效且極具吸引力的品牌廣告。</p>",
+  "en": "<p>A high-energy 2D Motion Graphics commercial created using Adobe After Effects for <strong>USPACE</strong>, a smart parking app.</p><p>The video tackles a common driver pain point—”Can’t find a parking spot?”—and introduces USPACE’s key features within 20 seconds. Through sleek UI motion design, custom vector illustrations, and intuitive visual metaphors (like clocks and piggy banks for minute-based billing), the animation delivers a concise, visually compelling promo that drives app downloads.</p>",
+  "link": {
+    "url": "https://www.youtube.com/watch?v=sBxd3HgS8-o",
+    "label": "在 YouTube 觀看"
+  },
+  "date": "2026-10-07T00:00"
+}

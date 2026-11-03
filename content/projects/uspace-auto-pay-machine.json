@@ -1,0 +1,22 @@
+{
+  "slug": "uspace-auto-pay-machine",
+  "title": "USPACE Auto Pay Machine",
+  "categories": [
+    "Branding",
+    "Graphic"
+  ],
+  "cover": "/media/uspace-auto-pay-machine/cover.webp",
+  "gallery": [
+    "/media/uspace-auto-pay-machine/01.webp",
+    "/media/uspace-auto-pay-machine/02.webp",
+    "/media/uspace-auto-pay-machine/03.webp",
+    "/media/uspace-auto-pay-machine/04.webp",
+    "/media/uspace-auto-pay-machine/05.webp",
+    "/media/uspace-auto-pay-machine/06.webp",
+    "/media/uspace-auto-pay-machine/07.webp",
+    "/media/uspace-auto-pay-machine/08.webp"
+  ],
+  "zh": "<p>本專案為 USPACE 智慧出行生態系所自主研發的 <strong>智慧自助繳費機全流程產品開發專案</strong>。</p><p>專案經歷完整產品開發週期：從前期市場與場站使用者痛點調查切入，定義出符合各式場站空間需求的多元型態（包含 18 吋大螢幕款、無螢幕與輕量化柱狀等方案）。在設計階段結合人因工程繪製精準的 2D 尺寸結構圖，並進行 3D 外觀建模與極高級感渲染。本產品完美整合了硬幣/紙鈔投遞、信用卡感應、掃碼支付與發票列印模組，打造兼具前瞻科技美學與高效率營運成本的自研硬體設備。</p>",
+  "en": "<p>A end-to-end industrial product development project for the <strong>USPACE Proprietary Smart Payment Kiosk</strong>, built from scratch.</p><p>The project spanned the entire hardware life cycle: starting with market research and field user observation to define key functional modules and form factors. Three distinct models (A, B, and C) were architected to fit varied parking facility footprints—ranging from an 18-inch interactive flagship terminal to sleek, screenless pole-mounted units. Integrating ergonomic human-scale considerations, 2D technical drafting, and high-fidelity 3D CAD modeling/rendering, the final hardware seamlessly houses cash acceptors, NFC readers, QR scanners, and receipt printers in a cohesive, premium brand aesthetic.</p>",
+  "date": "2026-10-31T00:00"
+}

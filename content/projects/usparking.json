@@ -1,0 +1,29 @@
+{
+  "slug": "usparking",
+  "title": "USPACE Parking Guide",
+  "categories": [
+    "Branding",
+    "Graphic"
+  ],
+  "cover": "/media/usparking/cover.webp",
+  "gallery": [
+    "/media/usparking/01.webp",
+    "/media/usparking/02.webp",
+    "/media/usparking/03.webp",
+    "/media/usparking/04.webp",
+    "/media/usparking/05.webp",
+    "/media/usparking/06.webp",
+    "/media/usparking/07.webp",
+    "/media/usparking/08.webp",
+    "/media/usparking/09.webp",
+    "/media/usparking/10.webp",
+    "/media/usparking/11.webp",
+    "/media/usparking/12.webp",
+    "/media/usparking/13.webp",
+    "/media/usparking/14.webp",
+    "/media/usparking/15.webp"
+  ],
+  "zh": "<p>本專案為 USPACE 智慧停車場打造的 <strong>大型場站招牌與指標系統模組化規範</strong>。</p><p>為因應跨區域場站快速擴展需求，本規範建立起模組化、高度一致的指標視覺語言。包含出入口立牌、車道指示、警示燈具、繳費與方向引導等各式看板，透過統一的版面架構與色彩系統，提升車主在場站內的識別效率與體驗；同時作為跨單位溝通標準手冊，提供業務洽談、業主確認及施工單位精準對齊，大幅降低溝通成本與施工落差。</p>",
+  "en": "<p>A standardized environmental wayfinding and signage guidelines system designed for <strong>USPACE</strong> smart parking facilities.</p><p>Created to support rapid site expansion, this project establishes a modular design language across all physical touchpoints—including entrance pylons, lane directions, warning lights, and payment guides. By defining strict layout rules and consistent visual hierarchy, the system ensures effortless navigation for drivers while providing a unified technical reference for sales teams, venue partners, and construction vendors to streamline implementation.</p>",
+  "date": "2026-10-25T00:00"
+}

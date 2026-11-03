@@ -1,0 +1,27 @@
+{
+  "slug": "trolls",
+  "title": "Trolls Music Stars Photo",
+  "categories": [
+    "Photography"
+  ],
+  "cover": "/media/trolls/cover.webp",
+  "gallery": [
+    "/media/trolls/01.webp",
+    "/media/trolls/02.webp",
+    "/media/trolls/03.webp",
+    "/media/trolls/04.webp",
+    "/media/trolls/05.webp",
+    "/media/trolls/06.webp",
+    "/media/trolls/07.webp",
+    "/media/trolls/08.webp",
+    "/media/trolls/09.webp",
+    "/media/trolls/10.webp",
+    "/media/trolls/11.webp",
+    "/media/trolls/12.webp",
+    "/media/trolls/13.webp",
+    "/media/trolls/14.webp"
+  ],
+  "zh": "<p>本專案為結合手機 App 互動的智慧絨毛玩具（Smart Plush Toy）進行全套商業攝影企劃。視覺策略著重於 <strong>「實體玩偶與數位介面（App UI）的自然互動」</strong>。企劃涵蓋室內棚拍（Studio Lifestyle）與戶外攜帶情境（Outdoor On-the-Go），精準呈現玩具在居家陪護、AR 互動辨識以及戶外攜帶等多元使用場景，完美融合產品的可愛質感與科技互動感。</p>",
+  "en": "<p>A commercial photography campaign for an App-connected interactive plush toy. The project highlights the seamless integration between the physical product and digital mobile experience. Through studio lifestyle setups and outdoor photography, the visuals capture real-time interaction, mobile AR scanning, and portable playfulness, presenting the toy as an engaging, everyday companion for modern users.</p>",
+  "date": "2026-09-28T00:00"
+}

@@ -1,0 +1,21 @@
+{
+  "slug": "ic",
+  "title": "IC+ 九暘電子官網",
+  "categories": [
+    "Website"
+  ],
+  "cover": "/media/ic/cover.webp",
+  "gallery": [
+    "/media/ic/01.webp",
+    "/media/ic/02.webp",
+    "/media/ic/03.webp",
+    "/media/ic/04.webp"
+  ],
+  "zh": "<p>本專案為上市公司「九暘電子（IC Plus）」所打造的 <strong>B2B 企業官方網站 UI/UX 設計與資訊架構企劃</strong>。</p><p>因應半導體與 IC 設計領域的專業採購與工程師需求，本專案打破傳統科技公司生硬龐雜的資訊層級，以「極簡、高效、精準檢索」為核心策略。設計上梳理了龐大的產品型號與規格數據，打造直觀的產品對照表與應用領域分類介面；視覺上採用穩重的科技深藍與清晰的層次排版，兼顧上市公司應有的專業信賴感與極佳的使用者體驗（User Experience）。</p>",
+  "en": "<p>A B2B corporate website UI/UX redesign created for <strong>IC Plus Corporation</strong>, a publicly traded semiconductor and IC design company.</p><p>Designed to streamline the technical user journey for engineers and buyers, the visual strategy focuses on <strong>clarity, efficiency, and structured information architecture</strong>. The interface reorganizes extensive product lines and technical datasheets into clean, easily scannable data tables and application-based navigation. Featuring a refined tech-blue palette and precise grid layouts, the website delivers a seamless user experience that reinforces the enterprise’s technological authority and reliability.</p>",
+  "link": {
+    "url": "https://www.icplus.com.tw/",
+    "label": "九暘電子官方網站"
+  },
+  "date": "2026-10-23T00:00"
+}

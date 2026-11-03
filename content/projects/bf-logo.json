@@ -1,0 +1,20 @@
+{
+  "slug": "bf-logo",
+  "title": "貝殼放大 Logo Design",
+  "categories": [
+    "Branding",
+    "Graphic"
+  ],
+  "cover": "/media/bf-logo/cover.webp",
+  "gallery": [
+    "/media/bf-logo/01.webp",
+    "/media/bf-logo/02.webp",
+    "/media/bf-logo/03.webp",
+    "/media/bf-logo/04.webp",
+    "/media/bf-logo/05.webp",
+    "/media/bf-logo/06.webp"
+  ],
+  "zh": "<p>本專案為台灣首屈一指的群眾集資顧問公司「貝殼放大（Backer-Founder）」所進行的 <strong>品牌視覺識別重塑專案（Logo Redesign &amp; Brand Guidelines）</strong>。</p><p>專案以「保留品牌核心記憶，進化數位時代可讀性」為目標。重新梳理原有的貝殼符號，精簡繁複線條並微調黃金比例，提升標誌在數位螢幕（Mobile/Web）與微縮場景下的清晰度。同步規範中英文字體重組（Bold/Black 應用層級）與子品牌擴充架構，讓全新品牌識別更具現代感、科技親和力與國際擴充性。</p>",
+  "en": "<p>A comprehensive visual identity redesign for <strong>Backer-Founder</strong>, Taiwan’s premier crowdfunding consultancy.</p><p>The project optimizes the iconic shell mark for the modern digital era. By refining geometry, reducing line complexity, and adjusting optical balance, the logo achieves enhanced legibility across all screen sizes. The redesign also establishes a scalable brand architecture, detailing typography hierarchy and sub-brand integration for a fresh, professional, and forward-looking identity.</p>",
+  "date": "2026-10-19T00:00"
+}

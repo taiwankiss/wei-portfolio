@@ -1,0 +1,18 @@
+{
+  "slug": "cutter",
+  "title": "Cutting-Cutter-Rolling Photo",
+  "categories": [
+    "Photography"
+  ],
+  "cover": "/media/cutter/cover.webp",
+  "gallery": [
+    "/media/cutter/01.webp",
+    "/media/cutter/02.webp",
+    "/media/cutter/03.webp",
+    "/media/cutter/04.webp",
+    "/media/cutter/05.webp"
+  ],
+  "zh": "<p>本專案為「滾刀筆」產品的情境攝影與視覺創作系列。透過捕捉不同使用者（包含兒童與手作愛好者）的真實操作姿態，呈現產品在<strong>安全裁切、順暢轉向與直覺握持</strong>上的設計優勢。影像風格以明亮、乾淨且具生活感（Lifestyle）的色調為主軸，強調工具融入日常手作與創意學習的親和力。</p>",
+  "en": "<p>This photography series showcases the real-world application and ergonomic performance of the <strong>Rolling Cutter Pen</strong>. Through clean lighting and natural storytelling, the visuals emphasize safety, intuitive grip, and smooth cutting precision across age groups, positioning the product as an essential tool for everyday craft and creative work.</p>",
+  "date": "2026-09-27T00:00"
+}

@@ -1,0 +1,19 @@
+{
+  "slug": "iaps",
+  "title": "IAPS Wall Design",
+  "categories": [
+    "Graphic"
+  ],
+  "cover": "/media/iaps/cover.webp",
+  "gallery": [
+    "/media/iaps/01.webp",
+    "/media/iaps/02.webp",
+    "/media/iaps/03.webp",
+    "/media/iaps/04.webp",
+    "/media/iaps/05.webp",
+    "/media/iaps/06.webp"
+  ],
+  "zh": "<p>本專案為國立陽明交通大學產業加速器（IAPS）所規劃的大型展覽牆面與辦公空間視覺設計（Environmental Graphic Design）。視覺概念以 <strong>「國際機場（Airport Ecosystem）」</strong> 為核心暗喻，將新創團隊的培育歷程轉化為「登機、跑道起飛、跨國航線與抵達」的旅程。</p><p>全圖以品牌經典藍黃為主調，透過精密的極簡向量線稿（Isometric/Vector Line Art），將加速器四大計畫流程、合作夥伴矩陣，以及孵化中與畢業的傑出新創團隊標誌（Logo Grid）巧妙整合於大尺度牆面中，兼具資訊導覽功能與強烈的空間品牌識別度。</p>",
+  "en": "<p>An environmental graphic and information design wall created for IAPS (Industrial Accelerator &amp; Incubation Center). Conceptualized around an <strong>“International Airport Ecosystem,”</strong> the design metaphors the startup journey to flight departures, runways, and global destinations.</p><p>Utilizing a clean vector line art style with IAPS’s signature blue and yellow palette, the mural seamlessly integrates acceleration programs, corporate partner ecosystems, and alumnus startup portfolios into a cohesive, large-scale visual landmark.</p>",
+  "date": "2026-10-01T00:00"
+}

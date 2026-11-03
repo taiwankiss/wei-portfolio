@@ -158,6 +158,7 @@ body::after {
 .hero-badge-mark { position: absolute; z-index: 4; right: 49px; top: 49px; width: 41px; height: 41px; transition: transform .5s var(--ease); }
 .hero-card:hover .hero-badge { animation-duration: 8s; }
 .hero-card:hover .hero-badge-mark { transform: rotate(-20deg) scale(1.1); }
+.hero-badge-mark img { display: block; width: 100%; height: 100%; }
 @keyframes spin { to { transform: rotate(360deg); } }
 .circles a { will-change: transform; }
 

@@ -1,0 +1,24 @@
+{
+  "slug": "murobox",
+  "title": "MuroBox Photo",
+  "categories": [
+    "Photography"
+  ],
+  "cover": "/media/murobox/cover.webp",
+  "gallery": [
+    "/media/murobox/01.webp",
+    "/media/murobox/02.webp",
+    "/media/murobox/03.webp",
+    "/media/murobox/04.webp",
+    "/media/murobox/05.webp",
+    "/media/murobox/06.webp",
+    "/media/murobox/07.webp",
+    "/media/murobox/08.webp",
+    "/media/murobox/09.webp",
+    "/media/murobox/10.webp",
+    "/media/murobox/11.webp"
+  ],
+  "zh": "<p>本專案為全球首創「App 智慧控制物理音樂盒」品牌 Muro Box 所規劃的 商業產品攝影與情境藝術指導。</p><p>視覺策略以「跨越時代的聲音記憶」為主軸，透過高精度微距打光，精準還原金屬撞針、齒輪機芯與溫潤實木底座的古典機械工藝。同步企劃跨世代的情境敘事——涵蓋「親子互動」、「居家生活放鬆」與「現代工作空間」，將看似冰冷的 App 數位控制技術，轉化為具備濃厚情感溫度與客製化記憶的精品家居視覺資產。</p>",
+  "en": "<p>A comprehensive commercial photography and lifestyle direction project for <strong>Muro Box</strong>, the world’s first smart music box combining classical analog craftsmanship with modern App integration.</p><p>The visual direction bridges traditional mechanical engineering with contemporary smart living. High-contrast close-ups highlight the intricate mechanical cylinders and wooden textures. Meanwhile, curated lifestyle narratives—featuring heartfelt family moments, relaxing home environments, and modern office setups—position Muro Box as both an innovative technology and a sentimental home piece that preserves unique musical memories.</p>",
+  "date": "2026-10-27T00:00"
+}
