@@ -6,6 +6,15 @@
   "role": "Visual Designer · Design Manager",
   "headline": "把複雜的策略，轉化為會說話的視覺。",
   "intro": "10 年跨領域視覺設計與品牌管理經驗。從群眾募資頁、品牌識別、商業攝影到官網 UI，擅長把產品的核心價值變成高轉換的商業視覺。",
+  "hero": {
+    "title": ["Wei's", "Portfolio"],
+    "lede": "I'm Wei Lee, a visual designer and design manager in Taipei, turning complex ideas into clear, persuasive visuals.",
+    "stats": [
+      {"value": "10", "label": "Years shaping brands, campaigns and products"},
+      {"value": "37", "label": "Selected projects across five disciplines"}
+    ]
+  },
+  "location": "Taipei, TW",
   "email": "s923446@gmail.com",
   "phone": "+886 935 102 071",
   "categories": ["Branding", "Graphic", "Photography", "Website", "Motion"],

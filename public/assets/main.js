@@ -33,6 +33,7 @@ const chips = [...document.querySelectorAll(".chip")];
 function applyFilter(name, push) {
   if (!chips.some((c) => c.dataset.filter === name)) name = "all";
   chips.forEach((c) => c.setAttribute("aria-pressed", c.dataset.filter === name));
+  document.querySelector(".grid").classList.toggle("filtered", name !== "all");
   for (const card of cards) {
     const show = name === "all" || card.dataset.cats.split(" ").includes(name);
     card.hidden = !show;
