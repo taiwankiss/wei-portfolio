@@ -26,7 +26,7 @@
 2. 從後台上傳的新圖片不會自動壓縮 — 若常上傳，可在 `build.py` 加自動縮圖。
 
 ## 重要檔案
-- `content/projects.json`、`content/site.json`：內容
+- `content/projects.json`（格式 `{"projects": [...]}`，包一層才能讓後台收合並顯示作品名）、`content/site.json`：內容
 - `build.py`：產生網站、複製履歷成 About（找不到 `../Resume` 時保留現有 `public/about-me/`）
 - `public/assets/style.css`、`public/assets/main.js`：樣式與互動
 - `public/_redirects`、`public/_headers`：Cloudflare 轉址與快取
