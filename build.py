@@ -163,12 +163,11 @@ def card(p, i):
     span = SPANS[i % len(SPANS)]
     return f"""<li class="card s{span}" data-cats="{cats}">
   <a href="/portfolio/{p['slug']}/">
-    <div class="card-media">{media(p['cover'], eager=i < 2)}</div>
-    <div class="card-meta">
-      <span class="card-num">{i + 1:02d}</span>
-      <h3>{escape(p['title'])}</h3>
-      <p>{" / ".join(p['categories'])}</p>
+    <div class="card-media">
+      {media(p['cover'], eager=i < 2)}
+      <ul class="card-tags">{"".join(f"<li>{c}</li>" for c in p['categories'])}</ul>
     </div>
+    <h3 class="card-title">{escape(p['title'])}</h3>
   </a>
 </li>"""
 
