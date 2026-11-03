@@ -312,6 +312,7 @@ def build_about():
         "body.is-hot .chrome { color: #121212; }\n"
         "body.is-dark .pf-nav a[aria-current] { background: #efebe3; color: #121212; }\n"
         ".pf-nav a:hover { color: #121212; }\n"
+        ".profile p { color: #e6e1d6; }\n"
     )
     (dest / "assets/style.css").write_text(css)
 
@@ -332,6 +333,16 @@ def build_about():
         '<nav class="pf-nav"><a href="/#work">Work</a><a href="/about-me/" aria-current="page">About</a></nav>'
         f'<a class="pf-status" href="mailto:{site["email"]}"><span class="dot"></span>Open to work</a>'
         "</div>\n",
+        html,
+        count=1,
+        flags=re.S,
+    )
+    # second profile paragraph as worded on the printed résumé
+    html = re.sub(
+        r'<p class="reveal">近期也積極投入.*?</p>',
+        '<p class="reveal">工作之餘，是一名單車公路騎行與馬拉松愛好者，期許能將這份自律與對生命的細膩體察，'
+        '轉化為持續輸出卓越設計的動能。近期也積極投入 AI 輔助設計流程（Vibe Coding），'
+        '透過 AI 工具快速將設計概念原型化、迭代網頁與互動介面，加速從構想到落地的產出效率。</p>',
         html,
         count=1,
         flags=re.S,

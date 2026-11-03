@@ -338,3 +338,4 @@ body.is-dark .chrome { background: color-mix(in srgb, #1a1815 85%, transparent);
 body.is-hot .chrome { color: #121212; }
 body.is-dark .pf-nav a[aria-current] { background: #efebe3; color: #121212; }
 .pf-nav a:hover { color: #121212; }
+.profile p { color: #e6e1d6; }
