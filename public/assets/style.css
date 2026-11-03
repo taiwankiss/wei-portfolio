@@ -191,7 +191,7 @@ body::after {
 
 /* Section heads */
 .section-head { display: grid; gap: 20px; margin-bottom: clamp(28px, 4vw, 48px); }
-.section-title { font-size: clamp(52px, 8vw, 132px); }
+.section-title { font-size: clamp(52px, 8vw, 132px); text-transform: none; }
 
 /* Work grid */
 .work { padding-bottom: clamp(96px, 12vw, 180px); }

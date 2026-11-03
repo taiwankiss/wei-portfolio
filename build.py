@@ -222,7 +222,7 @@ def build_home():
   </div>
 </section>
 <section class="work wrap" id="work">
-  {section_head("selected work", f'<div class="chips" role="group" aria-label="Filter by category">{chips}</div>')}
+  {section_head("Selected Work", f'<div class="chips" role="group" aria-label="Filter by category">{chips}</div>')}
   <ul class="grid">{"".join(card(p, i) for i, p in enumerate(projects))}</ul>
 </section>"""
     page("/", "", body, active="work")
