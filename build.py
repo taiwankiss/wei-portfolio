@@ -40,18 +40,50 @@ def slugify(cat):
     return cat.lower()
 
 
-def media(m, cls="", eager=False):
-    """<img> or looping <video> for a media entry."""
-    if m.get("poster"):
+def image_size(path):
+    """(width, height) of a PNG, GIF, JPEG or WebP file, or None."""
+    try:
+        data = path.read_bytes()
+    except OSError:
+        return None
+    if data[:8] == b"\x89PNG\r\n\x1a\n":
+        return int.from_bytes(data[16:20], "big"), int.from_bytes(data[20:24], "big")
+    if data[:6] in (b"GIF87a", b"GIF89a"):
+        return int.from_bytes(data[6:8], "little"), int.from_bytes(data[8:10], "little")
+    if data[:4] == b"RIFF" and data[8:12] == b"WEBP":
+        kind = data[12:16]
+        if kind == b"VP8X":
+            return int.from_bytes(data[24:27], "little") + 1, int.from_bytes(data[27:30], "little") + 1
+        if kind == b"VP8L":
+            bits = int.from_bytes(data[21:25], "little")
+            return (bits & 0x3FFF) + 1, ((bits >> 14) & 0x3FFF) + 1
+        if kind == b"VP8 ":
+            return int.from_bytes(data[26:28], "little") & 0x3FFF, int.from_bytes(data[28:30], "little") & 0x3FFF
+    if data[:2] == b"\xff\xd8":
+        i = 2
+        while i < len(data) - 9:
+            if data[i] != 0xFF:
+                i += 1
+                continue
+            marker = data[i + 1]
+            if 0xC0 <= marker <= 0xCF and marker not in (0xC4, 0xC8, 0xCC):
+                return int.from_bytes(data[i + 7:i + 9], "big"), int.from_bytes(data[i + 5:i + 7], "big")
+            i += 2 + int.from_bytes(data[i + 2:i + 4], "big")
+    return None
+
+
+def media(src, cls="", eager=False):
+    """<img>, or a looping <video> when an .mp4 sits next to the image (the image is its poster)."""
+    size = image_size(OUT / src.lstrip("/"))
+    dims = f' width="{size[0]}" height="{size[1]}"' if size else ""
+    video = Path(src).with_suffix(".mp4")
+    if (OUT / str(video).lstrip("/")).exists():
         return (
-            f'<video class="{cls}" src="{m["src"]}" poster="{m["poster"]}" width="{m["w"]}" '
-            f'height="{m["h"]}" autoplay muted loop playsinline preload="none"></video>'
+            f'<video class="{cls}" src="{video}" poster="{src}"{dims} '
+            'autoplay muted loop playsinline preload="none"></video>'
         )
     loading = "eager" if eager else "lazy"
-    return (
-        f'<img class="{cls}" src="{m["src"]}" width="{m["w"]}" height="{m["h"]}" '
-        f'alt="" loading="{loading}" decoding="async">'
-    )
+    return f'<img class="{cls}" src="{src}"{dims} alt="" loading="{loading}" decoding="async">'
 
 
 def page(path, title, body, desc=None, image=None, active=""):
@@ -181,7 +213,7 @@ def build_project(i, p):
     nxt = projects[(i + 1) % len(projects)]
     prev = projects[i - 1]
     link = ""
-    if p.get("link"):
+    if (p.get("link") or {}).get("url"):
         link = f'<div><dt>Live</dt><dd><a href="{escape(p["link"]["url"])}" target="_blank" rel="noopener">{escape(p["link"]["label"])} ↗</a></dd></div>'
     tags = ", ".join(f'<a href="/?filter={slugify(c)}#work">{c}</a>' for c in p["categories"])
     en = f'<div class="desc-col" lang="en"><h2 class="label">Overview</h2>{p["en"]}</div>' if p["en"] else ""
@@ -218,7 +250,7 @@ def build_project(i, p):
   <p class="lb-count"></p>
 </div>"""
     desc = re.sub(r"<[^>]+>", "", p["zh"]).strip().split("\n")[0][:150]
-    page(f"/portfolio/{p['slug']}/", p["title"], body, desc=desc, image=p["cover"].get("poster", p["cover"]["src"]))
+    page(f"/portfolio/{p['slug']}/", p["title"], body, desc=desc, image=p["cover"])
 
 
 def build_about():
@@ -236,10 +268,19 @@ def build_about():
     css = (RESUME / "assets/style.css").read_text()
     css = css.replace("#FF4D1A", ACCENT).replace("255, 77, 26", "244, 167, 17")
     css += (
-        "\n/* portfolio link in the chrome */\n"
-        ".chrome__home { color: inherit; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; }\n"
-        ".chrome__home img { width: 22px; height: 22px; transition: transform .4s; }\n"
-        ".chrome__home:hover img { transform: rotate(-12deg); }\n"
+        "\n/* portfolio header inside the résumé chrome */\n"
+        ".chrome__inner.pf { font: 500 14px/1 'Inter Tight', 'Noto Sans TC', sans-serif; letter-spacing: 0; text-transform: none; padding-top: 14px; padding-bottom: 14px; display: grid; grid-template-columns: 1fr auto 1fr; }\n"
+        ".pf-brand { display: flex; align-items: center; gap: 10px; color: inherit; text-decoration: none; font-weight: 700; font-size: 17px; letter-spacing: -.02em; }\n"
+        ".pf-brand img { width: 34px; height: 34px; transition: transform .5s; }\n"
+        ".pf-brand:hover img { transform: rotate(-12deg) scale(1.06); }\n"
+        ".pf-nav { display: flex; gap: 2px; padding: 4px; border-radius: 999px; background: color-mix(in srgb, currentColor 9%, transparent); }\n"
+        ".pf-nav a { color: inherit; text-decoration: none; padding: 10px 16px; border-radius: 999px; }\n"
+        ".pf-nav a:hover { background: color-mix(in srgb, currentColor 10%, transparent); }\n"
+        ".pf-nav a[aria-current] { background: var(--ink); color: var(--paper); }\n"
+        "body.is-dark .pf-nav a[aria-current] { background: var(--paper); color: var(--ink); }\n"
+        ".pf-status { justify-self: end; display: flex; align-items: center; gap: 8px; font-size: 13px; color: inherit; text-decoration: none; }\n"
+        "@media (max-width: 1100px) { .chrome__inner.pf { grid-template-columns: auto 1fr; } .pf-nav { justify-self: end; } .pf-status { display: none; } }\n"
+        "@media (max-width: 720px) { .pf-brand span { display: none; } .pf-nav a { padding: 10px 12px; } }\n"
     )
     (dest / "assets/style.css").write_text(css)
 
@@ -254,9 +295,15 @@ def build_about():
     )
     html = html.replace('<meta name="apple-mobile-web-app-title" content="Resume">\n', "")
     html = re.sub(
-        r'<span>李建緯 <span class="dim">/</span> Wei Lee</span>',
-        '<a class="chrome__home" href="/"><img src="/assets/img/mark.svg" alt="">← Wei\'s Portfolio</a>',
+        r'<div class="chrome__inner">.*?</div>\n',
+        '<div class="chrome__inner pf">'
+        '<a class="pf-brand" href="/" aria-label="Wei Lee, home"><img src="/assets/img/mark.svg" alt=""><span>Wei Lee</span></a>'
+        '<nav class="pf-nav"><a href="/#work">Work</a><a href="/about-me/" aria-current="page">About</a></nav>'
+        f'<a class="pf-status" href="mailto:{site["email"]}"><span class="dot"></span>Open to work</a>'
+        "</div>\n",
         html,
+        count=1,
+        flags=re.S,
     )
     (dest / "index.html").write_text(html)
 

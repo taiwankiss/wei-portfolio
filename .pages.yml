@@ -1,0 +1,119 @@
+# Pages CMS (https://pagescms.org) — the portfolio's admin panel.
+# Edits are committed to GitHub; Cloudflare Pages then runs build.py and redeploys.
+
+media:
+  - name: images
+    label: Images
+    input: public/media
+    output: /media
+    extensions: [jpg, jpeg, png, webp, gif]
+
+content:
+  - name: projects
+    label: 作品 Projects
+    type: file
+    path: content/projects.json
+    format: json
+    list: true
+    fields:
+      - name: title
+        label: 標題
+        type: string
+        required: true
+      - name: slug
+        label: 網址代稱（英文小寫與 -，例如 my-project）
+        type: string
+        required: true
+        pattern:
+          regex: "^[a-z0-9-]+$"
+          message: 只能用英文小寫、數字和 -
+      - name: categories
+        label: 分類
+        type: select
+        options:
+          values: [Branding, Graphic, Photography, Website, Motion]
+          multiple: true
+      - name: cover
+        label: 封面圖
+        type: image
+        required: true
+        options:
+          media: images
+          rename: safe
+      - name: gallery
+        label: 作品圖（依順序顯示）
+        type: image
+        options:
+          media: images
+          multiple: true
+          rename: safe
+      - name: zh
+        label: 專案介紹（中文）
+        type: rich-text
+      - name: en
+        label: Project Overview（英文）
+        type: rich-text
+      - name: link
+        label: 外部連結（可留空）
+        type: object
+        fields:
+          - name: url
+            label: 網址
+            type: string
+          - name: label
+            label: 按鈕文字
+            type: string
+
+  - name: site
+    label: 首頁設定 Site
+    type: file
+    path: content/site.json
+    format: json
+    fields:
+      - name: hero
+        label: 首頁 Hero
+        type: object
+        fields:
+          - name: title
+            label: 大標（每行一個）
+            type: string
+            list: true
+          - name: lede
+            label: 介紹文字
+            type: text
+          - name: stats
+            label: 數字
+            type: object
+            list: true
+            fields:
+              - name: value
+                label: 數字
+                type: string
+              - name: label
+                label: 說明
+                type: string
+      - name: location
+        label: 所在地
+        type: string
+      - name: email
+        label: Email
+        type: string
+      - name: tagline
+        label: 頁尾標語
+        type: string
+      - name: name
+        type: string
+        hidden: true
+      - name: title
+        type: string
+        hidden: true
+      - name: url
+        type: string
+        hidden: true
+      - name: phone
+        type: string
+        hidden: true
+      - name: categories
+        type: string
+        list: true
+        hidden: true
