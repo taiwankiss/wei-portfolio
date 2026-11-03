@@ -19,7 +19,7 @@ OUT = ROOT / "public"
 RESUME = ROOT.parent / "Resume"
 ACCENT = "#F4A711"
 site = json.loads((ROOT / "content/site.json").read_text())
-projects = json.loads((ROOT / "content/projects.json").read_text())
+projects = json.loads((ROOT / "content/projects.json").read_text())["projects"]
 
 FONTS = (
     '<link rel="preconnect" href="https://fonts.googleapis.com">'

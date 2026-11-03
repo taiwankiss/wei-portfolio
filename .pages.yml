@@ -14,59 +14,66 @@ content:
     type: file
     path: content/projects.json
     format: json
-    list: true
     fields:
-      - name: slug
-        label: 網址代稱（英文小寫與 -，例如 my-project）
-        type: string
-        required: true
-        pattern:
-          regex: "^[a-z0-9-]+$"
-          message: 只能用英文小寫、數字和 -
-      - name: title
-        label: 標題
-        type: string
-        required: true
-      - name: categories
-        label: 分類
-        type: select
-        options:
-          values: [Branding, Graphic, Photography, Website, Motion]
-          multiple: true
-      - name: cover
-        label: 封面圖
-        type: image
-        required: true
-        options:
-          media: images
-          rename: safe
-      - name: gallery
-        label: 作品圖（依順序顯示）
-        type: image
-        options:
-          media: images
-          multiple: true
-          rename: safe
-      - name: zh
-        label: 專案介紹（中文）
-        type: rich-text
-        options:
-          format: html
-      - name: en
-        label: Project Overview（英文）
-        type: rich-text
-        options:
-          format: html
-      - name: link
-        label: 外部連結（可留空）
+      - name: projects
+        label: 作品（拖曳左側把手調整順序；新作品加在最下面，再拖到最上面）
         type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{title}"
         fields:
-          - name: url
-            label: 網址
+          - name: slug
+            label: 網址代稱（英文小寫與 -，例如 my-project）
             type: string
-          - name: label
-            label: 按鈕文字
+            required: true
+            pattern:
+              regex: "^[a-z0-9-]+$"
+              message: 只能用英文小寫、數字和 -
+          - name: title
+            label: 標題
             type: string
+            required: true
+          - name: categories
+            label: 分類
+            type: select
+            options:
+              values: [Branding, Graphic, Photography, Website, Motion]
+              multiple: true
+          - name: cover
+            label: 封面圖
+            type: image
+            required: true
+            options:
+              media: images
+              rename: safe
+          - name: gallery
+            label: 作品圖（依順序顯示）
+            type: image
+            options:
+              media: images
+              multiple: true
+              rename: safe
+          - name: zh
+            label: 專案介紹（中文）
+            type: rich-text
+            options:
+              format: html
+          - name: en
+            label: Project Overview（英文）
+            type: rich-text
+            options:
+              format: html
+          - name: link
+            label: 外部連結（可留空）
+            type: object
+            fields:
+              - name: url
+                label: 網址
+                type: string
+              - name: label
+                label: 按鈕文字
+                type: string
 
   - name: site
     label: 首頁設定 Site

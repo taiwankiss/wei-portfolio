@@ -1,770 +1,772 @@
-[
-  {
-    "slug": "snest",
-    "title": "S.NEST 細胞增生機",
-    "categories": [
-      "Photography"
-    ],
-    "cover": "/media/snest/cover.webp",
-    "gallery": [
-      "/media/snest/01.webp",
-      "/media/snest/02.webp",
-      "/media/snest/03.webp",
-      "/media/snest/04.webp",
-      "/media/snest/05.webp",
-      "/media/snest/06.webp",
-      "/media/snest/07.webp",
-      "/media/snest/08.webp",
-      "/media/snest/09.webp",
-      "/media/snest/10.webp"
-    ],
-    "zh": "<p>本專案為生醫科技設備 <strong>S.NEST（高通量細胞增生培養系統）</strong> 所規劃的 <strong>商業產品攝影與實驗室情境藝術指導</strong>。</p><p>針對高階醫療與生物科技設備極致追求「精準、無菌、權威感」的視覺需求，本專案採用高光調（High-Key）光影控制，塑造臨床級無塵室的極簡潔淨感。透過高精度微距畫面，細膩刻劃設備的極簡金屬質感與手部操作細節（包含分液滴定、微孔板載入與數據分析情境），精準轉化複雜的生醫技術為具備國際級說服力的視覺資產。</p>",
-    "en": "<p>A commercial biotech photography and art direction project created for <strong>S.NEST</strong>, a high-throughput cell culture and expansion system.</p><p>Designed to align with top-tier biomedical and pharmaceutical standards, the visual strategy emphasizes <strong>sterility, precision, and clinical authority</strong>. Utilizing high-key lighting to construct a seamless cleanroom environment, the photography captures precise human-device interactions—such as pipetting, microplate loading, and data analysis. The images elevate a complex scientific instrument into an approachable, high-tech, and globally trusted medical solution.</p>"
-  },
-  {
-    "slug": "uspace-auto-pay-machine",
-    "title": "USPACE Auto Pay Machine",
-    "categories": [
-      "Branding",
-      "Graphic"
-    ],
-    "cover": "/media/uspace-auto-pay-machine/cover.webp",
-    "gallery": [
-      "/media/uspace-auto-pay-machine/01.webp",
-      "/media/uspace-auto-pay-machine/02.webp",
-      "/media/uspace-auto-pay-machine/03.webp",
-      "/media/uspace-auto-pay-machine/04.webp",
-      "/media/uspace-auto-pay-machine/05.webp",
-      "/media/uspace-auto-pay-machine/06.webp",
-      "/media/uspace-auto-pay-machine/07.webp",
-      "/media/uspace-auto-pay-machine/08.webp"
-    ],
-    "zh": "<p>本專案為 USPACE 智慧出行生態系所自主研發的 <strong>智慧自助繳費機全流程產品開發專案</strong>。</p><p>專案經歷完整產品開發週期：從前期市場與場站使用者痛點調查切入，定義出符合各式場站空間需求的多元型態（包含 18 吋大螢幕款、無螢幕與輕量化柱狀等方案）。在設計階段結合人因工程繪製精準的 2D 尺寸結構圖，並進行 3D 外觀建模與極高級感渲染。本產品完美整合了硬幣/紙鈔投遞、信用卡感應、掃碼支付與發票列印模組，打造兼具前瞻科技美學與高效率營運成本的自研硬體設備。</p>",
-    "en": "<p>A end-to-end industrial product development project for the <strong>USPACE Proprietary Smart Payment Kiosk</strong>, built from scratch.</p><p>The project spanned the entire hardware life cycle: starting with market research and field user observation to define key functional modules and form factors. Three distinct models (A, B, and C) were architected to fit varied parking facility footprints—ranging from an 18-inch interactive flagship terminal to sleek, screenless pole-mounted units. Integrating ergonomic human-scale considerations, 2D technical drafting, and high-fidelity 3D CAD modeling/rendering, the final hardware seamlessly houses cash acceptors, NFC readers, QR scanners, and receipt printers in a cohesive, premium brand aesthetic.</p>"
-  },
-  {
-    "slug": "usjp",
-    "title": "USPACE 日本官方網站",
-    "categories": [
-      "Graphic",
-      "Website"
-    ],
-    "cover": "/media/usjp/cover.webp",
-    "gallery": [
-      "/media/usjp/01.webp",
-      "/media/usjp/02.webp"
-    ],
-    "zh": "<p>本專案為台灣智慧共享停車品牌 <strong>USPACE</strong>&nbsp;進軍日本市場打造的 <strong>官方網站 UI/UX 設計與品牌客製化插畫系統</strong>。</p><p>因應日本市場對於新創服務的高度品質需求與信任門檻，設計策略以「親和力」與「清晰直觀」為核心。透過繪製專屬品牌角色與活潑的向量插畫，將複雜的 IoT 智慧地鎖與共享經濟模式轉化為生動易懂的圖像語言；介面上精準梳理「C 端車主預約 App」與「B 端地主空地加盟（JOIN USPACE）」雙向商業模式，打造具備在地化信任感的跨國網頁體驗。</p>",
-    "en": "<p>A tailored website UI/UX redesign and custom illustration system created for <strong>USPACE Japan</strong>, a leading IoT smart parking sharing platform expanding into the Japanese market.</p><p>To bridge the gap between complex smart hardware and user trust in Japan, the visual strategy utilizes <strong>vibrant custom character illustrations and intuitive step-by-step workflows</strong>. The interface effectively balances two distinct user journeys: B2C app engagement for drivers (Search, Book, Pay) and B2B partnership acquisition for property owners (Space Sharing &amp; Monetization). The result is a highly accessible, trustworthy, and converted landing page experience optimized for market entry.</p>",
-    "link": {
-      "url": "https://japan.uspace.city/user/",
-      "label": "USPACE JP 官網"
+{
+  "projects": [
+    {
+      "slug": "snest",
+      "title": "S.NEST 細胞增生機",
+      "categories": [
+        "Photography"
+      ],
+      "cover": "/media/snest/cover.webp",
+      "gallery": [
+        "/media/snest/01.webp",
+        "/media/snest/02.webp",
+        "/media/snest/03.webp",
+        "/media/snest/04.webp",
+        "/media/snest/05.webp",
+        "/media/snest/06.webp",
+        "/media/snest/07.webp",
+        "/media/snest/08.webp",
+        "/media/snest/09.webp",
+        "/media/snest/10.webp"
+      ],
+      "zh": "<p>本專案為生醫科技設備 <strong>S.NEST（高通量細胞增生培養系統）</strong> 所規劃的 <strong>商業產品攝影與實驗室情境藝術指導</strong>。</p><p>針對高階醫療與生物科技設備極致追求「精準、無菌、權威感」的視覺需求，本專案採用高光調（High-Key）光影控制，塑造臨床級無塵室的極簡潔淨感。透過高精度微距畫面，細膩刻劃設備的極簡金屬質感與手部操作細節（包含分液滴定、微孔板載入與數據分析情境），精準轉化複雜的生醫技術為具備國際級說服力的視覺資產。</p>",
+      "en": "<p>A commercial biotech photography and art direction project created for <strong>S.NEST</strong>, a high-throughput cell culture and expansion system.</p><p>Designed to align with top-tier biomedical and pharmaceutical standards, the visual strategy emphasizes <strong>sterility, precision, and clinical authority</strong>. Utilizing high-key lighting to construct a seamless cleanroom environment, the photography captures precise human-device interactions—such as pipetting, microplate loading, and data analysis. The images elevate a complex scientific instrument into an approachable, high-tech, and globally trusted medical solution.</p>"
+    },
+    {
+      "slug": "uspace-auto-pay-machine",
+      "title": "USPACE Auto Pay Machine",
+      "categories": [
+        "Branding",
+        "Graphic"
+      ],
+      "cover": "/media/uspace-auto-pay-machine/cover.webp",
+      "gallery": [
+        "/media/uspace-auto-pay-machine/01.webp",
+        "/media/uspace-auto-pay-machine/02.webp",
+        "/media/uspace-auto-pay-machine/03.webp",
+        "/media/uspace-auto-pay-machine/04.webp",
+        "/media/uspace-auto-pay-machine/05.webp",
+        "/media/uspace-auto-pay-machine/06.webp",
+        "/media/uspace-auto-pay-machine/07.webp",
+        "/media/uspace-auto-pay-machine/08.webp"
+      ],
+      "zh": "<p>本專案為 USPACE 智慧出行生態系所自主研發的 <strong>智慧自助繳費機全流程產品開發專案</strong>。</p><p>專案經歷完整產品開發週期：從前期市場與場站使用者痛點調查切入，定義出符合各式場站空間需求的多元型態（包含 18 吋大螢幕款、無螢幕與輕量化柱狀等方案）。在設計階段結合人因工程繪製精準的 2D 尺寸結構圖，並進行 3D 外觀建模與極高級感渲染。本產品完美整合了硬幣/紙鈔投遞、信用卡感應、掃碼支付與發票列印模組，打造兼具前瞻科技美學與高效率營運成本的自研硬體設備。</p>",
+      "en": "<p>A end-to-end industrial product development project for the <strong>USPACE Proprietary Smart Payment Kiosk</strong>, built from scratch.</p><p>The project spanned the entire hardware life cycle: starting with market research and field user observation to define key functional modules and form factors. Three distinct models (A, B, and C) were architected to fit varied parking facility footprints—ranging from an 18-inch interactive flagship terminal to sleek, screenless pole-mounted units. Integrating ergonomic human-scale considerations, 2D technical drafting, and high-fidelity 3D CAD modeling/rendering, the final hardware seamlessly houses cash acceptors, NFC readers, QR scanners, and receipt printers in a cohesive, premium brand aesthetic.</p>"
+    },
+    {
+      "slug": "usjp",
+      "title": "USPACE 日本官方網站",
+      "categories": [
+        "Graphic",
+        "Website"
+      ],
+      "cover": "/media/usjp/cover.webp",
+      "gallery": [
+        "/media/usjp/01.webp",
+        "/media/usjp/02.webp"
+      ],
+      "zh": "<p>本專案為台灣智慧共享停車品牌 <strong>USPACE</strong>&nbsp;進軍日本市場打造的 <strong>官方網站 UI/UX 設計與品牌客製化插畫系統</strong>。</p><p>因應日本市場對於新創服務的高度品質需求與信任門檻，設計策略以「親和力」與「清晰直觀」為核心。透過繪製專屬品牌角色與活潑的向量插畫，將複雜的 IoT 智慧地鎖與共享經濟模式轉化為生動易懂的圖像語言；介面上精準梳理「C 端車主預約 App」與「B 端地主空地加盟（JOIN USPACE）」雙向商業模式，打造具備在地化信任感的跨國網頁體驗。</p>",
+      "en": "<p>A tailored website UI/UX redesign and custom illustration system created for <strong>USPACE Japan</strong>, a leading IoT smart parking sharing platform expanding into the Japanese market.</p><p>To bridge the gap between complex smart hardware and user trust in Japan, the visual strategy utilizes <strong>vibrant custom character illustrations and intuitive step-by-step workflows</strong>. The interface effectively balances two distinct user journeys: B2C app engagement for drivers (Search, Book, Pay) and B2B partnership acquisition for property owners (Space Sharing &amp; Monetization). The result is a highly accessible, trustworthy, and converted landing page experience optimized for market entry.</p>",
+      "link": {
+        "url": "https://japan.uspace.city/user/",
+        "label": "USPACE JP 官網"
+      }
+    },
+    {
+      "slug": "xiaowa",
+      "title": "小瓦掃地機器人募資頁",
+      "categories": [
+        "Graphic",
+        "Website"
+      ],
+      "cover": "/media/xiaowa/cover.webp",
+      "gallery": [
+        "/media/xiaowa/01.webp",
+        "/media/xiaowa/02.webp",
+        "/media/xiaowa/03.webp",
+        "/media/xiaowa/04.webp"
+      ],
+      "zh": "<p>本專案為消費性電子熱銷產品「小瓦掃地機器人」所規劃的 <strong>群眾募資與銷售一頁式網頁（Crowdfunding Landing Page）</strong>。</p><p>設計以「高轉化率商業漏斗」為核心，將複雜的硬體規格轉化為直覺的「痛點共鳴 &gt; 功能解方 &gt; 實測情境 &gt;&nbsp;規格對比」視覺動線。採用品牌經典活力橘搭配乾淨明亮的居家風格，結合產品實拍情境圖、動態賣點圖標與清晰的對比表格，打造高説服力且具極佳閱讀體驗的電商銷售頁面。</p>",
+      "en": "<p>A high-converting crowdfunding landing page designed for the <strong>Xiaowa Robot Vacuum Cleaner</strong>.</p><p>Structured around a proven e-commerce sales funnel, the long-form landing page seamlessly guides users from problem identification to product features, real-world usage scenarios, and feature comparison tables. Utilizing a vibrant orange accent alongside clean home-lifestyle imagery, the design optimizes narrative flow and user engagement to boost campaign conversion rates.</p>",
+      "link": {
+        "url": "https://s923446.wixsite.com/xiaowa",
+        "label": "小瓦掃地機器人頁面"
+      }
+    },
+    {
+      "slug": "vaginal-corona",
+      "title": "陰道冠正名懶人包",
+      "categories": [
+        "Graphic"
+      ],
+      "cover": "/media/vaginal-corona/cover.webp",
+      "gallery": [
+        "/media/vaginal-corona/01.webp",
+        "/media/vaginal-corona/02.webp",
+        "/media/vaginal-corona/03.webp",
+        "/media/vaginal-corona/04.webp",
+        "/media/vaginal-corona/05.webp",
+        "/media/vaginal-corona/06.webp",
+        "/media/vaginal-corona/07.webp",
+        "/media/vaginal-corona/08.webp",
+        "/media/vaginal-corona/09.webp",
+        "/media/vaginal-corona/10.webp",
+        "/media/vaginal-corona/11.webp"
+      ],
+      "zh": "<p>本專案為推廣身體自主權與生理衛教正名的社群倡議懶人包設計。</p><p>針對過往帶有迷思與污名化的生理詞彙，本專案透過手繪風格向量插畫與詼諧的情境敘事，將複雜嚴肅的醫學衛教知識轉化為輕鬆有趣的懶人包。設計上巧妙運用「甜甜圈」作為視覺隱喻，並結合放大鏡角色與亮眼配色，成功將敏感的社會議題轉化為具備高傳播力、高親和力且易於被大眾接受的視覺內容。</p>",
+      "en": "<p>An educational social media campaign and information design created to advocate for body positivity and accurate anatomical terminology.</p><p>To tackle a historically sensitive and taboo topic, the design utilizes approachable character illustrations, vibrant color schemes, and playful visual metaphors—such as using diverse donut shapes to explain bodily structures. This lighthearted and insightful approach transforms complex medical facts into compelling, highly shareable social media content that breaks stereotypes and drives public conversation.</p>"
+    },
+    {
+      "slug": "murobox",
+      "title": "MuroBox Photo",
+      "categories": [
+        "Photography"
+      ],
+      "cover": "/media/murobox/cover.webp",
+      "gallery": [
+        "/media/murobox/01.webp",
+        "/media/murobox/02.webp",
+        "/media/murobox/03.webp",
+        "/media/murobox/04.webp",
+        "/media/murobox/05.webp",
+        "/media/murobox/06.webp",
+        "/media/murobox/07.webp",
+        "/media/murobox/08.webp",
+        "/media/murobox/09.webp",
+        "/media/murobox/10.webp",
+        "/media/murobox/11.webp"
+      ],
+      "zh": "<p>本專案為全球首創「App 智慧控制物理音樂盒」品牌 Muro Box 所規劃的 商業產品攝影與情境藝術指導。</p><p>視覺策略以「跨越時代的聲音記憶」為主軸，透過高精度微距打光，精準還原金屬撞針、齒輪機芯與溫潤實木底座的古典機械工藝。同步企劃跨世代的情境敘事——涵蓋「親子互動」、「居家生活放鬆」與「現代工作空間」，將看似冰冷的 App 數位控制技術，轉化為具備濃厚情感溫度與客製化記憶的精品家居視覺資產。</p>",
+      "en": "<p>A comprehensive commercial photography and lifestyle direction project for <strong>Muro Box</strong>, the world’s first smart music box combining classical analog craftsmanship with modern App integration.</p><p>The visual direction bridges traditional mechanical engineering with contemporary smart living. High-contrast close-ups highlight the intricate mechanical cylinders and wooden textures. Meanwhile, curated lifestyle narratives—featuring heartfelt family moments, relaxing home environments, and modern office setups—position Muro Box as both an innovative technology and a sentimental home piece that preserves unique musical memories.</p>"
+    },
+    {
+      "slug": "ucare",
+      "title": "UCARE Car Warranty Photo",
+      "categories": [
+        "Photography"
+      ],
+      "cover": "/media/ucare/cover.webp",
+      "gallery": [
+        "/media/ucare/01.webp",
+        "/media/ucare/02.webp",
+        "/media/ucare/03.webp",
+        "/media/ucare/04.webp",
+        "/media/ucare/05.webp",
+        "/media/ucare/06.webp",
+        "/media/ucare/07.webp",
+        "/media/ucare/08.webp",
+        "/media/ucare/09.webp",
+        "/media/ucare/10.webp",
+        "/media/ucare/11.webp"
+      ],
+      "zh": "<p>本專案為 USPACE 旗下汽車保修品牌「UCARE」所企劃的 <strong>品牌形象與服務情境商業攝影</strong>。</p><p>攝影策略以「透明信賴」與「高質感服務體驗」為核心，翻轉傳統保修廠的既定印象。全系列影像紀錄了從顧客接洽、透明化估價諮詢，到技師團隊運用專業設備進行底盤檢測、輪胎保養與鈑噴修復的完整過程。透過明亮潔淨的現場打光與自然的人際互動捕捉，為 UCARE 建立起兼具科技感、專業技術與親切服務的品牌視覺資產。</p>",
+      "en": "<p>A commercial photoshoot for <strong>UCARE</strong>, the auto maintenance and repair service vertical under the USPACE ecosystem.</p><p>The photographic direction highlights “transparency, trust, and premium customer experience,” modernization the visual identity of traditional auto repair shops. The photo suite captures the entire service touchpoint journey—from initial customer consultations and tablet-based diagnostics to certified technicians performing lift inspections, tire servicing, and body paint touch-ups. With bright, clean studio-style environmental lighting and natural human interactions, the imagery establishes a professional and trustworthy brand tone for marketing campaigns.</p>"
+    },
+    {
+      "slug": "usparking",
+      "title": "USPACE Parking Guide",
+      "categories": [
+        "Branding",
+        "Graphic"
+      ],
+      "cover": "/media/usparking/cover.webp",
+      "gallery": [
+        "/media/usparking/01.webp",
+        "/media/usparking/02.webp",
+        "/media/usparking/03.webp",
+        "/media/usparking/04.webp",
+        "/media/usparking/05.webp",
+        "/media/usparking/06.webp",
+        "/media/usparking/07.webp",
+        "/media/usparking/08.webp",
+        "/media/usparking/09.webp",
+        "/media/usparking/10.webp",
+        "/media/usparking/11.webp",
+        "/media/usparking/12.webp",
+        "/media/usparking/13.webp",
+        "/media/usparking/14.webp",
+        "/media/usparking/15.webp"
+      ],
+      "zh": "<p>本專案為 USPACE 智慧停車場打造的 <strong>大型場站招牌與指標系統模組化規範</strong>。</p><p>為因應跨區域場站快速擴展需求，本規範建立起模組化、高度一致的指標視覺語言。包含出入口立牌、車道指示、警示燈具、繳費與方向引導等各式看板，透過統一的版面架構與色彩系統，提升車主在場站內的識別效率與體驗；同時作為跨單位溝通標準手冊，提供業務洽談、業主確認及施工單位精準對齊，大幅降低溝通成本與施工落差。</p>",
+      "en": "<p>A standardized environmental wayfinding and signage guidelines system designed for <strong>USPACE</strong> smart parking facilities.</p><p>Created to support rapid site expansion, this project establishes a modular design language across all physical touchpoints—including entrance pylons, lane directions, warning lights, and payment guides. By defining strict layout rules and consistent visual hierarchy, the system ensures effortless navigation for drivers while providing a unified technical reference for sales teams, venue partners, and construction vendors to streamline implementation.</p>"
+    },
+    {
+      "slug": "blood-seafood",
+      "title": "拒絕血汗海鮮懶人包",
+      "categories": [
+        "Graphic"
+      ],
+      "cover": "/media/blood-seafood/cover.webp",
+      "gallery": [
+        "/media/blood-seafood/01.webp",
+        "/media/blood-seafood/02.webp",
+        "/media/blood-seafood/03.webp",
+        "/media/blood-seafood/04.webp",
+        "/media/blood-seafood/05.webp",
+        "/media/blood-seafood/06.webp"
+      ],
+      "zh": "<p>本專案為關注遠洋漁業「人權剝削」與「海洋生態破壞」所製作的社會倡議資訊設計。</p><p>專案針對台灣遠洋漁船上的外籍漁工權益、海上奴役現象以及美國「黃牌 warnings」等國際外交與經濟影響進行系統性梳理。設計上採用具故事繪本質感的插畫風格，以深海藍為主調，搭配警示感強烈烈的紅橙色系，將龐雜的國際法規與產業痛點，拆解為四大層面（生態破壞、海上奴役、守法業者衝擊、台灣國際形象），以層次分明、引人深思的視覺語言引發社會關注與公眾倡議。</p>",
+      "en": "<p>A social advocacy campaign designed to raise awareness about forced labor and ecological destruction in the distant-water fishing industry.</p><p>The project breaks down complex international human rights issues—such as the exploitation of migrant fishers and global trade warnings—into an engaging, story-driven information architecture. Utilizing a rich, narrative illustration style with deep oceanic blues and striking warning tones, the design highlights key issues across four main pillars, transforming heavyweight policy and ethical topics into a visually impactful social campaign.</p>"
+    },
+    {
+      "slug": "ic",
+      "title": "IC+ 九暘電子官網",
+      "categories": [
+        "Website"
+      ],
+      "cover": "/media/ic/cover.webp",
+      "gallery": [
+        "/media/ic/01.webp",
+        "/media/ic/02.webp",
+        "/media/ic/03.webp",
+        "/media/ic/04.webp"
+      ],
+      "zh": "<p>本專案為上市公司「九暘電子（IC Plus）」所打造的 <strong>B2B 企業官方網站 UI/UX 設計與資訊架構企劃</strong>。</p><p>因應半導體與 IC 設計領域的專業採購與工程師需求，本專案打破傳統科技公司生硬龐雜的資訊層級，以「極簡、高效、精準檢索」為核心策略。設計上梳理了龐大的產品型號與規格數據，打造直觀的產品對照表與應用領域分類介面；視覺上採用穩重的科技深藍與清晰的層次排版，兼顧上市公司應有的專業信賴感與極佳的使用者體驗（User Experience）。</p>",
+      "en": "<p>A B2B corporate website UI/UX redesign created for <strong>IC Plus Corporation</strong>, a publicly traded semiconductor and IC design company.</p><p>Designed to streamline the technical user journey for engineers and buyers, the visual strategy focuses on <strong>clarity, efficiency, and structured information architecture</strong>. The interface reorganizes extensive product lines and technical datasheets into clean, easily scannable data tables and application-based navigation. Featuring a refined tech-blue palette and precise grid layouts, the website delivers a seamless user experience that reinforces the enterprise’s technological authority and reliability.</p>",
+      "link": {
+        "url": "https://www.icplus.com.tw/",
+        "label": "九暘電子官方網站"
+      }
+    },
+    {
+      "slug": "hualien",
+      "title": "花蓮群眾募資視覺",
+      "categories": [
+        "Graphic"
+      ],
+      "cover": "/media/hualien/cover.webp",
+      "gallery": [
+        "/media/hualien/01.webp",
+        "/media/hualien/02.webp",
+        "/media/hualien/03.webp",
+        "/media/hualien/04.webp",
+        "/media/hualien/05.webp"
+      ],
+      "zh": "<p>本專案為「花蓮群眾集資培育計畫工作坊」所打造的 主視覺設計與全通路宣傳延展。專案旨在協助在地青年、創作者與地方團隊掌握群眾集資的核心技能。視覺策略採用具親和力且活潑的扁平化幾何插畫，將「創意點子（燈泡）」、「地方發芽（幼苗）」與「社群傳播（大聲公）」等抽象觀念圖解化。同步規劃極具系統化的全通路延展——包含實體半開海報、X 展架、社群 1:1 與 16:9 多尺寸 Banner、電子邀請卡及活動手冊，展現活動 VI 與資訊設計感。</p>",
+      "en": "<p>A comprehensive key visual and campaign identity designed for the Hualien Regional Crowdfunding Workshop, aimed at empowering local innovators and entrepreneurs.The visual concept replaces rigid government aesthetics with vibrant, approachable geometric illustrations. Metaphors like lightbulbs (ideas), sprouts (local growth), and megaphones (crowdfunding reach) are seamlessly integrated into a cohesive visual system. The project features extensive asset extensions across digital and physical touchpoints, including posters, X-banners, social media cards ($1080 \\times 1080, 1200 \\times 900$), digital invitations, and event signage.</p>"
+    },
+    {
+      "slug": "tokuyo",
+      "title": "Tokuyo 無重力躺椅",
+      "categories": [
+        "Photography"
+      ],
+      "cover": "/media/tokuyo/cover.webp",
+      "gallery": [
+        "/media/tokuyo/01.webp",
+        "/media/tokuyo/02.webp",
+        "/media/tokuyo/03.webp",
+        "/media/tokuyo/04.webp",
+        "/media/tokuyo/05.webp",
+        "/media/tokuyo/06.webp",
+        "/media/tokuyo/07.webp",
+        "/media/tokuyo/08.webp",
+        "/media/tokuyo/09.webp",
+        "/media/tokuyo/10.webp"
+      ],
+      "zh": "<p>本專案為健康家電領導品牌 tokuyo 旗下的「無重力放鬆躺椅／電動沙發」所規劃的 商業產品攝影與視覺藝術指導。</p><p>視覺策略以「打破傳統按摩椅沉重感，塑造極簡居家舒眠美學」為核心。透過明亮透光的北歐風客廳場景與柔和暖調光影，營造無壓力的放鬆氛圍；同步企劃「全身伸展小憩」、「追劇閱讀」與「居家辦公」等多重情境，結合控制面板與細節質感特寫，將高科技保健家電轉化為提升生活品質的質感家居藝術品。</p>",
+      "en": "<p>A commercial photography and lifestyle direction campaign created for tokuyo, a leading wellness appliance brand, highlighting its Zero-Gravity Recliner Sofa.</p><p>The visual direction shifts away from traditional heavy massage chairs towards modern interior aesthetics. Set in a sunlit, Nordic-inspired living room, the photos showcase the recliner seamlessly blending into home decor. By capturing candid moments—such as stretching out in zero-gravity mode, reading, and cozying up with a blanket—along with close-ups of built-in controls, the imagery effectively communicates both supreme comfort and refined lifestyle value.</p>"
+    },
+    {
+      "slug": "idodan",
+      "title": "Idodan Wristwatch photo",
+      "categories": [
+        "Photography"
+      ],
+      "cover": "/media/idodan/cover.webp",
+      "gallery": [
+        "/media/idodan/01.webp",
+        "/media/idodan/02.webp",
+        "/media/idodan/03.webp",
+        "/media/idodan/04.webp",
+        "/media/idodan/05.webp",
+        "/media/idodan/06.webp",
+        "/media/idodan/07.webp",
+        "/media/idodan/08.webp",
+        "/media/idodan/09.webp",
+        "/media/idodan/10.webp",
+        "/media/idodan/11.webp"
+      ],
+      "zh": "<p>本專案為台灣原創木質腕錶品牌「Idodan」所規劃的 戶外商業產品攝影與風格人像視覺企劃。</p><p>拍攝策略以「回歸自然與時間對話」為主軸，特別選址於自然森林與樹林場景。透過將木質腕錶置於青苔、年輪木樁與天然樹皮上，完美勾勒出原木紋理與手作工藝的溫潤質感；同步企劃文青風格的大地色系模特兒配戴與靜態書寫情境，為品牌打造極具沉浸感、慢活氣息與自然美學的全方位行銷視覺庫。</p>",
+      "en": "<p>An outdoor commercial photography and lifestyle direction project created for Idodan, a brand known for its handcrafted wooden watches.</p><p>Inspired by the connection between craftsmanship and nature, the visual direction locates the product within lush forest environments. Placing the timepieces against mossy tree trunks, weathered stumps, and organic bark highlights the unique wooden textures and artisan details. Paired with soft natural lighting and earth-toned lifestyle portraits, the photo suite creates a serene, artistic story that strongly elevates the brand’s organic identity.</p>"
+    },
+    {
+      "slug": "bf-logo",
+      "title": "貝殼放大 Logo Design",
+      "categories": [
+        "Branding",
+        "Graphic"
+      ],
+      "cover": "/media/bf-logo/cover.webp",
+      "gallery": [
+        "/media/bf-logo/01.webp",
+        "/media/bf-logo/02.webp",
+        "/media/bf-logo/03.webp",
+        "/media/bf-logo/04.webp",
+        "/media/bf-logo/05.webp",
+        "/media/bf-logo/06.webp"
+      ],
+      "zh": "<p>本專案為台灣首屈一指的群眾集資顧問公司「貝殼放大（Backer-Founder）」所進行的 <strong>品牌視覺識別重塑專案（Logo Redesign &amp; Brand Guidelines）</strong>。</p><p>專案以「保留品牌核心記憶，進化數位時代可讀性」為目標。重新梳理原有的貝殼符號，精簡繁複線條並微調黃金比例，提升標誌在數位螢幕（Mobile/Web）與微縮場景下的清晰度。同步規範中英文字體重組（Bold/Black 應用層級）與子品牌擴充架構，讓全新品牌識別更具現代感、科技親和力與國際擴充性。</p>",
+      "en": "<p>A comprehensive visual identity redesign for <strong>Backer-Founder</strong>, Taiwan’s premier crowdfunding consultancy.</p><p>The project optimizes the iconic shell mark for the modern digital era. By refining geometry, reducing line complexity, and adjusting optical balance, the logo achieves enhanced legibility across all screen sizes. The redesign also establishes a scalable brand architecture, detailing typography hierarchy and sub-brand integration for a fresh, professional, and forward-looking identity.</p>"
+    },
+    {
+      "slug": "ino",
+      "title": "Ino 肉肉卷按摩器",
+      "categories": [
+        "Photography"
+      ],
+      "cover": "/media/ino/cover.webp",
+      "gallery": [
+        "/media/ino/01.webp",
+        "/media/ino/02.webp",
+        "/media/ino/03.webp",
+        "/media/ino/04.webp",
+        "/media/ino/05.webp",
+        "/media/ino/06.webp",
+        "/media/ino/07.webp",
+        "/media/ino/08.webp",
+        "/media/ino/09.webp",
+        "/media/ino/10.webp",
+        "/media/ino/11.webp"
+      ],
+      "zh": "<p>本專案為個人美容美體家電「肉肉卷按摩器」所規劃的 商業視覺企劃、產品靜物與情境人像攝影。</p><p>拍攝策略聚焦於「解決美體痛點」與「打造儀式感生活」。透過模特兒於臉部輪廓、手臂、肩頸與腿部的實測特寫，直觀展現產品的多功能按摩頭與舒壓功效；同步企劃「高壓職場辦公室」與「溫馨居家 Self-care 時光」兩大生活情境，結合精緻的產品靜物擺設，為品牌建立起兼具實用導向與時尚生活質感的全方位廣告素材庫。</p>",
+      "en": "<p>A commercial photo shoot and visual marketing campaign designed for a handheld personal body &amp; face massager.</p><p>The visual strategy bridges functional demonstation with aspirational lifestyle storytelling. High-definition close-ups showcase targeted application areas—including face contouring, shoulder relief, and leg massage—clearly communicating the product’s versatility. By juxtaposing sleek office scenarios with relaxing home environments, the imagery positions the device as an essential daily self-care companion, delivering high-converting assets for e-commerce and digital marketing.</p>"
+    },
+    {
+      "slug": "helix2h-logo",
+      "title": "Helix2h Logo Design",
+      "categories": [
+        "Branding",
+        "Graphic"
+      ],
+      "cover": "/media/helix2h-logo/cover.webp",
+      "gallery": [
+        "/media/helix2h-logo/01.webp",
+        "/media/helix2h-logo/02.webp",
+        "/media/helix2h-logo/03.webp",
+        "/media/helix2h-logo/04.webp",
+        "/media/helix2h-logo/05.webp",
+        "/media/helix2h-logo/06.webp",
+        "/media/helix2h-logo/07.webp",
+        "/media/helix2h-logo/08.webp"
+      ],
+      "zh": "<p>本專案為生醫基因檢測品牌「華生智慧科技（HELIX2h）」量身打造的品牌視覺識別系統（VIS）。設計以 DNA 雙螺旋結構（Helix）為視覺核心，透過心智圖（Mind Map）發想與元素拆解，將基因結構、數據技術與生命健康的概念重新收斂與抽象化。</p><p>專案不僅完成核心 Logo 設計，更制定了嚴謹的字體規範（Typeface）、標準色系統（Color Palette）與多場景組合應用（Layout System），成功塑造出兼具<strong>嚴謹科技感、生醫專業度與現代簡約</strong>的品牌形象。</p>",
+      "en": "<p>A comprehensive Visual Identity System (VIS) designed for <strong>HELIX2h</strong>, a biotechnology company specializing in genetic testing. Inspired by the DNA double helix structure, the project translates complex biotech concepts into a modern, minimalist brand icon.</p><p>The presentation covers the full creative process—from initial mind mapping, conceptual drafting, typography selection, to complete brand guidelines and layout variations across light and dark backgrounds.</p>"
+    },
+    {
+      "slug": "uc",
+      "title": "ULTRA COATING Photo",
+      "categories": [
+        "Photography"
+      ],
+      "cover": "/media/uc/cover.webp",
+      "gallery": [
+        "/media/uc/01.webp",
+        "/media/uc/02.webp",
+        "/media/uc/03.webp",
+        "/media/uc/04.webp",
+        "/media/uc/05.webp",
+        "/media/uc/06.webp",
+        "/media/uc/07.webp",
+        "/media/uc/08.webp",
+        "/media/uc/09.webp",
+        "/media/uc/10.webp",
+        "/media/uc/11.webp",
+        "/media/uc/12.webp",
+        "/media/uc/13.webp",
+        "/media/uc/14.webp"
+      ],
+      "zh": "<p>本專案為 USPACE 旗下汽車鍍膜品牌「Ultra Coating」所企劃的 <strong>商業視覺與職人施工攝影</strong>。</p><p>拍攝策略聚焦於「極致工藝」與「專業信任感」。全系列影像完整紀錄了頂級鍍膜與 PPF 漆面保護膜的標準施工流程——從車身精密洗車、水霧沖洗、漆面拋光修復，到保護膜的刮平貼合與細節修邊。運用高對比的線條光影襯托車身漆面光澤與撥水效果，同時捕捉技師專注的手部特寫，為品牌建立起具備高端質感與職人精神的宣傳影像庫。</p>",
+      "en": "<p>A commercial photo shoot designed for <strong>Ultra Coating</strong>, an automotive detailing and protective coating service under the USPACE ecosystem.</p><p>The visual direction emphasizes precision, premium craftsmanship, and professional trust. The image suite documents the full end-to-end service workflow—spanning meticulous pre-wash, high-pressure rinsing, paint correction polishing, and PPF (Paint Protection Film) application. Utilizing high-contrast studio lighting to highlight glossy paint reflections and water-beading effects, the photography elevates the brand’s technical expertise for digital marketing and campaign assets.</p>"
+    },
+    {
+      "slug": "jpbc",
+      "title": "USPACE JP 名片",
+      "categories": [
+        "Branding"
+      ],
+      "cover": "/media/jpbc/cover.webp",
+      "gallery": [
+        "/media/jpbc/01.webp",
+        "/media/jpbc/02.webp",
+        "/media/jpbc/03.webp",
+        "/media/jpbc/04.webp",
+        "/media/jpbc/05.webp"
+      ],
+      "zh": "<p>本專案為共享智慧出行品牌「USPACE」日本分部所使用的名片系統設計。</p><p>設計針對日本商務市場注重「嚴謹秩序」與「專業信賴」的文化特性，建立「極致黑（Black）」與「純粹白（White）」雙色名片體系。排版上融合日英文資訊的網格架構（Grid System），精準呈現株式會社名稱、職銜與聯絡細節，並透過極簡的幾何線條與現代留白，展現 USPACE 作為跨國科技品牌高雅、前瞻且值得信賴的商業形象。</p>",
+      "en": "<p>A corporate business card and identity extension designed for USPACE as part of its brand expansion into the Japanese market.</p><p>Tailored specifically to the refined corporate etiquette of Japan, the design features a dual colorway—Sleek Black and Minimalist White. Utilizing a structured grid system, the layout effortlessly balances bilingual information (Japanese &amp; English) with ample white space. The result is a clean, modern, and highly professional touchpoint that reinforces USPACE’s credibility as an innovative global mobility platform.</p>"
+    },
+    {
+      "slug": "minfort",
+      "title": "Minfort Min7 Bluetooth Photo",
+      "categories": [
+        "Photography"
+      ],
+      "cover": "/media/minfort/cover.webp",
+      "gallery": [
+        "/media/minfort/01.webp",
+        "/media/minfort/02.webp",
+        "/media/minfort/03.webp",
+        "/media/minfort/04.webp",
+        "/media/minfort/05.webp",
+        "/media/minfort/06.webp",
+        "/media/minfort/07.webp",
+        "/media/minfort/08.webp",
+        "/media/minfort/09.webp"
+      ],
+      "zh": "<p>本專案為台灣手工音響品牌 Minfort 旗下的旗艦產品「MIN7 實木藍牙音響」所規劃的 商業產品攝影與情境藝術指導。</p><p>攝影策略以「工藝美學融入日常生活」為主軸，透過暖調光影精準勾勒手工實木的溫潤紋理與金屬單體細節。同步企劃「現代創作者工作桌」與「自然綠意家居」雙重情境，將精品音響轉化為提升空間質感的家居藝術品，為集資推廣與品牌官網建立強烈且具溫度的視覺印象。</p>",
+      "en": "<p>A commercial photography and lifestyle direction project for Minfort MIN7, a premium handcrafted wooden Bluetooth speaker.</p><p>The visual direction centers on merging artisanal craft with modern lifestyle interior design. By capturing the natural wood grain textures under warm ambient light, the photography highlights the speaker’s acoustic craftsmanship. Curated scenarios—ranging from sleek iMac workspaces to vibrant, plant-filled living areas—position the MIN7 not just as an audio device, but as a statement piece for sophisticated home decor.</p>"
+    },
+    {
+      "slug": "citizen-judge",
+      "title": "全民法官懶人包",
+      "categories": [
+        "Graphic"
+      ],
+      "cover": "/media/citizen-judge/cover.webp",
+      "gallery": [
+        "/media/citizen-judge/01.webp",
+        "/media/citizen-judge/02.webp",
+        "/media/citizen-judge/03.webp",
+        "/media/citizen-judge/04.webp",
+        "/media/citizen-judge/05.webp",
+        "/media/citizen-judge/06.webp"
+      ],
+      "zh": "<p>本專案為推廣法律普及知識所規劃的 <strong>社群多圖懶人包（Social Media Carousel）</strong> 視覺設計。以「大法庭制度」為核心議題，將生硬嚴肅的司法改革內容，轉化為親和力極高且具幽默感的圖像與插畫。透過首頁吸睛標題、問題引導、視覺對比與卡片式資訊排版，大幅降低大眾閱讀門檻，提升社群傳播力與互動觸及率。</p>",
+      "en": "<p>An educational social media carousel designed to translate complex legal topics—specifically Taiwan’s Grand Bench system—into digestible, engaging visual content. By integrating witty typography, custom vector illustrations, and structured information architecture, the series lowers reading barriers, turning dense policy information into an approachable and shareable social media asset.</p>"
+    },
+    {
+      "slug": "phrozen",
+      "title": "Phrozen 3d Printer Photo",
+      "categories": [
+        "Photography"
+      ],
+      "cover": "/media/phrozen/cover.webp",
+      "gallery": [
+        "/media/phrozen/01.webp",
+        "/media/phrozen/02.webp",
+        "/media/phrozen/03.webp",
+        "/media/phrozen/04.webp",
+        "/media/phrozen/05.webp",
+        "/media/phrozen/06.webp",
+        "/media/phrozen/07.webp",
+        "/media/phrozen/08.webp",
+        "/media/phrozen/09.webp"
+      ],
+      "zh": "<p>本專案為台灣知名光固化 3D 印表機品牌「Phrozen 普羅森」所規劃的 商業產品攝影與情境藝術指導。為打破傳統科技硬體設備冰冷、專業門檻高昂的刻板印象，攝影策略採取「高精度細節, 多元應用情境」雙線並行。透過打光掌控突顯小丑頭雕與齒研牙模的極致微米級細節；同步企劃「客廳家庭娛樂」、「桌遊同樂」以及「職人模型工作室」等實用場景，精準連結原型師、創作者與一般家庭用戶，成功建立起兼具高科技專業度與生活感親和力的品牌視覺體系。</p>",
+      "en": "<p>A comprehensive commercial photography and visual direction project for Phrozen, a leading resin 3D printer brand.</p><p>The project strategy bridges precision engineering with everyday usability. High-contrast close-ups highlight the printer’s ultra-fine resolution on detailed figure sculpts and dental models. Simultaneously, curated lifestyle setups—ranging from family tabletop gaming scenes to immersive maker studios—humanize the technology. This multi-faceted visual approach effectively resonates with professional sculptors, dental labs, and hobbyists alike.</p>"
+    },
+    {
+      "slug": "ttri",
+      "title": "高間距織品懶人包",
+      "categories": [
+        "Graphic"
+      ],
+      "cover": "/media/ttri/cover.webp",
+      "gallery": [
+        "/media/ttri/01.webp",
+        "/media/ttri/02.webp",
+        "/media/ttri/03.webp",
+        "/media/ttri/04.webp",
+        "/media/ttri/05.webp"
+      ],
+      "zh": "<p>本專案為紡織產業綜合研究所（TTRI）所進行的 產業技術資訊圖表與品牌倡議視覺設計。</p><p>專案針對艱深的 B2B 技術——「高間距織物（Spacer Fabric）」技術，以極簡現代風格的手繪插畫進行重新梳理。設計上拆解了複雜的微觀織物結構剖面圖，並具象化其在「單人立槳（SUP）、充氣浮橋、高噸位千斤頂」等多種極限情境下的創新應用。同步為其 R&amp;D 100 大獎與「口罩國家隊」國家級倡議製作主題視覺，將冰冷的產業研發成果轉化為兼具專業質感、科普親和力與社會影響力的視覺資產。</p>",
+      "en": "<p>A comprehensive industrial infographic and technical branding project for the Taiwan Textile Research Institute (TTRI).</p><p>The project focuses on illustrating and simplifying complex B2B textile technologies, specifically advanced spacer fabric structures. By translating technical specifications—such as R&amp;D 100 award-winning DIFA structure analysis and varied applications in SUP boards, pneumatic jacks, and bridges—into intuitive vector diagrams and lifestyle illustrations, the design transforms a specialized subject into an approachable and informative visual narrative. The project also included strategic branding and patriotic illustrations for the national ‘mask team’ campaign, strengthening TTRI’s social impact and visibility.</p>"
+    },
+    {
+      "slug": "pillow",
+      "title": "LOVEFU Pillow Photo",
+      "categories": [
+        "Photography"
+      ],
+      "cover": "/media/pillow/cover.webp",
+      "gallery": [
+        "/media/pillow/01.webp",
+        "/media/pillow/02.webp",
+        "/media/pillow/03.webp",
+        "/media/pillow/04.webp",
+        "/media/pillow/05.webp",
+        "/media/pillow/06.webp",
+        "/media/pillow/07.webp",
+        "/media/pillow/08.webp",
+        "/media/pillow/09.webp",
+        "/media/pillow/10.webp"
+      ],
+      "zh": "<p>本專案為寢具品牌「樂眠枕」所規劃的 商業產品情境攝影與視覺藝術指導。</p><p>專案以「觸覺視覺化」為核心策略，透過自然光影與微距特寫，捕捉手壓下陷的彈性弧度與布料織紋，直觀呈現枕頭的柔軟舒適度與人體工學支撐力。同步企劃多款居家放鬆情境——包含晨起伸展、床邊閱讀與深層睡眠姿態，以柔和清透的色調打造具沉浸感的「居家舒眠美學」，有效提升電商落地頁與品牌宣傳的質感與轉化率。</p>",
+      "en": "<p>A commercial photography and visual direction project created for LoveSleep Ergonomic Pillow, focusing on softness, comfort, and relaxed home living.</p><p>The visual strategy centers on translating tactile sensations into graphic imagery. Close-up shots capture the pillow’s material texture and memory-foam responsiveness under pressure. Complemented by natural daylight and cozy, candid lifestyle scenes—such as morning stretches and relaxed reading—the photo suite establishes an inviting, tranquil ambiance that elevates the brand’s e-commerce and marketing touchpoints.</p>"
+    },
+    {
+      "slug": "helix2h-social-post",
+      "title": "Helix2h Social Post",
+      "categories": [
+        "Graphic"
+      ],
+      "cover": "/media/helix2h-social-post/cover.webp",
+      "gallery": [
+        "/media/helix2h-social-post/01.webp",
+        "/media/helix2h-social-post/02.webp",
+        "/media/helix2h-social-post/03.webp",
+        "/media/helix2h-social-post/04.webp",
+        "/media/helix2h-social-post/05.webp",
+        "/media/helix2h-social-post/06.webp",
+        "/media/helix2h-social-post/07.webp",
+        "/media/helix2h-social-post/08.webp",
+        "/media/helix2h-social-post/09.webp"
+      ],
+      "zh": "<p>本專案為生醫品牌「華生智慧科技（HELIX2h）」所規劃的 <strong>數位行銷與社群內容視覺設計</strong>。</p><p>針對 Facebook 粉絲專頁與數位廣告，將艱深的基因科學、慢性病防範（脂肪肝、過敏、得舒飲食、近視等）及趣味話題（星座運勢）轉化為高度視覺化的科普圖文。設計以品牌專屬 IP 吉祥物貫穿整體風格，運用鮮明繽紛的配色、趣味插畫與清晰的文字編排，大幅提升社群互動率與品牌親和力。</p>",
+      "en": "<p>A series of digital branding and social media visuals crafted for <strong>HELIX2h</strong>‘s marketing campaigns.</p><p>To bridge the gap between complex genetic science and the general public, the campaign translates health topics—such as fatty liver, allergies, DASH diet, and horoscope trends—into engaging social posts. By utilizing the brand’s custom mascot, vibrant color schemes, and expressive typography, the visuals successfully increase user engagement while reinforcing a friendly, modern biotech image.</p>"
+    },
+    {
+      "slug": "stunner",
+      "title": "Bistro Stunner Photo",
+      "categories": [
+        "Photography"
+      ],
+      "cover": "/media/stunner/cover.webp",
+      "gallery": [
+        "/media/stunner/01.webp",
+        "/media/stunner/02.webp",
+        "/media/stunner/03.webp",
+        "/media/stunner/04.webp",
+        "/media/stunner/05.webp",
+        "/media/stunner/06.webp",
+        "/media/stunner/07.webp",
+        "/media/stunner/08.webp",
+        "/media/stunner/09.webp",
+        "/media/stunner/10.webp",
+        "/media/stunner/11.webp",
+        "/media/stunner/12.webp",
+        "/media/stunner/13.webp"
+      ],
+      "zh": "<p>本專案為獨立餐酒館（Bistro）量身打造全套視覺攝影企劃，範疇涵蓋品牌招牌料理與特色酒水。影像以不同視角多元呈現，結合沉穩溫暖的木質基調與層次豐富的自然側光，襯托出食材的鮮美質感與料理的澎湃豐盛感。整體風格兼具高質感與歡聚氛圍，專為菜單設計、品牌官網及社群行銷所規劃。</p><blockquote><p></p></blockquote><p></p>",
+      "en": "<p>A commercial food &amp; beverage photography series crafted for a local bistro. Utilizing top-down flatlay compositions, rich color tones, and warm ambient lighting, the visuals highlight the textures, vibrant colors, and convivial atmosphere of the culinary offerings. Designed specifically for menu design, website showcases, and social media campaigns.</p>"
+    },
+    {
+      "slug": "uspace-video",
+      "title": "USPACE Intro Video",
+      "categories": [
+        "Graphic",
+        "Motion"
+      ],
+      "cover": "/media/uspace-video/cover.webp",
+      "gallery": [
+        "/media/uspace-video/01.webp",
+        "/media/uspace-video/02.webp"
+      ],
+      "zh": "<p>本專案為共享停車品牌「USPACE 」所製作的官方 2D 動態宣傳影片（Motion Graphics Commercial）。</p><p>全片使用 Adobe After Effects 進行動畫編排與節奏掌控，以「找不到停車位嗎？」作為開頭痛點引導。影片結合手持智慧型手機的 UI 介面操作動態、向量插畫元素、智慧地鎖與車牌辨識情境，並以「時鐘與存錢筒」直觀視覺化「以分計費」的省錢優勢。在短短 20 秒之內，以高節奏感的視覺轉換，建立起科技、高效且極具吸引力的品牌廣告。</p>",
+      "en": "<p>A high-energy 2D Motion Graphics commercial created using Adobe After Effects for <strong>USPACE</strong>, a smart parking app.</p><p>The video tackles a common driver pain point—”Can’t find a parking spot?”—and introduces USPACE’s key features within 20 seconds. Through sleek UI motion design, custom vector illustrations, and intuitive visual metaphors (like clocks and piggy banks for minute-based billing), the animation delivers a concise, visually compelling promo that drives app downloads.</p>",
+      "link": {
+        "url": "https://www.youtube.com/watch?v=sBxd3HgS8-o",
+        "label": "在 YouTube 觀看"
+      }
+    },
+    {
+      "slug": "helix2h-box",
+      "title": "Helix2h Box Design",
+      "categories": [
+        "Branding",
+        "Graphic"
+      ],
+      "cover": "/media/helix2h-box/cover.webp",
+      "gallery": [
+        "/media/helix2h-box/01.webp",
+        "/media/helix2h-box/02.webp",
+        "/media/helix2h-box/03.webp",
+        "/media/helix2h-box/04.webp",
+        "/media/helix2h-box/05.webp",
+        "/media/helix2h-box/06.webp"
+      ],
+      "zh": "<p>本專案為 Helix2h 華生基因檢測套組所打造的 <strong>系列化產品包裝與刀模結構設計</strong>。</p><p>針對「防癌、阿茲海默、減重、綜合」等不同檢測功能，運用活潑色彩<strong>與</strong>原創人物角色插畫進行清晰的產品線區隔。包裝設計兼具印刷刀模展開圖與 3D 結構呈現，透過乾淨親和的插畫風格，降低醫療檢測產品的冰冷距離感，為使用者創造極具儀式感且安心的開箱體驗。</p>",
+      "en": "<p>A packaging design system for a DTC (Direct-to-Consumer) genetic testing kit series.</p><p>The project categorizes complex health testings—such as Cancer Prevention, Alzheimer’s Risk, Weight Management, and Comprehensive Health—into a unified packaging framework using a tailored <strong>Color-Coding System</strong> and <strong>character illustrations</strong>. Covering everything from dieline preparation to 3D packaging rendering, the design transforms a medical product into an approachable, trustworthy, and engaging consumer experience.</p>"
+    },
+    {
+      "slug": "nintendo",
+      "title": "Consoles of Nintendo",
+      "categories": [
+        "Graphic"
+      ],
+      "cover": "/media/nintendo/cover.webp",
+      "gallery": [
+        "/media/nintendo/01.webp",
+        "/media/nintendo/02.webp",
+        "/media/nintendo/03.webp"
+      ],
+      "zh": "<p>本專案為出於對資深玩家情懷與電玩文化的致敬，所獨立創作的 <strong>個人自主設計專案</strong>。</p><p>以 2.5D 等角軸線風格（Isometric Style），精心繪製了任天堂自 1983 年至今的歷代核心家用與混合型主機（FC 紅白機、SFC、N64、GameCube、Wii、Wii U 至 Switch）。作品結合黃藍強烈對比的幾何分割排版，搭配精準的線稿結構與歷史資訊介紹，將 40 年的主機演進史轉化為兼具復古美學與現代視覺張力的資訊圖表海報。</p>",
+      "en": "<p>A passion-driven side project celebrating the rich hardware history of Nintendo.</p><p>Crafted in a detailed <strong>2.5D Isometric Vector Style</strong>, this project illustrates Nintendo’s iconic home consoles—from the 1983 Famicom (NES), Super Famicom, N64, GameCube, Wii, Wii U, to the Nintendo Switch. Featuring a striking diagonal grid with contrasting blue and yellow hues, the design seamlessly bridges retro gaming nostalgia with modern infographic aesthetics.</p>"
+    },
+    {
+      "slug": "sunnyfounder",
+      "title": "陽光伏特家 Logo Design",
+      "categories": [
+        "Branding",
+        "Graphic"
+      ],
+      "cover": "/media/sunnyfounder/cover.webp",
+      "gallery": [
+        "/media/sunnyfounder/01.webp",
+        "/media/sunnyfounder/02.webp",
+        "/media/sunnyfounder/03.webp",
+        "/media/sunnyfounder/04.webp",
+        "/media/sunnyfounder/05.webp",
+        "/media/sunnyfounder/06.webp",
+        "/media/sunnyfounder/07.webp",
+        "/media/sunnyfounder/08.webp"
+      ],
+      "zh": "<p>本專案為台灣首創全民綠能平台「陽光伏特家（Sunnyfounder）」所設計的品牌視覺識別系統（VIS）。</p><p>標誌設計以 <strong>「房子（家的溫暖）、太陽（潔淨能源）與閃電（伏特/電能）」</strong> 三大核心元素進行幾何融合。視覺語言採用充滿生機與能量的陽光黃（Sunny Yellow），搭配俐落穩重的幾何結構與字體規範，精準傳達「讓綠能參與走入日常生活」的品牌使命。專案涵蓋完整的標誌網格圖、標準字、色彩規範與多元情境應用指南，建立起專業、親和且具前瞻性的永續科技形象。</p>",
+      "en": "<p>A comprehensive Visual Identity System (VIS) designed for <strong>Sunnyfounder</strong>, Taiwan’s leading green energy sharing platform.</p><p>The brand mark seamlessly combines three symbolic elements: a <strong>House</strong> (home &amp; warmth), the <strong>Sun</strong> (clean energy), and a <strong>Lightning Bolt</strong> (power &amp; innovation). Paired with an energetic Sunny Yellow color scheme and precise typography guidelines, the identity communicates accessibility, sustainability, and trust, establishing a clear and reliable visual foundation for the renewable energy brand.</p>"
+    },
+    {
+      "slug": "helix2h-icon-system",
+      "title": "Helix2h Icon System",
+      "categories": [
+        "Branding",
+        "Graphic"
+      ],
+      "cover": "/media/helix2h-icon-system/cover.webp",
+      "gallery": [
+        "/media/helix2h-icon-system/01.webp",
+        "/media/helix2h-icon-system/02.webp",
+        "/media/helix2h-icon-system/03.webp",
+        "/media/helix2h-icon-system/04.webp",
+        "/media/helix2h-icon-system/05.webp"
+      ],
+      "zh": "<p>本專案為基因檢測品牌「華生智慧科技（HELIX2h）」所建構的 <strong>系統化圖標庫（Iconography System）</strong>。針對基因檢測報告、UI 介面與健康評估系統中龐大的生醫數據，設計了數十款涵蓋「器官、疾病風險、飲食營養、生活型態與檢測流程」的專屬圖標。</p><p>視覺語彙延續品牌 VIS 的**「科技藍與極簡深灰」**雙色組合，採用一致的線條粗細（Stroke Weight）、幾何圓角與雙色點綴（Duo-tone Highlight）。不僅大幅提升了檢測報告的閱讀體驗，更建立起可跨平台（Web / App / 印刷報告）延伸的視覺資產。</p>",
+      "en": "<p>A comprehensive custom icon system crafted for <strong>HELIX2h</strong>‘s genetic testing reports and digital platforms. To simplify complex biomedical data, this system categorizes key metrics into intuitive visual symbols including internal organs, health risks, nutrition, lifestyle habits, and lab procedures.</p><p>Designed with consistent stroke weight, uniform corner radius, and the brand’s signature duo-tone palette (BioTech Blue &amp; Charcoal Gray), the icon collection ensures optimal legibility and visual coherence across both print reports and UI/UX digital interfaces.</p>"
+    },
+    {
+      "slug": "ticwatch",
+      "title": "Ticwatch 募資專案",
+      "categories": [
+        "Photography",
+        "Website"
+      ],
+      "cover": "/media/ticwatch/cover.webp",
+      "gallery": [
+        "/media/ticwatch/01.webp",
+        "/media/ticwatch/02.webp",
+        "/media/ticwatch/03.webp",
+        "/media/ticwatch/04.webp",
+        "/media/ticwatch/05.webp",
+        "/media/ticwatch/06.webp",
+        "/media/ticwatch/07.webp"
+      ],
+      "zh": "<p>本專案為 智慧手錶 TicWatch 登陸集資平台所規劃的 <strong>全方位品牌整合行銷視覺</strong>。</p><p>專案涵蓋「產品情境攝影企劃」與「集資銷售頁面」。為突顯 TicWatch 跨足運動、時尚、街頭與日常生活的多功能定位，親自執行靜物平鋪（Flat Lay）美術擺拍，透過色彩語言與隨身配件（OOTD）建立多元場景。攝影成果完美融入集資網頁視覺，大幅提升產品的質感與消費者代入感。</p>",
+      "en": "<p>A comprehensive visual identity and crowdfunding marketing campaign designed for <strong>TicWatch</strong>.</p><p>The project combines <strong>Commercial Flat Lay Photography</strong> with a high-converting <strong>Crowdfunding Landing Page</strong>. To highlight the smartwatch’s versatility—spanning sports, urban fashion, and everyday lifestyle—curated lifestyle scenes were photographed using tailored color themes and personal accessories. The resulting visual assets seamlessly integrate into the web layout, creating a cohesive and relatable user experience that drives campaign engagement.</p>",
+      "link": {
+        "url": "https://s923446.wixsite.com/ticwatchse",
+        "label": "Ticwatch 募資頁面"
+      }
+    },
+    {
+      "slug": "iaps",
+      "title": "IAPS Wall Design",
+      "categories": [
+        "Graphic"
+      ],
+      "cover": "/media/iaps/cover.webp",
+      "gallery": [
+        "/media/iaps/01.webp",
+        "/media/iaps/02.webp",
+        "/media/iaps/03.webp",
+        "/media/iaps/04.webp",
+        "/media/iaps/05.webp",
+        "/media/iaps/06.webp"
+      ],
+      "zh": "<p>本專案為國立陽明交通大學產業加速器（IAPS）所規劃的大型展覽牆面與辦公空間視覺設計（Environmental Graphic Design）。視覺概念以 <strong>「國際機場（Airport Ecosystem）」</strong> 為核心暗喻，將新創團隊的培育歷程轉化為「登機、跑道起飛、跨國航線與抵達」的旅程。</p><p>全圖以品牌經典藍黃為主調，透過精密的極簡向量線稿（Isometric/Vector Line Art），將加速器四大計畫流程、合作夥伴矩陣，以及孵化中與畢業的傑出新創團隊標誌（Logo Grid）巧妙整合於大尺度牆面中，兼具資訊導覽功能與強烈的空間品牌識別度。</p>",
+      "en": "<p>An environmental graphic and information design wall created for IAPS (Industrial Accelerator &amp; Incubation Center). Conceptualized around an <strong>“International Airport Ecosystem,”</strong> the design metaphors the startup journey to flight departures, runways, and global destinations.</p><p>Utilizing a clean vector line art style with IAPS’s signature blue and yellow palette, the mural seamlessly integrates acceleration programs, corporate partner ecosystems, and alumnus startup portfolios into a cohesive, large-scale visual landmark.</p>"
+    },
+    {
+      "slug": "bf-member",
+      "title": "貝殼似顏繪",
+      "categories": [
+        "Branding",
+        "Graphic"
+      ],
+      "cover": "/media/bf-member/cover.webp",
+      "gallery": [
+        "/media/bf-member/01.webp",
+        "/media/bf-member/02.webp",
+        "/media/bf-member/03.webp"
+      ],
+      "zh": "<p>本專案為任職於「貝殼放大」期間，為全體團隊成員量身打造的 Q 版人像插畫與生日祝福卡片系統（Team Character Design）。</p><p>專案以活潑亮眼的品牌紫、黃為主色調，結合像素風格（Pixel Style）字體與扁平化插畫語彙，精準抓取數十位夥伴的髮型、眼鏡、個人配件與神韻特質（甚至包含辦公室寵物）。這套頭像不僅應用於團隊生日祝福小卡，更成為凝聚內部企業文化、展現團隊活力的視覺資產。</p>",
+      "en": "<p>A passion-driven character design project created during my time at Backer-Founder, where I illustrated customized vector avatars and birthday cards for all team members.</p><p>Designed using a vibrant brand-color palette (purple &amp; yellow) and retro pixel typography, each avatar encapsulates unique personal features, hairstyles, accessories, and distinct expressions—even incorporating office pets. This system was used for internal birthday greeting cards and culture-building, showcasing a warm, collaborative, and creative workplace environment.</p>"
+    },
+    {
+      "slug": "toptier",
+      "title": "Toptier Chopping Board Photo",
+      "categories": [
+        "Photography"
+      ],
+      "cover": "/media/toptier/cover.webp",
+      "gallery": [
+        "/media/toptier/01.webp",
+        "/media/toptier/02.webp",
+        "/media/toptier/03.webp",
+        "/media/toptier/04.webp",
+        "/media/toptier/05.webp",
+        "/media/toptier/06.webp",
+        "/media/toptier/07.webp",
+        "/media/toptier/08.webp",
+        "/media/toptier/09.webp",
+        "/media/toptier/10.webp",
+        "/media/toptier/11.webp",
+        "/media/toptier/12.webp",
+        "/media/toptier/13.webp",
+        "/media/toptier/14.webp"
+      ],
+      "zh": "<p>本專案為預計上架 Amazon（亞馬遜）平台的廚房砧板商業視覺企劃。視覺策略專注於 <strong>「電商高轉換率」</strong>，結合白底產品去背圖（White Background Product Photography）與溫暖高質感的自然光生活情境照（Lifestyle Photography）。透過拍攝備料動作，直觀呈現砧板的 <strong>防滑矽膠邊角、溢流溝槽與大面積備料空間</strong>，建立消費者對產品品質與耐用度的信任感。</p>",
+      "en": "<p>A commercial product and lifestyle photography series created for an Amazon kitchenware brand. Designed to drive conversion, the visual strategy combines clean hero shots with warm, relatable lifestyle photography. The imagery emphasizes functional product features—such as non-slip corners, juice grooves, and premium wood texture—to build consumer trust and optimize the e-commerce shopping experience.</p>"
+    },
+    {
+      "slug": "trolls",
+      "title": "Trolls Music Stars Photo",
+      "categories": [
+        "Photography"
+      ],
+      "cover": "/media/trolls/cover.webp",
+      "gallery": [
+        "/media/trolls/01.webp",
+        "/media/trolls/02.webp",
+        "/media/trolls/03.webp",
+        "/media/trolls/04.webp",
+        "/media/trolls/05.webp",
+        "/media/trolls/06.webp",
+        "/media/trolls/07.webp",
+        "/media/trolls/08.webp",
+        "/media/trolls/09.webp",
+        "/media/trolls/10.webp",
+        "/media/trolls/11.webp",
+        "/media/trolls/12.webp",
+        "/media/trolls/13.webp",
+        "/media/trolls/14.webp"
+      ],
+      "zh": "<p>本專案為結合手機 App 互動的智慧絨毛玩具（Smart Plush Toy）進行全套商業攝影企劃。視覺策略著重於 <strong>「實體玩偶與數位介面（App UI）的自然互動」</strong>。企劃涵蓋室內棚拍（Studio Lifestyle）與戶外攜帶情境（Outdoor On-the-Go），精準呈現玩具在居家陪護、AR 互動辨識以及戶外攜帶等多元使用場景，完美融合產品的可愛質感與科技互動感。</p>",
+      "en": "<p>A commercial photography campaign for an App-connected interactive plush toy. The project highlights the seamless integration between the physical product and digital mobile experience. Through studio lifestyle setups and outdoor photography, the visuals capture real-time interaction, mobile AR scanning, and portable playfulness, presenting the toy as an engaging, everyday companion for modern users.</p>"
+    },
+    {
+      "slug": "cutter",
+      "title": "Cutting-Cutter-Rolling Photo",
+      "categories": [
+        "Photography"
+      ],
+      "cover": "/media/cutter/cover.webp",
+      "gallery": [
+        "/media/cutter/01.webp",
+        "/media/cutter/02.webp",
+        "/media/cutter/03.webp",
+        "/media/cutter/04.webp",
+        "/media/cutter/05.webp"
+      ],
+      "zh": "<p>本專案為「滾刀筆」產品的情境攝影與視覺創作系列。透過捕捉不同使用者（包含兒童與手作愛好者）的真實操作姿態，呈現產品在<strong>安全裁切、順暢轉向與直覺握持</strong>上的設計優勢。影像風格以明亮、乾淨且具生活感（Lifestyle）的色調為主軸，強調工具融入日常手作與創意學習的親和力。</p>",
+      "en": "<p>This photography series showcases the real-world application and ergonomic performance of the <strong>Rolling Cutter Pen</strong>. Through clean lighting and natural storytelling, the visuals emphasize safety, intuitive grip, and smooth cutting precision across age groups, positioning the product as an essential tool for everyday craft and creative work.</p>"
+    },
+    {
+      "slug": "landmarks",
+      "title": "Landmarks of Taiwan",
+      "categories": [
+        "Graphic"
+      ],
+      "cover": "/media/landmarks/cover.webp",
+      "gallery": [
+        "/media/landmarks/01.webp",
+        "/media/landmarks/02.webp",
+        "/media/landmarks/03.webp",
+        "/media/landmarks/04.webp",
+        "/media/landmarks/05.webp",
+        "/media/landmarks/06.webp"
+      ],
+      "zh": "<p>本系列專案以 「精準向量結構」 與 「扁平微縮風格（Flat Vector Style）」 為核心，重新詮釋台灣具代表性的地標建築。作品透過 Illustrator 的幾何圖形與嚴謹的等比結構，在保有建築原貌結構特徵的同時，賦予其現代、俐落且具親和力的視覺風格。</p>",
+      "en": "<p>Taiwan Landmarks is a vector illustration series celebrating Taiwan’s rich architectural heritage. Designed in Adobe Illustrator, each illustration simplifies complex architectural structures into clean vector geometry while retaining delicate original details, created for versatile digital and print applications.</p>"
     }
-  },
-  {
-    "slug": "xiaowa",
-    "title": "小瓦掃地機器人募資頁",
-    "categories": [
-      "Graphic",
-      "Website"
-    ],
-    "cover": "/media/xiaowa/cover.webp",
-    "gallery": [
-      "/media/xiaowa/01.webp",
-      "/media/xiaowa/02.webp",
-      "/media/xiaowa/03.webp",
-      "/media/xiaowa/04.webp"
-    ],
-    "zh": "<p>本專案為消費性電子熱銷產品「小瓦掃地機器人」所規劃的 <strong>群眾募資與銷售一頁式網頁（Crowdfunding Landing Page）</strong>。</p><p>設計以「高轉化率商業漏斗」為核心，將複雜的硬體規格轉化為直覺的「痛點共鳴 &gt; 功能解方 &gt; 實測情境 &gt;&nbsp;規格對比」視覺動線。採用品牌經典活力橘搭配乾淨明亮的居家風格，結合產品實拍情境圖、動態賣點圖標與清晰的對比表格，打造高説服力且具極佳閱讀體驗的電商銷售頁面。</p>",
-    "en": "<p>A high-converting crowdfunding landing page designed for the <strong>Xiaowa Robot Vacuum Cleaner</strong>.</p><p>Structured around a proven e-commerce sales funnel, the long-form landing page seamlessly guides users from problem identification to product features, real-world usage scenarios, and feature comparison tables. Utilizing a vibrant orange accent alongside clean home-lifestyle imagery, the design optimizes narrative flow and user engagement to boost campaign conversion rates.</p>",
-    "link": {
-      "url": "https://s923446.wixsite.com/xiaowa",
-      "label": "小瓦掃地機器人頁面"
-    }
-  },
-  {
-    "slug": "vaginal-corona",
-    "title": "陰道冠正名懶人包",
-    "categories": [
-      "Graphic"
-    ],
-    "cover": "/media/vaginal-corona/cover.webp",
-    "gallery": [
-      "/media/vaginal-corona/01.webp",
-      "/media/vaginal-corona/02.webp",
-      "/media/vaginal-corona/03.webp",
-      "/media/vaginal-corona/04.webp",
-      "/media/vaginal-corona/05.webp",
-      "/media/vaginal-corona/06.webp",
-      "/media/vaginal-corona/07.webp",
-      "/media/vaginal-corona/08.webp",
-      "/media/vaginal-corona/09.webp",
-      "/media/vaginal-corona/10.webp",
-      "/media/vaginal-corona/11.webp"
-    ],
-    "zh": "<p>本專案為推廣身體自主權與生理衛教正名的社群倡議懶人包設計。</p><p>針對過往帶有迷思與污名化的生理詞彙，本專案透過手繪風格向量插畫與詼諧的情境敘事，將複雜嚴肅的醫學衛教知識轉化為輕鬆有趣的懶人包。設計上巧妙運用「甜甜圈」作為視覺隱喻，並結合放大鏡角色與亮眼配色，成功將敏感的社會議題轉化為具備高傳播力、高親和力且易於被大眾接受的視覺內容。</p>",
-    "en": "<p>An educational social media campaign and information design created to advocate for body positivity and accurate anatomical terminology.</p><p>To tackle a historically sensitive and taboo topic, the design utilizes approachable character illustrations, vibrant color schemes, and playful visual metaphors—such as using diverse donut shapes to explain bodily structures. This lighthearted and insightful approach transforms complex medical facts into compelling, highly shareable social media content that breaks stereotypes and drives public conversation.</p>"
-  },
-  {
-    "slug": "murobox",
-    "title": "MuroBox Photo",
-    "categories": [
-      "Photography"
-    ],
-    "cover": "/media/murobox/cover.webp",
-    "gallery": [
-      "/media/murobox/01.webp",
-      "/media/murobox/02.webp",
-      "/media/murobox/03.webp",
-      "/media/murobox/04.webp",
-      "/media/murobox/05.webp",
-      "/media/murobox/06.webp",
-      "/media/murobox/07.webp",
-      "/media/murobox/08.webp",
-      "/media/murobox/09.webp",
-      "/media/murobox/10.webp",
-      "/media/murobox/11.webp"
-    ],
-    "zh": "<p>本專案為全球首創「App 智慧控制物理音樂盒」品牌 Muro Box 所規劃的 商業產品攝影與情境藝術指導。</p><p>視覺策略以「跨越時代的聲音記憶」為主軸，透過高精度微距打光，精準還原金屬撞針、齒輪機芯與溫潤實木底座的古典機械工藝。同步企劃跨世代的情境敘事——涵蓋「親子互動」、「居家生活放鬆」與「現代工作空間」，將看似冰冷的 App 數位控制技術，轉化為具備濃厚情感溫度與客製化記憶的精品家居視覺資產。</p>",
-    "en": "<p>A comprehensive commercial photography and lifestyle direction project for <strong>Muro Box</strong>, the world’s first smart music box combining classical analog craftsmanship with modern App integration.</p><p>The visual direction bridges traditional mechanical engineering with contemporary smart living. High-contrast close-ups highlight the intricate mechanical cylinders and wooden textures. Meanwhile, curated lifestyle narratives—featuring heartfelt family moments, relaxing home environments, and modern office setups—position Muro Box as both an innovative technology and a sentimental home piece that preserves unique musical memories.</p>"
-  },
-  {
-    "slug": "ucare",
-    "title": "UCARE Car Warranty Photo",
-    "categories": [
-      "Photography"
-    ],
-    "cover": "/media/ucare/cover.webp",
-    "gallery": [
-      "/media/ucare/01.webp",
-      "/media/ucare/02.webp",
-      "/media/ucare/03.webp",
-      "/media/ucare/04.webp",
-      "/media/ucare/05.webp",
-      "/media/ucare/06.webp",
-      "/media/ucare/07.webp",
-      "/media/ucare/08.webp",
-      "/media/ucare/09.webp",
-      "/media/ucare/10.webp",
-      "/media/ucare/11.webp"
-    ],
-    "zh": "<p>本專案為 USPACE 旗下汽車保修品牌「UCARE」所企劃的 <strong>品牌形象與服務情境商業攝影</strong>。</p><p>攝影策略以「透明信賴」與「高質感服務體驗」為核心，翻轉傳統保修廠的既定印象。全系列影像紀錄了從顧客接洽、透明化估價諮詢，到技師團隊運用專業設備進行底盤檢測、輪胎保養與鈑噴修復的完整過程。透過明亮潔淨的現場打光與自然的人際互動捕捉，為 UCARE 建立起兼具科技感、專業技術與親切服務的品牌視覺資產。</p>",
-    "en": "<p>A commercial photoshoot for <strong>UCARE</strong>, the auto maintenance and repair service vertical under the USPACE ecosystem.</p><p>The photographic direction highlights “transparency, trust, and premium customer experience,” modernization the visual identity of traditional auto repair shops. The photo suite captures the entire service touchpoint journey—from initial customer consultations and tablet-based diagnostics to certified technicians performing lift inspections, tire servicing, and body paint touch-ups. With bright, clean studio-style environmental lighting and natural human interactions, the imagery establishes a professional and trustworthy brand tone for marketing campaigns.</p>"
-  },
-  {
-    "slug": "usparking",
-    "title": "USPACE Parking Guide",
-    "categories": [
-      "Branding",
-      "Graphic"
-    ],
-    "cover": "/media/usparking/cover.webp",
-    "gallery": [
-      "/media/usparking/01.webp",
-      "/media/usparking/02.webp",
-      "/media/usparking/03.webp",
-      "/media/usparking/04.webp",
-      "/media/usparking/05.webp",
-      "/media/usparking/06.webp",
-      "/media/usparking/07.webp",
-      "/media/usparking/08.webp",
-      "/media/usparking/09.webp",
-      "/media/usparking/10.webp",
-      "/media/usparking/11.webp",
-      "/media/usparking/12.webp",
-      "/media/usparking/13.webp",
-      "/media/usparking/14.webp",
-      "/media/usparking/15.webp"
-    ],
-    "zh": "<p>本專案為 USPACE 智慧停車場打造的 <strong>大型場站招牌與指標系統模組化規範</strong>。</p><p>為因應跨區域場站快速擴展需求，本規範建立起模組化、高度一致的指標視覺語言。包含出入口立牌、車道指示、警示燈具、繳費與方向引導等各式看板，透過統一的版面架構與色彩系統，提升車主在場站內的識別效率與體驗；同時作為跨單位溝通標準手冊，提供業務洽談、業主確認及施工單位精準對齊，大幅降低溝通成本與施工落差。</p>",
-    "en": "<p>A standardized environmental wayfinding and signage guidelines system designed for <strong>USPACE</strong> smart parking facilities.</p><p>Created to support rapid site expansion, this project establishes a modular design language across all physical touchpoints—including entrance pylons, lane directions, warning lights, and payment guides. By defining strict layout rules and consistent visual hierarchy, the system ensures effortless navigation for drivers while providing a unified technical reference for sales teams, venue partners, and construction vendors to streamline implementation.</p>"
-  },
-  {
-    "slug": "blood-seafood",
-    "title": "拒絕血汗海鮮懶人包",
-    "categories": [
-      "Graphic"
-    ],
-    "cover": "/media/blood-seafood/cover.webp",
-    "gallery": [
-      "/media/blood-seafood/01.webp",
-      "/media/blood-seafood/02.webp",
-      "/media/blood-seafood/03.webp",
-      "/media/blood-seafood/04.webp",
-      "/media/blood-seafood/05.webp",
-      "/media/blood-seafood/06.webp"
-    ],
-    "zh": "<p>本專案為關注遠洋漁業「人權剝削」與「海洋生態破壞」所製作的社會倡議資訊設計。</p><p>專案針對台灣遠洋漁船上的外籍漁工權益、海上奴役現象以及美國「黃牌 warnings」等國際外交與經濟影響進行系統性梳理。設計上採用具故事繪本質感的插畫風格，以深海藍為主調，搭配警示感強烈烈的紅橙色系，將龐雜的國際法規與產業痛點，拆解為四大層面（生態破壞、海上奴役、守法業者衝擊、台灣國際形象），以層次分明、引人深思的視覺語言引發社會關注與公眾倡議。</p>",
-    "en": "<p>A social advocacy campaign designed to raise awareness about forced labor and ecological destruction in the distant-water fishing industry.</p><p>The project breaks down complex international human rights issues—such as the exploitation of migrant fishers and global trade warnings—into an engaging, story-driven information architecture. Utilizing a rich, narrative illustration style with deep oceanic blues and striking warning tones, the design highlights key issues across four main pillars, transforming heavyweight policy and ethical topics into a visually impactful social campaign.</p>"
-  },
-  {
-    "slug": "ic",
-    "title": "IC+ 九暘電子官網",
-    "categories": [
-      "Website"
-    ],
-    "cover": "/media/ic/cover.webp",
-    "gallery": [
-      "/media/ic/01.webp",
-      "/media/ic/02.webp",
-      "/media/ic/03.webp",
-      "/media/ic/04.webp"
-    ],
-    "zh": "<p>本專案為上市公司「九暘電子（IC Plus）」所打造的 <strong>B2B 企業官方網站 UI/UX 設計與資訊架構企劃</strong>。</p><p>因應半導體與 IC 設計領域的專業採購與工程師需求，本專案打破傳統科技公司生硬龐雜的資訊層級，以「極簡、高效、精準檢索」為核心策略。設計上梳理了龐大的產品型號與規格數據，打造直觀的產品對照表與應用領域分類介面；視覺上採用穩重的科技深藍與清晰的層次排版，兼顧上市公司應有的專業信賴感與極佳的使用者體驗（User Experience）。</p>",
-    "en": "<p>A B2B corporate website UI/UX redesign created for <strong>IC Plus Corporation</strong>, a publicly traded semiconductor and IC design company.</p><p>Designed to streamline the technical user journey for engineers and buyers, the visual strategy focuses on <strong>clarity, efficiency, and structured information architecture</strong>. The interface reorganizes extensive product lines and technical datasheets into clean, easily scannable data tables and application-based navigation. Featuring a refined tech-blue palette and precise grid layouts, the website delivers a seamless user experience that reinforces the enterprise’s technological authority and reliability.</p>",
-    "link": {
-      "url": "https://www.icplus.com.tw/",
-      "label": "九暘電子官方網站"
-    }
-  },
-  {
-    "slug": "hualien",
-    "title": "花蓮群眾募資視覺",
-    "categories": [
-      "Graphic"
-    ],
-    "cover": "/media/hualien/cover.webp",
-    "gallery": [
-      "/media/hualien/01.webp",
-      "/media/hualien/02.webp",
-      "/media/hualien/03.webp",
-      "/media/hualien/04.webp",
-      "/media/hualien/05.webp"
-    ],
-    "zh": "<p>本專案為「花蓮群眾集資培育計畫工作坊」所打造的 主視覺設計與全通路宣傳延展。專案旨在協助在地青年、創作者與地方團隊掌握群眾集資的核心技能。視覺策略採用具親和力且活潑的扁平化幾何插畫，將「創意點子（燈泡）」、「地方發芽（幼苗）」與「社群傳播（大聲公）」等抽象觀念圖解化。同步規劃極具系統化的全通路延展——包含實體半開海報、X 展架、社群 1:1 與 16:9 多尺寸 Banner、電子邀請卡及活動手冊，展現活動 VI 與資訊設計感。</p>",
-    "en": "<p>A comprehensive key visual and campaign identity designed for the Hualien Regional Crowdfunding Workshop, aimed at empowering local innovators and entrepreneurs.The visual concept replaces rigid government aesthetics with vibrant, approachable geometric illustrations. Metaphors like lightbulbs (ideas), sprouts (local growth), and megaphones (crowdfunding reach) are seamlessly integrated into a cohesive visual system. The project features extensive asset extensions across digital and physical touchpoints, including posters, X-banners, social media cards ($1080 \\times 1080, 1200 \\times 900$), digital invitations, and event signage.</p>"
-  },
-  {
-    "slug": "tokuyo",
-    "title": "Tokuyo 無重力躺椅",
-    "categories": [
-      "Photography"
-    ],
-    "cover": "/media/tokuyo/cover.webp",
-    "gallery": [
-      "/media/tokuyo/01.webp",
-      "/media/tokuyo/02.webp",
-      "/media/tokuyo/03.webp",
-      "/media/tokuyo/04.webp",
-      "/media/tokuyo/05.webp",
-      "/media/tokuyo/06.webp",
-      "/media/tokuyo/07.webp",
-      "/media/tokuyo/08.webp",
-      "/media/tokuyo/09.webp",
-      "/media/tokuyo/10.webp"
-    ],
-    "zh": "<p>本專案為健康家電領導品牌 tokuyo 旗下的「無重力放鬆躺椅／電動沙發」所規劃的 商業產品攝影與視覺藝術指導。</p><p>視覺策略以「打破傳統按摩椅沉重感，塑造極簡居家舒眠美學」為核心。透過明亮透光的北歐風客廳場景與柔和暖調光影，營造無壓力的放鬆氛圍；同步企劃「全身伸展小憩」、「追劇閱讀」與「居家辦公」等多重情境，結合控制面板與細節質感特寫，將高科技保健家電轉化為提升生活品質的質感家居藝術品。</p>",
-    "en": "<p>A commercial photography and lifestyle direction campaign created for tokuyo, a leading wellness appliance brand, highlighting its Zero-Gravity Recliner Sofa.</p><p>The visual direction shifts away from traditional heavy massage chairs towards modern interior aesthetics. Set in a sunlit, Nordic-inspired living room, the photos showcase the recliner seamlessly blending into home decor. By capturing candid moments—such as stretching out in zero-gravity mode, reading, and cozying up with a blanket—along with close-ups of built-in controls, the imagery effectively communicates both supreme comfort and refined lifestyle value.</p>"
-  },
-  {
-    "slug": "idodan",
-    "title": "Idodan Wristwatch photo",
-    "categories": [
-      "Photography"
-    ],
-    "cover": "/media/idodan/cover.webp",
-    "gallery": [
-      "/media/idodan/01.webp",
-      "/media/idodan/02.webp",
-      "/media/idodan/03.webp",
-      "/media/idodan/04.webp",
-      "/media/idodan/05.webp",
-      "/media/idodan/06.webp",
-      "/media/idodan/07.webp",
-      "/media/idodan/08.webp",
-      "/media/idodan/09.webp",
-      "/media/idodan/10.webp",
-      "/media/idodan/11.webp"
-    ],
-    "zh": "<p>本專案為台灣原創木質腕錶品牌「Idodan」所規劃的 戶外商業產品攝影與風格人像視覺企劃。</p><p>拍攝策略以「回歸自然與時間對話」為主軸，特別選址於自然森林與樹林場景。透過將木質腕錶置於青苔、年輪木樁與天然樹皮上，完美勾勒出原木紋理與手作工藝的溫潤質感；同步企劃文青風格的大地色系模特兒配戴與靜態書寫情境，為品牌打造極具沉浸感、慢活氣息與自然美學的全方位行銷視覺庫。</p>",
-    "en": "<p>An outdoor commercial photography and lifestyle direction project created for Idodan, a brand known for its handcrafted wooden watches.</p><p>Inspired by the connection between craftsmanship and nature, the visual direction locates the product within lush forest environments. Placing the timepieces against mossy tree trunks, weathered stumps, and organic bark highlights the unique wooden textures and artisan details. Paired with soft natural lighting and earth-toned lifestyle portraits, the photo suite creates a serene, artistic story that strongly elevates the brand’s organic identity.</p>"
-  },
-  {
-    "slug": "bf-logo",
-    "title": "貝殼放大 Logo Design",
-    "categories": [
-      "Branding",
-      "Graphic"
-    ],
-    "cover": "/media/bf-logo/cover.webp",
-    "gallery": [
-      "/media/bf-logo/01.webp",
-      "/media/bf-logo/02.webp",
-      "/media/bf-logo/03.webp",
-      "/media/bf-logo/04.webp",
-      "/media/bf-logo/05.webp",
-      "/media/bf-logo/06.webp"
-    ],
-    "zh": "<p>本專案為台灣首屈一指的群眾集資顧問公司「貝殼放大（Backer-Founder）」所進行的 <strong>品牌視覺識別重塑專案（Logo Redesign &amp; Brand Guidelines）</strong>。</p><p>專案以「保留品牌核心記憶，進化數位時代可讀性」為目標。重新梳理原有的貝殼符號，精簡繁複線條並微調黃金比例，提升標誌在數位螢幕（Mobile/Web）與微縮場景下的清晰度。同步規範中英文字體重組（Bold/Black 應用層級）與子品牌擴充架構，讓全新品牌識別更具現代感、科技親和力與國際擴充性。</p>",
-    "en": "<p>A comprehensive visual identity redesign for <strong>Backer-Founder</strong>, Taiwan’s premier crowdfunding consultancy.</p><p>The project optimizes the iconic shell mark for the modern digital era. By refining geometry, reducing line complexity, and adjusting optical balance, the logo achieves enhanced legibility across all screen sizes. The redesign also establishes a scalable brand architecture, detailing typography hierarchy and sub-brand integration for a fresh, professional, and forward-looking identity.</p>"
-  },
-  {
-    "slug": "ino",
-    "title": "Ino 肉肉卷按摩器",
-    "categories": [
-      "Photography"
-    ],
-    "cover": "/media/ino/cover.webp",
-    "gallery": [
-      "/media/ino/01.webp",
-      "/media/ino/02.webp",
-      "/media/ino/03.webp",
-      "/media/ino/04.webp",
-      "/media/ino/05.webp",
-      "/media/ino/06.webp",
-      "/media/ino/07.webp",
-      "/media/ino/08.webp",
-      "/media/ino/09.webp",
-      "/media/ino/10.webp",
-      "/media/ino/11.webp"
-    ],
-    "zh": "<p>本專案為個人美容美體家電「肉肉卷按摩器」所規劃的 商業視覺企劃、產品靜物與情境人像攝影。</p><p>拍攝策略聚焦於「解決美體痛點」與「打造儀式感生活」。透過模特兒於臉部輪廓、手臂、肩頸與腿部的實測特寫，直觀展現產品的多功能按摩頭與舒壓功效；同步企劃「高壓職場辦公室」與「溫馨居家 Self-care 時光」兩大生活情境，結合精緻的產品靜物擺設，為品牌建立起兼具實用導向與時尚生活質感的全方位廣告素材庫。</p>",
-    "en": "<p>A commercial photo shoot and visual marketing campaign designed for a handheld personal body &amp; face massager.</p><p>The visual strategy bridges functional demonstation with aspirational lifestyle storytelling. High-definition close-ups showcase targeted application areas—including face contouring, shoulder relief, and leg massage—clearly communicating the product’s versatility. By juxtaposing sleek office scenarios with relaxing home environments, the imagery positions the device as an essential daily self-care companion, delivering high-converting assets for e-commerce and digital marketing.</p>"
-  },
-  {
-    "slug": "helix2h-logo",
-    "title": "Helix2h Logo Design",
-    "categories": [
-      "Branding",
-      "Graphic"
-    ],
-    "cover": "/media/helix2h-logo/cover.webp",
-    "gallery": [
-      "/media/helix2h-logo/01.webp",
-      "/media/helix2h-logo/02.webp",
-      "/media/helix2h-logo/03.webp",
-      "/media/helix2h-logo/04.webp",
-      "/media/helix2h-logo/05.webp",
-      "/media/helix2h-logo/06.webp",
-      "/media/helix2h-logo/07.webp",
-      "/media/helix2h-logo/08.webp"
-    ],
-    "zh": "<p>本專案為生醫基因檢測品牌「華生智慧科技（HELIX2h）」量身打造的品牌視覺識別系統（VIS）。設計以 DNA 雙螺旋結構（Helix）為視覺核心，透過心智圖（Mind Map）發想與元素拆解，將基因結構、數據技術與生命健康的概念重新收斂與抽象化。</p><p>專案不僅完成核心 Logo 設計，更制定了嚴謹的字體規範（Typeface）、標準色系統（Color Palette）與多場景組合應用（Layout System），成功塑造出兼具<strong>嚴謹科技感、生醫專業度與現代簡約</strong>的品牌形象。</p>",
-    "en": "<p>A comprehensive Visual Identity System (VIS) designed for <strong>HELIX2h</strong>, a biotechnology company specializing in genetic testing. Inspired by the DNA double helix structure, the project translates complex biotech concepts into a modern, minimalist brand icon.</p><p>The presentation covers the full creative process—from initial mind mapping, conceptual drafting, typography selection, to complete brand guidelines and layout variations across light and dark backgrounds.</p>"
-  },
-  {
-    "slug": "uc",
-    "title": "ULTRA COATING Photo",
-    "categories": [
-      "Photography"
-    ],
-    "cover": "/media/uc/cover.webp",
-    "gallery": [
-      "/media/uc/01.webp",
-      "/media/uc/02.webp",
-      "/media/uc/03.webp",
-      "/media/uc/04.webp",
-      "/media/uc/05.webp",
-      "/media/uc/06.webp",
-      "/media/uc/07.webp",
-      "/media/uc/08.webp",
-      "/media/uc/09.webp",
-      "/media/uc/10.webp",
-      "/media/uc/11.webp",
-      "/media/uc/12.webp",
-      "/media/uc/13.webp",
-      "/media/uc/14.webp"
-    ],
-    "zh": "<p>本專案為 USPACE 旗下汽車鍍膜品牌「Ultra Coating」所企劃的 <strong>商業視覺與職人施工攝影</strong>。</p><p>拍攝策略聚焦於「極致工藝」與「專業信任感」。全系列影像完整紀錄了頂級鍍膜與 PPF 漆面保護膜的標準施工流程——從車身精密洗車、水霧沖洗、漆面拋光修復，到保護膜的刮平貼合與細節修邊。運用高對比的線條光影襯托車身漆面光澤與撥水效果，同時捕捉技師專注的手部特寫，為品牌建立起具備高端質感與職人精神的宣傳影像庫。</p>",
-    "en": "<p>A commercial photo shoot designed for <strong>Ultra Coating</strong>, an automotive detailing and protective coating service under the USPACE ecosystem.</p><p>The visual direction emphasizes precision, premium craftsmanship, and professional trust. The image suite documents the full end-to-end service workflow—spanning meticulous pre-wash, high-pressure rinsing, paint correction polishing, and PPF (Paint Protection Film) application. Utilizing high-contrast studio lighting to highlight glossy paint reflections and water-beading effects, the photography elevates the brand’s technical expertise for digital marketing and campaign assets.</p>"
-  },
-  {
-    "slug": "jpbc",
-    "title": "USPACE JP 名片",
-    "categories": [
-      "Branding"
-    ],
-    "cover": "/media/jpbc/cover.webp",
-    "gallery": [
-      "/media/jpbc/01.webp",
-      "/media/jpbc/02.webp",
-      "/media/jpbc/03.webp",
-      "/media/jpbc/04.webp",
-      "/media/jpbc/05.webp"
-    ],
-    "zh": "<p>本專案為共享智慧出行品牌「USPACE」日本分部所使用的名片系統設計。</p><p>設計針對日本商務市場注重「嚴謹秩序」與「專業信賴」的文化特性，建立「極致黑（Black）」與「純粹白（White）」雙色名片體系。排版上融合日英文資訊的網格架構（Grid System），精準呈現株式會社名稱、職銜與聯絡細節，並透過極簡的幾何線條與現代留白，展現 USPACE 作為跨國科技品牌高雅、前瞻且值得信賴的商業形象。</p>",
-    "en": "<p>A corporate business card and identity extension designed for USPACE as part of its brand expansion into the Japanese market.</p><p>Tailored specifically to the refined corporate etiquette of Japan, the design features a dual colorway—Sleek Black and Minimalist White. Utilizing a structured grid system, the layout effortlessly balances bilingual information (Japanese &amp; English) with ample white space. The result is a clean, modern, and highly professional touchpoint that reinforces USPACE’s credibility as an innovative global mobility platform.</p>"
-  },
-  {
-    "slug": "minfort",
-    "title": "Minfort Min7 Bluetooth Photo",
-    "categories": [
-      "Photography"
-    ],
-    "cover": "/media/minfort/cover.webp",
-    "gallery": [
-      "/media/minfort/01.webp",
-      "/media/minfort/02.webp",
-      "/media/minfort/03.webp",
-      "/media/minfort/04.webp",
-      "/media/minfort/05.webp",
-      "/media/minfort/06.webp",
-      "/media/minfort/07.webp",
-      "/media/minfort/08.webp",
-      "/media/minfort/09.webp"
-    ],
-    "zh": "<p>本專案為台灣手工音響品牌 Minfort 旗下的旗艦產品「MIN7 實木藍牙音響」所規劃的 商業產品攝影與情境藝術指導。</p><p>攝影策略以「工藝美學融入日常生活」為主軸，透過暖調光影精準勾勒手工實木的溫潤紋理與金屬單體細節。同步企劃「現代創作者工作桌」與「自然綠意家居」雙重情境，將精品音響轉化為提升空間質感的家居藝術品，為集資推廣與品牌官網建立強烈且具溫度的視覺印象。</p>",
-    "en": "<p>A commercial photography and lifestyle direction project for Minfort MIN7, a premium handcrafted wooden Bluetooth speaker.</p><p>The visual direction centers on merging artisanal craft with modern lifestyle interior design. By capturing the natural wood grain textures under warm ambient light, the photography highlights the speaker’s acoustic craftsmanship. Curated scenarios—ranging from sleek iMac workspaces to vibrant, plant-filled living areas—position the MIN7 not just as an audio device, but as a statement piece for sophisticated home decor.</p>"
-  },
-  {
-    "slug": "citizen-judge",
-    "title": "全民法官懶人包",
-    "categories": [
-      "Graphic"
-    ],
-    "cover": "/media/citizen-judge/cover.webp",
-    "gallery": [
-      "/media/citizen-judge/01.webp",
-      "/media/citizen-judge/02.webp",
-      "/media/citizen-judge/03.webp",
-      "/media/citizen-judge/04.webp",
-      "/media/citizen-judge/05.webp",
-      "/media/citizen-judge/06.webp"
-    ],
-    "zh": "<p>本專案為推廣法律普及知識所規劃的 <strong>社群多圖懶人包（Social Media Carousel）</strong> 視覺設計。以「大法庭制度」為核心議題，將生硬嚴肅的司法改革內容，轉化為親和力極高且具幽默感的圖像與插畫。透過首頁吸睛標題、問題引導、視覺對比與卡片式資訊排版，大幅降低大眾閱讀門檻，提升社群傳播力與互動觸及率。</p>",
-    "en": "<p>An educational social media carousel designed to translate complex legal topics—specifically Taiwan’s Grand Bench system—into digestible, engaging visual content. By integrating witty typography, custom vector illustrations, and structured information architecture, the series lowers reading barriers, turning dense policy information into an approachable and shareable social media asset.</p>"
-  },
-  {
-    "slug": "phrozen",
-    "title": "Phrozen 3d Printer Photo",
-    "categories": [
-      "Photography"
-    ],
-    "cover": "/media/phrozen/cover.webp",
-    "gallery": [
-      "/media/phrozen/01.webp",
-      "/media/phrozen/02.webp",
-      "/media/phrozen/03.webp",
-      "/media/phrozen/04.webp",
-      "/media/phrozen/05.webp",
-      "/media/phrozen/06.webp",
-      "/media/phrozen/07.webp",
-      "/media/phrozen/08.webp",
-      "/media/phrozen/09.webp"
-    ],
-    "zh": "<p>本專案為台灣知名光固化 3D 印表機品牌「Phrozen 普羅森」所規劃的 商業產品攝影與情境藝術指導。為打破傳統科技硬體設備冰冷、專業門檻高昂的刻板印象，攝影策略採取「高精度細節, 多元應用情境」雙線並行。透過打光掌控突顯小丑頭雕與齒研牙模的極致微米級細節；同步企劃「客廳家庭娛樂」、「桌遊同樂」以及「職人模型工作室」等實用場景，精準連結原型師、創作者與一般家庭用戶，成功建立起兼具高科技專業度與生活感親和力的品牌視覺體系。</p>",
-    "en": "<p>A comprehensive commercial photography and visual direction project for Phrozen, a leading resin 3D printer brand.</p><p>The project strategy bridges precision engineering with everyday usability. High-contrast close-ups highlight the printer’s ultra-fine resolution on detailed figure sculpts and dental models. Simultaneously, curated lifestyle setups—ranging from family tabletop gaming scenes to immersive maker studios—humanize the technology. This multi-faceted visual approach effectively resonates with professional sculptors, dental labs, and hobbyists alike.</p>"
-  },
-  {
-    "slug": "ttri",
-    "title": "高間距織品懶人包",
-    "categories": [
-      "Graphic"
-    ],
-    "cover": "/media/ttri/cover.webp",
-    "gallery": [
-      "/media/ttri/01.webp",
-      "/media/ttri/02.webp",
-      "/media/ttri/03.webp",
-      "/media/ttri/04.webp",
-      "/media/ttri/05.webp"
-    ],
-    "zh": "<p>本專案為紡織產業綜合研究所（TTRI）所進行的 產業技術資訊圖表與品牌倡議視覺設計。</p><p>專案針對艱深的 B2B 技術——「高間距織物（Spacer Fabric）」技術，以極簡現代風格的手繪插畫進行重新梳理。設計上拆解了複雜的微觀織物結構剖面圖，並具象化其在「單人立槳（SUP）、充氣浮橋、高噸位千斤頂」等多種極限情境下的創新應用。同步為其 R&amp;D 100 大獎與「口罩國家隊」國家級倡議製作主題視覺，將冰冷的產業研發成果轉化為兼具專業質感、科普親和力與社會影響力的視覺資產。</p>",
-    "en": "<p>A comprehensive industrial infographic and technical branding project for the Taiwan Textile Research Institute (TTRI).</p><p>The project focuses on illustrating and simplifying complex B2B textile technologies, specifically advanced spacer fabric structures. By translating technical specifications—such as R&amp;D 100 award-winning DIFA structure analysis and varied applications in SUP boards, pneumatic jacks, and bridges—into intuitive vector diagrams and lifestyle illustrations, the design transforms a specialized subject into an approachable and informative visual narrative. The project also included strategic branding and patriotic illustrations for the national ‘mask team’ campaign, strengthening TTRI’s social impact and visibility.</p>"
-  },
-  {
-    "slug": "pillow",
-    "title": "LOVEFU Pillow Photo",
-    "categories": [
-      "Photography"
-    ],
-    "cover": "/media/pillow/cover.webp",
-    "gallery": [
-      "/media/pillow/01.webp",
-      "/media/pillow/02.webp",
-      "/media/pillow/03.webp",
-      "/media/pillow/04.webp",
-      "/media/pillow/05.webp",
-      "/media/pillow/06.webp",
-      "/media/pillow/07.webp",
-      "/media/pillow/08.webp",
-      "/media/pillow/09.webp",
-      "/media/pillow/10.webp"
-    ],
-    "zh": "<p>本專案為寢具品牌「樂眠枕」所規劃的 商業產品情境攝影與視覺藝術指導。</p><p>專案以「觸覺視覺化」為核心策略，透過自然光影與微距特寫，捕捉手壓下陷的彈性弧度與布料織紋，直觀呈現枕頭的柔軟舒適度與人體工學支撐力。同步企劃多款居家放鬆情境——包含晨起伸展、床邊閱讀與深層睡眠姿態，以柔和清透的色調打造具沉浸感的「居家舒眠美學」，有效提升電商落地頁與品牌宣傳的質感與轉化率。</p>",
-    "en": "<p>A commercial photography and visual direction project created for LoveSleep Ergonomic Pillow, focusing on softness, comfort, and relaxed home living.</p><p>The visual strategy centers on translating tactile sensations into graphic imagery. Close-up shots capture the pillow’s material texture and memory-foam responsiveness under pressure. Complemented by natural daylight and cozy, candid lifestyle scenes—such as morning stretches and relaxed reading—the photo suite establishes an inviting, tranquil ambiance that elevates the brand’s e-commerce and marketing touchpoints.</p>"
-  },
-  {
-    "slug": "helix2h-social-post",
-    "title": "Helix2h Social Post",
-    "categories": [
-      "Graphic"
-    ],
-    "cover": "/media/helix2h-social-post/cover.webp",
-    "gallery": [
-      "/media/helix2h-social-post/01.webp",
-      "/media/helix2h-social-post/02.webp",
-      "/media/helix2h-social-post/03.webp",
-      "/media/helix2h-social-post/04.webp",
-      "/media/helix2h-social-post/05.webp",
-      "/media/helix2h-social-post/06.webp",
-      "/media/helix2h-social-post/07.webp",
-      "/media/helix2h-social-post/08.webp",
-      "/media/helix2h-social-post/09.webp"
-    ],
-    "zh": "<p>本專案為生醫品牌「華生智慧科技（HELIX2h）」所規劃的 <strong>數位行銷與社群內容視覺設計</strong>。</p><p>針對 Facebook 粉絲專頁與數位廣告，將艱深的基因科學、慢性病防範（脂肪肝、過敏、得舒飲食、近視等）及趣味話題（星座運勢）轉化為高度視覺化的科普圖文。設計以品牌專屬 IP 吉祥物貫穿整體風格，運用鮮明繽紛的配色、趣味插畫與清晰的文字編排，大幅提升社群互動率與品牌親和力。</p>",
-    "en": "<p>A series of digital branding and social media visuals crafted for <strong>HELIX2h</strong>‘s marketing campaigns.</p><p>To bridge the gap between complex genetic science and the general public, the campaign translates health topics—such as fatty liver, allergies, DASH diet, and horoscope trends—into engaging social posts. By utilizing the brand’s custom mascot, vibrant color schemes, and expressive typography, the visuals successfully increase user engagement while reinforcing a friendly, modern biotech image.</p>"
-  },
-  {
-    "slug": "stunner",
-    "title": "Bistro Stunner Photo",
-    "categories": [
-      "Photography"
-    ],
-    "cover": "/media/stunner/cover.webp",
-    "gallery": [
-      "/media/stunner/01.webp",
-      "/media/stunner/02.webp",
-      "/media/stunner/03.webp",
-      "/media/stunner/04.webp",
-      "/media/stunner/05.webp",
-      "/media/stunner/06.webp",
-      "/media/stunner/07.webp",
-      "/media/stunner/08.webp",
-      "/media/stunner/09.webp",
-      "/media/stunner/10.webp",
-      "/media/stunner/11.webp",
-      "/media/stunner/12.webp",
-      "/media/stunner/13.webp"
-    ],
-    "zh": "<p>本專案為獨立餐酒館（Bistro）量身打造全套視覺攝影企劃，範疇涵蓋品牌招牌料理與特色酒水。影像以不同視角多元呈現，結合沉穩溫暖的木質基調與層次豐富的自然側光，襯托出食材的鮮美質感與料理的澎湃豐盛感。整體風格兼具高質感與歡聚氛圍，專為菜單設計、品牌官網及社群行銷所規劃。</p><blockquote><p></p></blockquote><p></p>",
-    "en": "<p>A commercial food &amp; beverage photography series crafted for a local bistro. Utilizing top-down flatlay compositions, rich color tones, and warm ambient lighting, the visuals highlight the textures, vibrant colors, and convivial atmosphere of the culinary offerings. Designed specifically for menu design, website showcases, and social media campaigns.</p>"
-  },
-  {
-    "slug": "uspace-video",
-    "title": "USPACE Intro Video",
-    "categories": [
-      "Graphic",
-      "Motion"
-    ],
-    "cover": "/media/uspace-video/cover.webp",
-    "gallery": [
-      "/media/uspace-video/01.webp",
-      "/media/uspace-video/02.webp"
-    ],
-    "zh": "<p>本專案為共享停車品牌「USPACE 」所製作的官方 2D 動態宣傳影片（Motion Graphics Commercial）。</p><p>全片使用 Adobe After Effects 進行動畫編排與節奏掌控，以「找不到停車位嗎？」作為開頭痛點引導。影片結合手持智慧型手機的 UI 介面操作動態、向量插畫元素、智慧地鎖與車牌辨識情境，並以「時鐘與存錢筒」直觀視覺化「以分計費」的省錢優勢。在短短 20 秒之內，以高節奏感的視覺轉換，建立起科技、高效且極具吸引力的品牌廣告。</p>",
-    "en": "<p>A high-energy 2D Motion Graphics commercial created using Adobe After Effects for <strong>USPACE</strong>, a smart parking app.</p><p>The video tackles a common driver pain point—”Can’t find a parking spot?”—and introduces USPACE’s key features within 20 seconds. Through sleek UI motion design, custom vector illustrations, and intuitive visual metaphors (like clocks and piggy banks for minute-based billing), the animation delivers a concise, visually compelling promo that drives app downloads.</p>",
-    "link": {
-      "url": "https://www.youtube.com/watch?v=sBxd3HgS8-o",
-      "label": "在 YouTube 觀看"
-    }
-  },
-  {
-    "slug": "helix2h-box",
-    "title": "Helix2h Box Design",
-    "categories": [
-      "Branding",
-      "Graphic"
-    ],
-    "cover": "/media/helix2h-box/cover.webp",
-    "gallery": [
-      "/media/helix2h-box/01.webp",
-      "/media/helix2h-box/02.webp",
-      "/media/helix2h-box/03.webp",
-      "/media/helix2h-box/04.webp",
-      "/media/helix2h-box/05.webp",
-      "/media/helix2h-box/06.webp"
-    ],
-    "zh": "<p>本專案為 Helix2h 華生基因檢測套組所打造的 <strong>系列化產品包裝與刀模結構設計</strong>。</p><p>針對「防癌、阿茲海默、減重、綜合」等不同檢測功能，運用活潑色彩<strong>與</strong>原創人物角色插畫進行清晰的產品線區隔。包裝設計兼具印刷刀模展開圖與 3D 結構呈現，透過乾淨親和的插畫風格，降低醫療檢測產品的冰冷距離感，為使用者創造極具儀式感且安心的開箱體驗。</p>",
-    "en": "<p>A packaging design system for a DTC (Direct-to-Consumer) genetic testing kit series.</p><p>The project categorizes complex health testings—such as Cancer Prevention, Alzheimer’s Risk, Weight Management, and Comprehensive Health—into a unified packaging framework using a tailored <strong>Color-Coding System</strong> and <strong>character illustrations</strong>. Covering everything from dieline preparation to 3D packaging rendering, the design transforms a medical product into an approachable, trustworthy, and engaging consumer experience.</p>"
-  },
-  {
-    "slug": "nintendo",
-    "title": "Consoles of Nintendo",
-    "categories": [
-      "Graphic"
-    ],
-    "cover": "/media/nintendo/cover.webp",
-    "gallery": [
-      "/media/nintendo/01.webp",
-      "/media/nintendo/02.webp",
-      "/media/nintendo/03.webp"
-    ],
-    "zh": "<p>本專案為出於對資深玩家情懷與電玩文化的致敬，所獨立創作的 <strong>個人自主設計專案</strong>。</p><p>以 2.5D 等角軸線風格（Isometric Style），精心繪製了任天堂自 1983 年至今的歷代核心家用與混合型主機（FC 紅白機、SFC、N64、GameCube、Wii、Wii U 至 Switch）。作品結合黃藍強烈對比的幾何分割排版，搭配精準的線稿結構與歷史資訊介紹，將 40 年的主機演進史轉化為兼具復古美學與現代視覺張力的資訊圖表海報。</p>",
-    "en": "<p>A passion-driven side project celebrating the rich hardware history of Nintendo.</p><p>Crafted in a detailed <strong>2.5D Isometric Vector Style</strong>, this project illustrates Nintendo’s iconic home consoles—from the 1983 Famicom (NES), Super Famicom, N64, GameCube, Wii, Wii U, to the Nintendo Switch. Featuring a striking diagonal grid with contrasting blue and yellow hues, the design seamlessly bridges retro gaming nostalgia with modern infographic aesthetics.</p>"
-  },
-  {
-    "slug": "sunnyfounder",
-    "title": "陽光伏特家 Logo Design",
-    "categories": [
-      "Branding",
-      "Graphic"
-    ],
-    "cover": "/media/sunnyfounder/cover.webp",
-    "gallery": [
-      "/media/sunnyfounder/01.webp",
-      "/media/sunnyfounder/02.webp",
-      "/media/sunnyfounder/03.webp",
-      "/media/sunnyfounder/04.webp",
-      "/media/sunnyfounder/05.webp",
-      "/media/sunnyfounder/06.webp",
-      "/media/sunnyfounder/07.webp",
-      "/media/sunnyfounder/08.webp"
-    ],
-    "zh": "<p>本專案為台灣首創全民綠能平台「陽光伏特家（Sunnyfounder）」所設計的品牌視覺識別系統（VIS）。</p><p>標誌設計以 <strong>「房子（家的溫暖）、太陽（潔淨能源）與閃電（伏特/電能）」</strong> 三大核心元素進行幾何融合。視覺語言採用充滿生機與能量的陽光黃（Sunny Yellow），搭配俐落穩重的幾何結構與字體規範，精準傳達「讓綠能參與走入日常生活」的品牌使命。專案涵蓋完整的標誌網格圖、標準字、色彩規範與多元情境應用指南，建立起專業、親和且具前瞻性的永續科技形象。</p>",
-    "en": "<p>A comprehensive Visual Identity System (VIS) designed for <strong>Sunnyfounder</strong>, Taiwan’s leading green energy sharing platform.</p><p>The brand mark seamlessly combines three symbolic elements: a <strong>House</strong> (home &amp; warmth), the <strong>Sun</strong> (clean energy), and a <strong>Lightning Bolt</strong> (power &amp; innovation). Paired with an energetic Sunny Yellow color scheme and precise typography guidelines, the identity communicates accessibility, sustainability, and trust, establishing a clear and reliable visual foundation for the renewable energy brand.</p>"
-  },
-  {
-    "slug": "helix2h-icon-system",
-    "title": "Helix2h Icon System",
-    "categories": [
-      "Branding",
-      "Graphic"
-    ],
-    "cover": "/media/helix2h-icon-system/cover.webp",
-    "gallery": [
-      "/media/helix2h-icon-system/01.webp",
-      "/media/helix2h-icon-system/02.webp",
-      "/media/helix2h-icon-system/03.webp",
-      "/media/helix2h-icon-system/04.webp",
-      "/media/helix2h-icon-system/05.webp"
-    ],
-    "zh": "<p>本專案為基因檢測品牌「華生智慧科技（HELIX2h）」所建構的 <strong>系統化圖標庫（Iconography System）</strong>。針對基因檢測報告、UI 介面與健康評估系統中龐大的生醫數據，設計了數十款涵蓋「器官、疾病風險、飲食營養、生活型態與檢測流程」的專屬圖標。</p><p>視覺語彙延續品牌 VIS 的**「科技藍與極簡深灰」**雙色組合，採用一致的線條粗細（Stroke Weight）、幾何圓角與雙色點綴（Duo-tone Highlight）。不僅大幅提升了檢測報告的閱讀體驗，更建立起可跨平台（Web / App / 印刷報告）延伸的視覺資產。</p>",
-    "en": "<p>A comprehensive custom icon system crafted for <strong>HELIX2h</strong>‘s genetic testing reports and digital platforms. To simplify complex biomedical data, this system categorizes key metrics into intuitive visual symbols including internal organs, health risks, nutrition, lifestyle habits, and lab procedures.</p><p>Designed with consistent stroke weight, uniform corner radius, and the brand’s signature duo-tone palette (BioTech Blue &amp; Charcoal Gray), the icon collection ensures optimal legibility and visual coherence across both print reports and UI/UX digital interfaces.</p>"
-  },
-  {
-    "slug": "ticwatch",
-    "title": "Ticwatch 募資專案",
-    "categories": [
-      "Photography",
-      "Website"
-    ],
-    "cover": "/media/ticwatch/cover.webp",
-    "gallery": [
-      "/media/ticwatch/01.webp",
-      "/media/ticwatch/02.webp",
-      "/media/ticwatch/03.webp",
-      "/media/ticwatch/04.webp",
-      "/media/ticwatch/05.webp",
-      "/media/ticwatch/06.webp",
-      "/media/ticwatch/07.webp"
-    ],
-    "zh": "<p>本專案為 智慧手錶 TicWatch 登陸集資平台所規劃的 <strong>全方位品牌整合行銷視覺</strong>。</p><p>專案涵蓋「產品情境攝影企劃」與「集資銷售頁面」。為突顯 TicWatch 跨足運動、時尚、街頭與日常生活的多功能定位，親自執行靜物平鋪（Flat Lay）美術擺拍，透過色彩語言與隨身配件（OOTD）建立多元場景。攝影成果完美融入集資網頁視覺，大幅提升產品的質感與消費者代入感。</p>",
-    "en": "<p>A comprehensive visual identity and crowdfunding marketing campaign designed for <strong>TicWatch</strong>.</p><p>The project combines <strong>Commercial Flat Lay Photography</strong> with a high-converting <strong>Crowdfunding Landing Page</strong>. To highlight the smartwatch’s versatility—spanning sports, urban fashion, and everyday lifestyle—curated lifestyle scenes were photographed using tailored color themes and personal accessories. The resulting visual assets seamlessly integrate into the web layout, creating a cohesive and relatable user experience that drives campaign engagement.</p>",
-    "link": {
-      "url": "https://s923446.wixsite.com/ticwatchse",
-      "label": "Ticwatch 募資頁面"
-    }
-  },
-  {
-    "slug": "iaps",
-    "title": "IAPS Wall Design",
-    "categories": [
-      "Graphic"
-    ],
-    "cover": "/media/iaps/cover.webp",
-    "gallery": [
-      "/media/iaps/01.webp",
-      "/media/iaps/02.webp",
-      "/media/iaps/03.webp",
-      "/media/iaps/04.webp",
-      "/media/iaps/05.webp",
-      "/media/iaps/06.webp"
-    ],
-    "zh": "<p>本專案為國立陽明交通大學產業加速器（IAPS）所規劃的大型展覽牆面與辦公空間視覺設計（Environmental Graphic Design）。視覺概念以 <strong>「國際機場（Airport Ecosystem）」</strong> 為核心暗喻，將新創團隊的培育歷程轉化為「登機、跑道起飛、跨國航線與抵達」的旅程。</p><p>全圖以品牌經典藍黃為主調，透過精密的極簡向量線稿（Isometric/Vector Line Art），將加速器四大計畫流程、合作夥伴矩陣，以及孵化中與畢業的傑出新創團隊標誌（Logo Grid）巧妙整合於大尺度牆面中，兼具資訊導覽功能與強烈的空間品牌識別度。</p>",
-    "en": "<p>An environmental graphic and information design wall created for IAPS (Industrial Accelerator &amp; Incubation Center). Conceptualized around an <strong>“International Airport Ecosystem,”</strong> the design metaphors the startup journey to flight departures, runways, and global destinations.</p><p>Utilizing a clean vector line art style with IAPS’s signature blue and yellow palette, the mural seamlessly integrates acceleration programs, corporate partner ecosystems, and alumnus startup portfolios into a cohesive, large-scale visual landmark.</p>"
-  },
-  {
-    "slug": "bf-member",
-    "title": "貝殼似顏繪",
-    "categories": [
-      "Branding",
-      "Graphic"
-    ],
-    "cover": "/media/bf-member/cover.webp",
-    "gallery": [
-      "/media/bf-member/01.webp",
-      "/media/bf-member/02.webp",
-      "/media/bf-member/03.webp"
-    ],
-    "zh": "<p>本專案為任職於「貝殼放大」期間，為全體團隊成員量身打造的 Q 版人像插畫與生日祝福卡片系統（Team Character Design）。</p><p>專案以活潑亮眼的品牌紫、黃為主色調，結合像素風格（Pixel Style）字體與扁平化插畫語彙，精準抓取數十位夥伴的髮型、眼鏡、個人配件與神韻特質（甚至包含辦公室寵物）。這套頭像不僅應用於團隊生日祝福小卡，更成為凝聚內部企業文化、展現團隊活力的視覺資產。</p>",
-    "en": "<p>A passion-driven character design project created during my time at Backer-Founder, where I illustrated customized vector avatars and birthday cards for all team members.</p><p>Designed using a vibrant brand-color palette (purple &amp; yellow) and retro pixel typography, each avatar encapsulates unique personal features, hairstyles, accessories, and distinct expressions—even incorporating office pets. This system was used for internal birthday greeting cards and culture-building, showcasing a warm, collaborative, and creative workplace environment.</p>"
-  },
-  {
-    "slug": "toptier",
-    "title": "Toptier Chopping Board Photo",
-    "categories": [
-      "Photography"
-    ],
-    "cover": "/media/toptier/cover.webp",
-    "gallery": [
-      "/media/toptier/01.webp",
-      "/media/toptier/02.webp",
-      "/media/toptier/03.webp",
-      "/media/toptier/04.webp",
-      "/media/toptier/05.webp",
-      "/media/toptier/06.webp",
-      "/media/toptier/07.webp",
-      "/media/toptier/08.webp",
-      "/media/toptier/09.webp",
-      "/media/toptier/10.webp",
-      "/media/toptier/11.webp",
-      "/media/toptier/12.webp",
-      "/media/toptier/13.webp",
-      "/media/toptier/14.webp"
-    ],
-    "zh": "<p>本專案為預計上架 Amazon（亞馬遜）平台的廚房砧板商業視覺企劃。視覺策略專注於 <strong>「電商高轉換率」</strong>，結合白底產品去背圖（White Background Product Photography）與溫暖高質感的自然光生活情境照（Lifestyle Photography）。透過拍攝備料動作，直觀呈現砧板的 <strong>防滑矽膠邊角、溢流溝槽與大面積備料空間</strong>，建立消費者對產品品質與耐用度的信任感。</p>",
-    "en": "<p>A commercial product and lifestyle photography series created for an Amazon kitchenware brand. Designed to drive conversion, the visual strategy combines clean hero shots with warm, relatable lifestyle photography. The imagery emphasizes functional product features—such as non-slip corners, juice grooves, and premium wood texture—to build consumer trust and optimize the e-commerce shopping experience.</p>"
-  },
-  {
-    "slug": "trolls",
-    "title": "Trolls Music Stars Photo",
-    "categories": [
-      "Photography"
-    ],
-    "cover": "/media/trolls/cover.webp",
-    "gallery": [
-      "/media/trolls/01.webp",
-      "/media/trolls/02.webp",
-      "/media/trolls/03.webp",
-      "/media/trolls/04.webp",
-      "/media/trolls/05.webp",
-      "/media/trolls/06.webp",
-      "/media/trolls/07.webp",
-      "/media/trolls/08.webp",
-      "/media/trolls/09.webp",
-      "/media/trolls/10.webp",
-      "/media/trolls/11.webp",
-      "/media/trolls/12.webp",
-      "/media/trolls/13.webp",
-      "/media/trolls/14.webp"
-    ],
-    "zh": "<p>本專案為結合手機 App 互動的智慧絨毛玩具（Smart Plush Toy）進行全套商業攝影企劃。視覺策略著重於 <strong>「實體玩偶與數位介面（App UI）的自然互動」</strong>。企劃涵蓋室內棚拍（Studio Lifestyle）與戶外攜帶情境（Outdoor On-the-Go），精準呈現玩具在居家陪護、AR 互動辨識以及戶外攜帶等多元使用場景，完美融合產品的可愛質感與科技互動感。</p>",
-    "en": "<p>A commercial photography campaign for an App-connected interactive plush toy. The project highlights the seamless integration between the physical product and digital mobile experience. Through studio lifestyle setups and outdoor photography, the visuals capture real-time interaction, mobile AR scanning, and portable playfulness, presenting the toy as an engaging, everyday companion for modern users.</p>"
-  },
-  {
-    "slug": "cutter",
-    "title": "Cutting-Cutter-Rolling Photo",
-    "categories": [
-      "Photography"
-    ],
-    "cover": "/media/cutter/cover.webp",
-    "gallery": [
-      "/media/cutter/01.webp",
-      "/media/cutter/02.webp",
-      "/media/cutter/03.webp",
-      "/media/cutter/04.webp",
-      "/media/cutter/05.webp"
-    ],
-    "zh": "<p>本專案為「滾刀筆」產品的情境攝影與視覺創作系列。透過捕捉不同使用者（包含兒童與手作愛好者）的真實操作姿態，呈現產品在<strong>安全裁切、順暢轉向與直覺握持</strong>上的設計優勢。影像風格以明亮、乾淨且具生活感（Lifestyle）的色調為主軸，強調工具融入日常手作與創意學習的親和力。</p>",
-    "en": "<p>This photography series showcases the real-world application and ergonomic performance of the <strong>Rolling Cutter Pen</strong>. Through clean lighting and natural storytelling, the visuals emphasize safety, intuitive grip, and smooth cutting precision across age groups, positioning the product as an essential tool for everyday craft and creative work.</p>"
-  },
-  {
-    "slug": "landmarks",
-    "title": "Landmarks of Taiwan",
-    "categories": [
-      "Graphic"
-    ],
-    "cover": "/media/landmarks/cover.webp",
-    "gallery": [
-      "/media/landmarks/01.webp",
-      "/media/landmarks/02.webp",
-      "/media/landmarks/03.webp",
-      "/media/landmarks/04.webp",
-      "/media/landmarks/05.webp",
-      "/media/landmarks/06.webp"
-    ],
-    "zh": "<p>本系列專案以 「精準向量結構」 與 「扁平微縮風格（Flat Vector Style）」 為核心，重新詮釋台灣具代表性的地標建築。作品透過 Illustrator 的幾何圖形與嚴謹的等比結構，在保有建築原貌結構特徵的同時，賦予其現代、俐落且具親和力的視覺風格。</p>",
-    "en": "<p>Taiwan Landmarks is a vector illustration series celebrating Taiwan’s rich architectural heritage. Designed in Adobe Illustrator, each illustration simplifies complex architectural structures into clean vector geometry while retaining delicate original details, created for versatile digital and print applications.</p>"
-  }
-]
+  ]
+}
