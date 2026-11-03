@@ -102,19 +102,37 @@ body::after {
 @keyframes rise { from { transform: translateY(105%); } }
 .hero-card { animation: card-in 1.2s var(--ease) .2s both; }
 @keyframes card-in { from { clip-path: inset(12% 10% 12% 10% round 40px); } to { clip-path: inset(0 round 40px); } }
-.hero-portrait { transform: translateY(var(--py, 0)) scale(1.06); will-change: transform; }
+.hero-portrait { transform: translate(calc(var(--mx, 0) * -16px), calc(var(--py, 0px) + var(--my, 0) * -12px)) scale(1.08); transition: transform .5s var(--ease); will-change: transform; }
 .hero-row, .hero-stats { animation: fade-up .9s var(--ease) .55s both; }
 .hero-stats { animation-delay: .7s; }
 @keyframes fade-up { from { opacity: 0; transform: translateY(18px); } }
 .js .reveal { opacity: 0; transform: translateY(40px); transition: opacity .9s var(--ease), transform .9s var(--ease); }
 .js .reveal.in { opacity: 1; transform: none; }
-.cursor {
-  position: fixed; left: 0; top: 0; z-index: 120; pointer-events: none;
-  display: grid; place-items: center; width: 84px; height: 84px; margin: -42px 0 0 -42px; border-radius: 50%;
-  background: var(--ink); color: var(--paper); font: 600 13px/1 var(--sans);
-  transform: translate(var(--cx, -200px), var(--cy, -200px)) scale(0); transition: transform .35s var(--ease);
+
+/* Hero pointer effects */
+.hero-title .ch { display: inline-block; transition: transform .45s var(--ease), color .3s; }
+.hero-card {
+  --rx: 0deg; --ry: 0deg; --mx: 0; --my: 0; --gx: 50%; --gy: 50%;
+  transform: perspective(1400px) rotateX(var(--rx)) rotateY(var(--ry));
+  transition: transform .6s var(--ease); will-change: transform;
 }
-.cursor.on { transform: translate(var(--cx), var(--cy)) scale(1); }
+.hero-card.tilting { transition: transform .12s linear; }
+.hero-card::after {
+  content: ""; position: absolute; inset: 0; z-index: 2; border-radius: inherit; pointer-events: none;
+  background: radial-gradient(circle at var(--gx) var(--gy), rgba(255, 255, 255, .28), transparent 45%);
+  opacity: 0; transition: opacity .4s;
+}
+.hero-card.tilting::after { opacity: 1; }
+.hero-badge {
+  position: absolute; z-index: 3; left: 22px; bottom: 22px; width: 116px; height: 116px; border-radius: 50%;
+  background: var(--paper); fill: var(--ink); font: 600 9px/1 var(--sans);
+  animation: spin 22s linear infinite; box-shadow: 0 10px 30px -12px rgba(0, 0, 0, .35);
+}
+.hero-badge-mark { position: absolute; z-index: 4; left: 62px; bottom: 62px; width: 36px; height: 36px; transition: transform .5s var(--ease); }
+.hero-card:hover .hero-badge { animation-duration: 8s; }
+.hero-card:hover .hero-badge-mark { transform: rotate(-20deg) scale(1.1); }
+@keyframes spin { to { transform: rotate(360deg); } }
+.circles a { will-change: transform; }
 
 /* Notched round buttons that sit in a cut-out of a card */
 .notch-btn {
@@ -311,6 +329,8 @@ body::after {
   .hero { grid-template-columns: 1fr; }
   .hero-copy { padding-top: 8px; }
   .hero-card { min-height: 0; aspect-ratio: 1 / 1.02; }
+  .hero-badge { width: 92px; height: 92px; left: 16px; bottom: 16px; }
+  .hero-badge-mark { width: 28px; height: 28px; left: 48px; bottom: 48px; }
   .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .card, .card.s5, .card.s7, .grid.filtered .card { grid-column: span 1; }
   .card.s5 .card-media, .card.s7 .card-media { aspect-ratio: 4 / 3; height: auto; }

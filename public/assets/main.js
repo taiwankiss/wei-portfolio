@@ -35,15 +35,59 @@ const headingObserver = new IntersectionObserver((entries) => {
 }, { rootMargin: "0px 0px -10% 0px" });
 document.querySelectorAll(".reveal").forEach((el) => headingObserver.observe(el));
 
-// "View" bubble that follows the pointer over project cards
-const cursor = document.querySelector(".cursor");
-if (cursor && !calm && matchMedia("(hover: hover) and (pointer: fine)").matches) {
-  addEventListener("pointermove", (e) => {
-    cursor.style.setProperty("--cx", `${e.clientX}px`);
-    cursor.style.setProperty("--cy", `${e.clientY}px`);
-    cursor.classList.toggle("on", !!e.target.closest?.(".card-media, .pager-next"));
-  }, { passive: true });
-  document.addEventListener("pointerleave", () => cursor.classList.remove("on"));
+const finePointer = !calm && matchMedia("(hover: hover) and (pointer: fine)").matches;
+
+// Hero: card tilts toward the pointer with a moving glare, photo drifts the other way
+const heroCard = document.querySelector(".hero-card");
+if (heroCard && finePointer) {
+  heroCard.addEventListener("pointermove", (e) => {
+    const r = heroCard.getBoundingClientRect();
+    const x = (e.clientX - r.left) / r.width - 0.5;
+    const y = (e.clientY - r.top) / r.height - 0.5;
+    heroCard.classList.add("tilting");
+    heroCard.style.setProperty("--ry", `${x * 8}deg`);
+    heroCard.style.setProperty("--rx", `${y * -8}deg`);
+    heroCard.style.setProperty("--mx", x.toFixed(3));
+    heroCard.style.setProperty("--my", y.toFixed(3));
+    heroCard.style.setProperty("--gx", `${(x + 0.5) * 100}%`);
+    heroCard.style.setProperty("--gy", `${(y + 0.5) * 100}%`);
+  });
+  heroCard.addEventListener("pointerleave", () => {
+    heroCard.classList.remove("tilting");
+    for (const v of ["--rx", "--ry"]) heroCard.style.setProperty(v, "0deg");
+    for (const v of ["--mx", "--my"]) heroCard.style.setProperty(v, "0");
+  });
+}
+
+// Hero: letters near the pointer lift and turn orange; the circle links lean toward it
+const letters = [...document.querySelectorAll(".hero-title .ch")];
+const magnets = [...document.querySelectorAll(".circles a")];
+const hero = document.querySelector(".hero");
+if (hero && finePointer) {
+  let frame = 0;
+  const reset = () => {
+    letters.forEach((l) => { l.style.transform = ""; l.style.color = ""; });
+    magnets.forEach((m) => { m.style.transform = ""; });
+  };
+  hero.addEventListener("pointermove", (e) => {
+    cancelAnimationFrame(frame);
+    frame = requestAnimationFrame(() => {
+      for (const l of letters) {
+        const r = l.getBoundingClientRect();
+        const d = Math.hypot(e.clientX - (r.left + r.width / 2), e.clientY - (r.top + r.height / 2));
+        const pull = Math.max(0, 1 - d / 220);
+        l.style.transform = pull ? `translateY(${-pull * 0.12}em)` : "";
+        l.style.color = pull > 0.55 ? "var(--acc)" : "";
+      }
+      for (const m of magnets) {
+        const r = m.getBoundingClientRect();
+        const dx = e.clientX - (r.left + r.width / 2);
+        const dy = e.clientY - (r.top + r.height / 2);
+        m.style.transform = Math.hypot(dx, dy) < 80 ? `translate(${dx * 0.3}px, ${dy * 0.3}px)` : "";
+      }
+    });
+  });
+  hero.addEventListener("pointerleave", () => { cancelAnimationFrame(frame); reset(); });
 }
 
 // Looping videos only play while on screen

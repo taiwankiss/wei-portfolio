@@ -23,7 +23,6 @@
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <div class="glow" aria-hidden="true"></div>
-<div class="cursor" aria-hidden="true">View</div>
 <header class="site-header">
   <div class="site-header__inner">
     <a class="brand" href="/" aria-label="Wei Lee, home"><img src="/assets/img/mark.svg" width="36" height="36" alt=""><span>Wei Lee</span></a>
@@ -36,7 +35,7 @@
 
 <section class="hero wrap">
   <div class="hero-copy">
-    <h1 class="display hero-title"><span class="ln"><span style="--i:0">Wei&#x27;s</span></span><span class="ln"><span style="--i:1">Portfolio</span></span></h1>
+    <h1 class="display hero-title" aria-label="Wei&#x27;s Portfolio"><span class="ln" aria-hidden="true"><span style="--i:0"><span class="ch">W</span><span class="ch">e</span><span class="ch">i</span><span class="ch">&#x27;</span><span class="ch">s</span></span></span><span class="ln" aria-hidden="true"><span style="--i:1"><span class="ch">P</span><span class="ch">o</span><span class="ch">r</span><span class="ch">t</span><span class="ch">f</span><span class="ch">o</span><span class="ch">l</span><span class="ch">i</span><span class="ch">o</span></span></span></h1>
     <div class="hero-row">
       <div class="circles">
         <a href="mailto:s923446@gmail.com">mail</a>
@@ -49,6 +48,11 @@
   </div>
   <div class="hero-card">
     <img class="hero-portrait" src="/assets/img/wei-camera.webp" width="1200" height="1149" alt="Wei Lee holding a camera" fetchpriority="high">
+    <svg class="hero-badge" viewBox="0 0 120 120" aria-hidden="true">
+      <defs><path id="badge-ring" d="M60 60m-44 0a44 44 0 1 1 88 0a44 44 0 1 1-88 0"/></defs>
+      <text textLength="274" lengthAdjust="spacing"><textPath href="#badge-ring" textLength="274" lengthAdjust="spacing">VISUAL DESIGNER • DESIGN MANAGER • </textPath></text>
+    </svg>
+    <img class="hero-badge-mark" src="/assets/img/mark.svg" width="36" height="36" alt="">
   </div>
 </section>
 <section class="work wrap" id="work">

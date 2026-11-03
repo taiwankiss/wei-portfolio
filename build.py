@@ -119,7 +119,6 @@ def page(path, title, body, desc=None, image=None, active=""):
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <div class="glow" aria-hidden="true"></div>
-<div class="cursor" aria-hidden="true">View</div>
 <header class="site-header">
   <div class="site-header__inner">
     <a class="brand" href="/" aria-label="Wei Lee, home">{MARK}<span>Wei Lee</span></a>
@@ -191,7 +190,12 @@ def build_home():
     body = f"""
 <section class="hero wrap">
   <div class="hero-copy">
-    <h1 class="display hero-title">{"".join(f'<span class="ln"><span style="--i:{n}">{escape(x)}</span></span>' for n, x in enumerate(hero["title"]))}</h1>
+    <h1 class="display hero-title" aria-label="{escape(" ".join(hero["title"]))}">{"".join(
+        f'<span class="ln" aria-hidden="true"><span style="--i:{n}">'
+        + "".join(f'<span class="ch">{escape(c)}</span>' for c in line)
+        + "</span></span>"
+        for n, line in enumerate(hero["title"])
+    )}</h1>
     <div class="hero-row">
       <div class="circles">
         <a href="mailto:{site['email']}">mail</a>
@@ -204,6 +208,11 @@ def build_home():
   </div>
   <div class="hero-card">
     <img class="hero-portrait" src="/assets/img/wei-camera.webp" width="1200" height="1149" alt="Wei Lee holding a camera" fetchpriority="high">
+    <svg class="hero-badge" viewBox="0 0 120 120" aria-hidden="true">
+      <defs><path id="badge-ring" d="M60 60m-44 0a44 44 0 1 1 88 0a44 44 0 1 1-88 0"/></defs>
+      <text textLength="274" lengthAdjust="spacing"><textPath href="#badge-ring" textLength="274" lengthAdjust="spacing">VISUAL DESIGNER • DESIGN MANAGER • </textPath></text>
+    </svg>
+    <img class="hero-badge-mark" src="/assets/img/mark.svg" width="36" height="36" alt="">
   </div>
 </section>
 <section class="work wrap" id="work">
