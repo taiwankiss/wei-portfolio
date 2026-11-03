@@ -1,10 +1,51 @@
 document.documentElement.classList.add("js");
 
-// Header border once the page scrolls
+const calm = matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+// Header border, reading progress and a slow drift on the hero photo
 const header = document.querySelector(".site-header");
-const onScroll = () => header.classList.toggle("scrolled", scrollY > 8);
-addEventListener("scroll", onScroll, { passive: true });
+const portrait = document.querySelector(".hero-portrait");
+let ticking = false;
+const onScroll = () => {
+  header.classList.toggle("scrolled", scrollY > 8);
+  const max = document.documentElement.scrollHeight - innerHeight;
+  header.style.setProperty("--p", max > 0 ? Math.min(scrollY / max, 1) : 0);
+  if (portrait && !calm && scrollY < innerHeight * 1.2) portrait.style.setProperty("--py", `${scrollY * 0.08}px`);
+  ticking = false;
+};
+addEventListener("scroll", () => { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, { passive: true });
 onScroll();
+
+// Hero numbers count up once
+document.querySelectorAll("[data-count]").forEach((el) => {
+  const end = Number(el.dataset.count);
+  if (calm || !end) return;
+  const start = performance.now() + 600;
+  const step = (now) => {
+    const t = Math.min(Math.max((now - start) / 1400, 0), 1);
+    el.textContent = Math.round(end * (1 - (1 - t) ** 3));
+    if (t < 1) requestAnimationFrame(step);
+  };
+  el.textContent = "0";
+  requestAnimationFrame(step);
+});
+
+// Headings slide up as they enter the viewport
+const headingObserver = new IntersectionObserver((entries) => {
+  for (const e of entries) if (e.isIntersecting) { e.target.classList.add("in"); headingObserver.unobserve(e.target); }
+}, { rootMargin: "0px 0px -10% 0px" });
+document.querySelectorAll(".reveal").forEach((el) => headingObserver.observe(el));
+
+// "View" bubble that follows the pointer over project cards
+const cursor = document.querySelector(".cursor");
+if (cursor && !calm && matchMedia("(hover: hover) and (pointer: fine)").matches) {
+  addEventListener("pointermove", (e) => {
+    cursor.style.setProperty("--cx", `${e.clientX}px`);
+    cursor.style.setProperty("--cy", `${e.clientY}px`);
+    cursor.classList.toggle("on", !!e.target.closest?.(".card-media, .pager-next"));
+  }, { passive: true });
+  document.addEventListener("pointerleave", () => cursor.classList.remove("on"));
+}
 
 // Looping videos only play while on screen
 const videoObserver = new IntersectionObserver((entries) => {

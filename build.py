@@ -8,11 +8,15 @@ from content/projects.json.
 import json
 import os
 import re
+import shutil
 from html import escape
 from pathlib import Path
 
 ROOT = Path(__file__).parent
 OUT = ROOT / "public"
+# The About page is the résumé site, copied in at build time when that project is present.
+RESUME = ROOT.parent / "Resume"
+ACCENT = "#F4A711"
 site = json.loads((ROOT / "content/site.json").read_text())
 projects = json.loads((ROOT / "content/projects.json").read_text())
 
@@ -56,7 +60,7 @@ def page(path, title, body, desc=None, image=None, active=""):
     og = site["url"] + (image or "/media/snest/cover.webp")
     nav = "".join(
         f'<a href="{href}"{" aria-current=page" if key == active else ""}>{label}</a>'
-        for key, href, label in [("work", "/#work", "Work"), ("about", "/about-me/", "About"), ("contact", "#contact", "Contact")]
+        for key, href, label in [("work", "/#work", "Work"), ("about", "/about-me/", "About")]
     )
     html = f"""<!doctype html>
 <html lang="en">
@@ -72,7 +76,7 @@ def page(path, title, body, desc=None, image=None, active=""):
 <meta property="og:image" content="{og}">
 <meta property="og:url" content="{site['url']}{path}">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#f4f3ee">
+<meta name="theme-color" content="#efebe3">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/favicon.png" type="image/png" sizes="32x32">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -82,10 +86,13 @@ def page(path, title, body, desc=None, image=None, active=""):
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
+<div class="glow" aria-hidden="true"></div>
+<div class="cursor" aria-hidden="true">View</div>
 <header class="site-header">
   <a class="brand" href="/" aria-label="Wei Lee, home">{MARK}<span>Wei Lee</span></a>
   <nav class="nav">{nav}</nav>
   <p class="status"><i></i>{escape(site['location'])} · Open to work</p>
+  <span class="progress" aria-hidden="true"></span>
 </header>
 <main id="main">
 {body}
@@ -104,7 +111,7 @@ def footer():
   <div class="wrap">
     <div class="cta">
       <p class="label">Have a project in mind?</p>
-      <h2 class="display cta-title">let's talk.</h2>
+      <h2 class="display cta-title reveal">let's talk.</h2>
       <a class="cta-mail" href="mailto:{site['email']}">{site['email']}</a>
       <a class="notch-btn cta-btn" href="mailto:{site['email']}" aria-label="Send an email">{ARROW}</a>
     </div>
@@ -131,8 +138,8 @@ def card(p, i):
 </li>"""
 
 
-def section_head(num, title, extra=""):
-    return f'<div class="section-head"><span class="label">({num:02d})</span><h2 class="display section-title">{title}</h2>{extra}</div>'
+def section_head(title, extra=""):
+    return f'<div class="section-head"><h2 class="display section-title reveal">{title}</h2>{extra}</div>'
 
 
 def build_home():
@@ -143,12 +150,12 @@ def build_home():
         for c, n in counts.items()
     )
     stats = "".join(
-        f'<li><b><sup>+</sup>{s["value"]}</b><span>{escape(s["label"])}</span></li>' for s in hero["stats"]
+        f'<li><b><sup>+</sup><span data-count="{s["value"]}">{s["value"]}</span></b><span>{escape(s["label"])}</span></li>' for s in hero["stats"]
     )
     body = f"""
 <section class="hero wrap">
   <div class="hero-copy">
-    <h1 class="display hero-title">{"<br>".join(hero["title"])}</h1>
+    <h1 class="display hero-title">{"".join(f'<span class="ln"><span style="--i:{n}">{escape(x)}</span></span>' for n, x in enumerate(hero["title"]))}</h1>
     <div class="hero-row">
       <div class="circles">
         <a href="mailto:{site['email']}">mail</a>
@@ -164,7 +171,7 @@ def build_home():
   </div>
 </section>
 <section class="work wrap" id="work">
-  {section_head(1, "selected work", f'<div class="chips" role="group" aria-label="Filter by category">{chips}</div>')}
+  {section_head("selected work", f'<div class="chips" role="group" aria-label="Filter by category">{chips}</div>')}
   <ul class="grid">{"".join(card(p, i) for i, p in enumerate(projects))}</ul>
 </section>"""
     page("/", "", body, active="work")
@@ -215,68 +222,43 @@ def build_project(i, p):
 
 
 def build_about():
-    exp = "".join(
-        f"""<li class="job">
-  <div class="job-when">{e['period']}</div>
-  <div><h3>{escape(e['role'])}</h3><p class="job-co">{escape(e['company'])}</p>
-  <ul>{"".join(f"<li>{escape(x)}</li>" for x in e['points'])}</ul></div>
-</li>"""
-        for e in site["experience"]
+    """Copy the résumé site into /about-me/, recoloured to the portfolio accent."""
+    if not RESUME.exists():
+        print(f"{RESUME} not found; keeping the existing about-me/ copy")
+        return
+    dest = OUT / "about-me"
+    shutil.rmtree(dest, ignore_errors=True)
+    (dest / "assets/logos").mkdir(parents=True)
+    for name in ["main.js", "avatar3.jpg", "avatar-loop.mp4"]:
+        shutil.copy(RESUME / "assets" / name, dest / "assets" / name)
+    for logo in (RESUME / "assets/logos").iterdir():
+        shutil.copy(logo, dest / "assets/logos" / logo.name)
+    css = (RESUME / "assets/style.css").read_text()
+    css = css.replace("#FF4D1A", ACCENT).replace("255, 77, 26", "244, 167, 17")
+    css += (
+        "\n/* portfolio link in the chrome */\n"
+        ".chrome__home { color: inherit; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; }\n"
+        ".chrome__home img { width: 22px; height: 22px; transition: transform .4s; }\n"
+        ".chrome__home:hover img { transform: rotate(-12deg); }\n"
     )
-    edu = "".join(
-        f'<li><b>{escape(e["degree"])}</b><span>{escape(e["school"])} · {e["period"]}</span></li>' for e in site["education"]
+    (dest / "assets/style.css").write_text(css)
+
+    html = (RESUME / "index.html").read_text()
+    html = re.sub(r'<link rel="(?:icon|apple-touch-icon|manifest)"[^>]*>\n', "", html)
+    html = html.replace(
+        "<title>Resume</title>",
+        f'<title>About — Wei Lee</title>\n<link rel="canonical" href="{site["url"]}/about-me/">\n'
+        '<link rel="icon" href="/favicon.svg" type="image/svg+xml">\n'
+        '<link rel="icon" href="/favicon.png" type="image/png" sizes="32x32">\n'
+        '<link rel="apple-touch-icon" href="/apple-touch-icon.png">',
     )
-    skills = "".join(f"<li>{escape(s)}</li>" for s in site["skills"])
-    cf = "".join(f"<li>{escape(s)}</li>" for s in site["crowdfunding"])
-    traits = "".join(f"<li>{escape(s)}</li>" for s in site["traits"])
-    nums = "".join(
-        f'<li><b>{n["value"]}<sup>{n["suffix"]}</sup></b><span>{escape(n["zh"])}</span><small>{escape(n["en"])}</small></li>'
-        for n in site["numbers"]
+    html = html.replace('<meta name="apple-mobile-web-app-title" content="Resume">\n', "")
+    html = re.sub(
+        r'<span>李建緯 <span class="dim">/</span> Wei Lee</span>',
+        '<a class="chrome__home" href="/"><img src="/assets/img/mark.svg" alt="">← Wei\'s Portfolio</a>',
+        html,
     )
-    statement = "<br>".join(escape(x) for x in site["statement"]["zh"])
-    off = "<br>".join(escape(x) for x in site["off_clock"]["zh"])
-    body = f"""
-<section class="about wrap">
-  <div class="about-intro">
-    <h1 class="display about-title">about<br>me.</h1>
-    <div class="about-card">
-      <span class="signature" aria-hidden="true">Wei Lee</span>
-      <img src="/assets/img/wei-cutout.webp" width="900" height="900" alt="Portrait of Wei Lee">
-    </div>
-  </div>
-  <div class="about-body">
-    <aside class="about-side">
-      <p class="label">Contact</p>
-      <dl class="contact-list">
-        <dt>Email</dt><dd><a href="mailto:{site['email']}">{site['email']}</a></dd>
-        <dt>Phone</dt><dd><a href="tel:{site['phone'].replace(' ', '')}">{site['phone']}</a></dd>
-        <dt>Based in</dt><dd>{escape(site['location'])}</dd>
-      </dl>
-    </aside>
-    <div class="about-main">
-      <h2 class="statement">{statement}</h2>
-      <p class="statement-en">{escape(site['statement']['en'])}</p>
-      <ul class="nums">{nums}</ul>
-      {"".join(f"<p class='lead'>{escape(x)}</p>" for x in site['about'])}
-      <ul class="traits">{traits}</ul>
-      <h2 class="label section-label">Experience</h2>
-      <ol class="jobs">{exp}</ol>
-      <div class="about-cols">
-        <div>
-          <h2 class="label section-label">Skills</h2><ul class="pills">{skills}</ul>
-          <p class="ai-note"><b>+ AI Workflow</b>{escape(site['ai_note'])}</p>
-        </div>
-        <div><h2 class="label section-label">Education</h2><ul class="edu">{edu}</ul></div>
-      </div>
-      <h2 class="label section-label">Crowdfunding campaigns</h2>
-      <ul class="pills pills-outline">{cf}</ul>
-      <h2 class="label section-label">Off the clock</h2>
-      <p class="off-zh">{off}</p>
-      <p class="statement-en">{escape(site['off_clock']['en'])}</p>
-    </div>
-  </div>
-</section>"""
-    page("/about-me/", "About", body, active="about")
+    (dest / "index.html").write_text(html)
 
 
 def build_misc():

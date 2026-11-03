@@ -3,9 +3,6 @@
   "title": "Wei's Portfolio",
   "url": "https://weilee01.com",
   "tagline": "好好感受、用心生活",
-  "role": "Visual Designer · Design Manager",
-  "headline": "把複雜的策略，轉化為會說話的視覺。",
-  "intro": "10 年跨領域視覺設計與品牌管理經驗。從群眾募資頁、品牌識別、商業攝影到官網 UI，擅長把產品的核心價值變成高轉換的商業視覺。",
   "hero": {
     "title": [
       "Wei's",
@@ -32,116 +29,5 @@
     "Photography",
     "Website",
     "Motion"
-  ],
-  "about": [
-    "具備 10 年以上跨領域視覺設計與品牌管理經驗，擅長將複雜策略與深度內容轉化為具備高轉換率的商業視覺。過去於「貝殼放大」深耕群眾募資視覺，精準掌握使用者心理與數位行銷視覺痛點；並於「悠勢科技」智慧停車 App 擔任設計經理，擁有跨領域、優化線上 (網站、APP) 線下 (停車場站) 體驗的實戰管理經驗。",
-    "近期也積極投入 AI 輔助設計流程（Vibe Coding），透過 AI 工具快速將設計概念原型化、迭代網頁與互動介面，加速從構想到落地的產出效率。"
-  ],
-  "experience": [
-    {
-      "role": "Design Manager",
-      "company": "悠勢科技股份有限公司",
-      "period": "AUG 2019 – AUG 2026",
-      "points": [
-        "全域品牌視覺建構：官網 UI、社群內容及線下實體空間系統跨媒介視覺設計。",
-        "主要服務視覺企劃與商業攝影：停車、租車、洗車及保險業務動、靜態商業攝影。",
-        "使用者體驗優化：結合線上數位介面與線下實體標示，打造一致的品牌視覺旅程。"
-      ]
-    },
-    {
-      "role": "Visual Designer",
-      "company": "華生基因檢測",
-      "period": "JUN 2018 – FEB 2019",
-      "points": [
-        "生醫科學資訊視覺化：將複雜基因數據轉化為清晰、專業的圖表與報告書模板。",
-        "多觸點品牌產品設計：官網介面、視覺系統及保健營養品包裝設計。",
-        "社群內容與產品溝通：針對大眾化健康服務設計多元社群視覺。"
-      ]
-    },
-    {
-      "role": "Visual Designer",
-      "company": "貝殼放大股份有限公司",
-      "period": "SEP 2014 – FEB 2018",
-      "points": [
-        "痛點導向之集資頁面視覺：規劃具高轉化率的專案視覺與情境提案。",
-        "數據驅動與內容持續優化：根據後台轉換數據與熱點回饋即時迭代視覺設計。",
-        "跨媒體內容整合與推廣：攝影企劃、動態影片製作與 KOL 宣傳素材延展。"
-      ]
-    }
-  ],
-  "education": [
-    {
-      "school": "長庚大學 Chang Gung University",
-      "degree": "工業設計研究所",
-      "period": "2011 – 2014"
-    },
-    {
-      "school": "東海大學 Tunghai University",
-      "degree": "工業工程學系",
-      "period": "2003 – 2008"
-    }
-  ],
-  "skills": [
-    "Branding",
-    "Web Design",
-    "Graphic",
-    "Photography",
-    "Motion",
-    "3D Graphic",
-    "Vibe Code (AI)"
-  ],
-  "crowdfunding": [
-    "Dreame V9 吸塵器",
-    "Mini Ramp 發展計劃",
-    "災後復甦同島相挺",
-    "小瓦掃地機器人",
-    "Ticwatch 智慧手錶",
-    "關懷站人生好好學",
-    "樂窩社區教室",
-    "思安慈善街頭義診"
-  ],
-  "statement": {
-    "zh": [
-      "把複雜的策略，",
-      "變成清楚的視覺。"
-    ],
-    "en": "Turning complex strategy into visuals that convert."
-  },
-  "numbers": [
-    {
-      "value": "10",
-      "suffix": "+",
-      "zh": "年設計經驗",
-      "en": "Years in visual design"
-    },
-    {
-      "value": "3",
-      "suffix": "",
-      "zh": "個產業深耕",
-      "en": "Crowdfunding · Biotech · Smart parking"
-    },
-    {
-      "value": "7",
-      "suffix": "",
-      "zh": "項核心技能",
-      "en": "From branding to vibe code"
-    }
-  ],
-  "traits": [
-    "效率",
-    "好溝通",
-    "素食",
-    "愛運動",
-    "行動力",
-    "多功能"
-  ],
-  "ai_note": "以 AI 輔助設計流程，從構想到原型更快落地。",
-  "off_clock": {
-    "zh": [
-      "騎公路車，",
-      "跑馬拉松，",
-      "登山健行。"
-    ],
-    "en": "Discipline is a design tool."
-  }
+  ]
 }
