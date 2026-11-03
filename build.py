@@ -146,7 +146,6 @@ def footer():
       <p class="label">Have a project in mind?</p>
       <h2 class="display cta-title reveal">let's talk.</h2>
       <a class="cta-mail" href="mailto:{site['email']}">{site['email']}</a>
-      <a class="notch-btn cta-btn" href="mailto:{site['email']}" aria-label="Send an email">{ARROW}</a>
     </div>
     <div class="footer-bottom">
       <span>© 2026 Wei Lee 李建緯</span>

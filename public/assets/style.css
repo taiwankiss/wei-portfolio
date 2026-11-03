@@ -303,17 +303,6 @@ body::after {
 .cta .label { color: var(--ink); font-size: 15px; }
 .cta-title { font-size: clamp(76px, 15vw, 240px); margin: 20px 0 clamp(28px, 4vw, 48px) -.04em; }
 .cta-mail { font: 600 clamp(18px, 2.2vw, 30px)/1.2 var(--sans); letter-spacing: -.02em; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 6px; word-break: break-all; }
-.cta-btn {
-  --ink: #efebe3;
-  position: absolute; right: -12px; bottom: -12px; width: 104px; height: 104px; border-radius: 52px 0 0 0;
-  background: var(--paper); padding: 14px 12px 12px 14px; display: block;
-}
-.cta-btn:hover { transform: none; background: var(--paper); }
-.cta-btn svg {
-  box-sizing: content-box; width: 26px; height: 26px; padding: 25px; border-radius: 50%;
-  background: var(--ink); color: var(--paper); transition: transform .35s var(--ease), background .2s, color .2s;
-}
-.cta-btn:hover svg { transform: rotate(45deg); background: var(--ink); color: var(--acc); }
 .footer-bottom {
   display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px;
   padding: 28px 4px 24px; font: 500 13px/1.4 var(--sans); color: var(--muted);
@@ -358,8 +347,6 @@ body::after {
   .lb-prev, .lb-next { position: absolute; bottom: 4px; }
   .lb-prev { left: 12px; } .lb-next { right: 12px; }
   .brand span { display: none; }
-  .cta-btn { width: 92px; height: 92px; }
-  .cta-btn svg { padding: 20px; }
 }
 @media (max-width: 520px) {
   .grid { grid-template-columns: 1fr; }
