@@ -10,7 +10,7 @@ import json
 import os
 import re
 import shutil
-from html import escape
+from html import escape, unescape
 from pathlib import Path
 
 ROOT = Path(__file__).parent
@@ -280,7 +280,8 @@ def build_project(i, p):
   <button class="lb-next" aria-label="Next image">→</button>
   <p class="lb-count"></p>
 </div>"""
-    desc = re.sub(r"<[^>]+>", "", p["zh"]).strip().split("\n")[0][:150]
+    # first paragraph; the CMS saves paragraphs without newlines between them
+    desc = unescape(re.sub(r"<[^>]+>", "", re.sub(r"</p>", "\n", p["zh"]))).strip().split("\n")[0][:150]
     page(f"/portfolio/{p['slug']}/", p["title"], body, desc=desc, image=p["cover"])
 
 
