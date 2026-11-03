@@ -10,7 +10,7 @@
   --r: 24px;
   --r-lg: 40px;
   --gutter: clamp(16px, 3.4vw, 48px);
-  --max: 1440px;
+  --max: 1240px;
   --ease: cubic-bezier(.2, .7, .2, 1);
   --display: "Inter Tight", "Noto Sans TC", system-ui, -apple-system, "PingFang TC", sans-serif;
   --sans: "Inter Tight", "Noto Sans TC", system-ui, -apple-system, "PingFang TC", sans-serif;
