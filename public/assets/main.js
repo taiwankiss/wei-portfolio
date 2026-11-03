@@ -94,7 +94,7 @@ const hero = document.querySelector(".hero");
 if (hero && finePointer) {
   let frame = 0;
   const reset = () => {
-    letters.forEach((l) => { l.style.transform = ""; l.style.color = ""; });
+    letters.forEach((l) => { l.style.transform = ""; l.style.color = ""; l.style.fontStyle = ""; });
     magnets.forEach((m) => { m.style.transform = ""; });
   };
   hero.addEventListener("pointermove", (e) => {
@@ -106,6 +106,7 @@ if (hero && finePointer) {
         const pull = Math.max(0, 1 - d / 220);
         l.style.transform = pull ? `translateY(${-pull * 0.12}em)` : "";
         l.style.color = pull > 0.55 ? "var(--acc)" : "";
+        l.style.fontStyle = pull > 0.55 ? "italic" : "";
       }
       for (const m of magnets) {
         const r = m.getBoundingClientRect();

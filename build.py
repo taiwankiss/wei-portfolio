@@ -24,7 +24,8 @@ FONTS = (
     '<link rel="preconnect" href="https://fonts.googleapis.com">'
     '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
     '<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400..900'
-    '&family=Mrs+Saint+Delafield&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">'
+    '&family=Instrument+Serif:ital@0;1&family=Geist+Mono:wght@400;500&family=Noto+Serif+TC:wght@400;600;900'
+    '&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">'
 )
 MARK = '<img src="/assets/img/mark.svg" width="36" height="36" alt="">'
 ARROW = (
@@ -119,6 +120,7 @@ def page(path, title, body, desc=None, image=None, active=""):
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <div class="glow" aria-hidden="true"></div>
+<div class="bgrid" aria-hidden="true"></div>
 <header class="site-header">
   <div class="site-header__inner">
     <a class="brand" href="/" aria-label="Wei Lee, home">{MARK}<span>Wei Lee</span></a>
@@ -143,8 +145,8 @@ def footer():
     return f"""<footer class="site-footer" id="contact">
   <div class="wrap">
     <div class="cta">
-      <p class="label">Have a project in mind?</p>
-      <h2 class="display cta-title reveal">let's talk.</h2>
+      <p class="kick"><b>03</b> — 聯絡 / Say hello</p>
+      <h2 class="display cta-title reveal">Let's <i>talk.</i></h2>
       <a class="cta-mail" href="mailto:{site['email']}">{site['email']}</a>
     </div>
     <div class="footer-bottom">
@@ -172,8 +174,8 @@ def card(p, i):
 </li>"""
 
 
-def section_head(title, extra=""):
-    return f'<div class="section-head"><h2 class="display section-title reveal">{title}</h2>{extra}</div>'
+def section_head(kick, title, extra=""):
+    return f'<div class="section-head"><p class="kick">{kick}</p><h2 class="display section-title reveal">{title}</h2>{extra}</div>'
 
 
 def build_home():
@@ -184,14 +186,16 @@ def build_home():
         for c, n in counts.items()
     )
     stats = "".join(
-        f'<li><b><sup>+</sup><span data-count="{s["value"]}">{s["value"]}</span></b><span>{escape(s["label"])}</span></li>' for s in hero["stats"]
+        f'<li><b><span data-count="{s["value"]}">{s["value"]}</span><sup>+</sup></b><span>{escape(s["label"])}</span></li>' for s in hero["stats"]
     )
     body = f"""
 <section class="hero wrap">
   <div class="hero-copy">
+    <p class="kick"><b>01</b> — 作品集 / Portfolio</p>
     <h1 class="display hero-title" aria-label="{escape(" ".join(hero["title"]))}">{"".join(
         f'<span class="ln" aria-hidden="true"><span style="--i:{n}">'
         + "".join(f'<span class="ch">{escape(c)}</span>' for c in line)
+        + ('<i class="ch stop">.</i>' if n == len(hero["title"]) - 1 else "")
         + "</span></span>"
         for n, line in enumerate(hero["title"])
     )}</h1>
@@ -222,7 +226,7 @@ def build_home():
   </div>
 </section>
 <section class="work wrap" id="work">
-  {section_head("Selected Work", f'<div class="chips" role="group" aria-label="Filter by category">{chips}</div>')}
+  {section_head("<b>02</b> — 作品 / Work", "Selected Work", f'<div class="chips" role="group" aria-label="Filter by category">{chips}</div>')}
   <ul class="grid">{"".join(card(p, i) for i, p in enumerate(projects))}</ul>
 </section>"""
     page("/", "", body, active="work")
