@@ -29,28 +29,86 @@ const revealObserver = new IntersectionObserver((entries) => {
 cards.forEach((c) => revealObserver.observe(c));
 
 // Category filter, kept in ?filter= so links and back button work
+// Cards that stay slide to their new spot (FLIP), leaving ones fade out, new ones fade up.
 const chips = [...document.querySelectorAll(".chip")];
-function applyFilter(name, push) {
+const grid = document.querySelector(".grid");
+const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)");
+const EASE = "cubic-bezier(.2, .7, .2, 1)";
+let filterRun = 0;
+
+const pageRect = (el) => {
+  const r = el.getBoundingClientRect();
+  return { left: r.left + scrollX, top: r.top + scrollY, width: r.width };
+};
+
+function setFilterState(name, matches) {
+  grid.classList.toggle("filtered", name !== "all");
+  for (const card of cards) {
+    card.hidden = !matches(card);
+    if (!card.hidden) card.classList.add("in");
+  }
+}
+
+async function applyFilter(name, push, animate) {
   if (!chips.some((c) => c.dataset.filter === name)) name = "all";
   chips.forEach((c) => c.setAttribute("aria-pressed", c.dataset.filter === name));
-  document.querySelector(".grid").classList.toggle("filtered", name !== "all");
-  for (const card of cards) {
-    const show = name === "all" || card.dataset.cats.split(" ").includes(name);
-    card.hidden = !show;
-    if (show) card.classList.add("in");
-  }
+  const matches = (card) => name === "all" || card.dataset.cats.split(" ").includes(name);
+  const run = ++filterRun;
+
   if (push) {
     const url = new URL(location);
     name === "all" ? url.searchParams.delete("filter") : url.searchParams.set("filter", name);
     history.replaceState(null, "", url);
   }
+  if (!animate || reduceMotion.matches) return setFilterState(name, matches);
+
+  cards.forEach((c) => c.getAnimations().forEach((a) => a.cancel()));
+  const visible = cards.filter((c) => !c.hidden);
+  const leaving = visible.filter((c) => !matches(c));
+  if (leaving.length) {
+    await Promise.all(leaving.map((c) =>
+      c.animate(
+        [{ opacity: 1, transform: "none" }, { opacity: 0, transform: "scale(.94)" }],
+        { duration: 220, easing: "ease-in", fill: "forwards" },
+      ).finished.catch(() => {}),
+    ));
+    if (run !== filterRun) return;
+  }
+
+  const first = new Map(visible.filter(matches).map((c) => [c, pageRect(c)]));
+  setFilterState(name, matches);
+  leaving.forEach((c) => c.getAnimations().forEach((a) => a.cancel()));
+
+  let entering = 0;
+  for (const card of cards) {
+    if (card.hidden) continue;
+    const from = first.get(card);
+    if (from) {
+      const to = pageRect(card);
+      const dx = from.left - to.left;
+      const dy = from.top - to.top;
+      const s = from.width / to.width;
+      if (Math.abs(dx) < 1 && Math.abs(dy) < 1 && Math.abs(s - 1) < 0.01) continue;
+      card.animate(
+        [
+          { transformOrigin: "0 0", transform: `translate(${dx}px, ${dy}px) scale(${s})` },
+          { transformOrigin: "0 0", transform: "none" },
+        ],
+        { duration: 650, easing: EASE },
+      );
+    } else {
+      card.animate(
+        [{ opacity: 0, transform: "translateY(28px) scale(.97)" }, { opacity: 1, transform: "none" }],
+        { duration: 560, delay: Math.min(entering++, 12) * 45, easing: EASE, fill: "backwards" },
+      );
+    }
+  }
 }
 if (chips.length) {
-  chips.forEach((c) => c.addEventListener("click", () => applyFilter(c.dataset.filter, true)));
+  chips.forEach((c) => c.addEventListener("click", () => applyFilter(c.dataset.filter, true, true)));
   const initial = new URLSearchParams(location.search).get("filter");
-  if (initial) applyFilter(initial, false);
+  if (initial) applyFilter(initial, false, false);
 }
-
 // Lightbox for project galleries
 const lightbox = document.querySelector(".lightbox");
 if (lightbox) {
