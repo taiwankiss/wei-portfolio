@@ -237,7 +237,7 @@ body::after {
 .grid.filtered .card { grid-column: span 4; }
 .card[hidden] { display: none; }
 .card a { display: block; text-decoration: none; }
-.card-media { position: relative; aspect-ratio: 4 / 3; overflow: hidden; border-radius: var(--r); background: var(--paper-2); }
+.card-media { position: relative; aspect-ratio: 4 / 3; overflow: hidden; border-radius: calc(var(--r) / 2); background: var(--paper-2); }
 /* the wide card lands at about 16:10, the narrow one a little taller than square */
 .card.s5 .card-media, .card.s7 .card-media { aspect-ratio: auto; height: 36cqi; }
 .grid.filtered .card .card-media { aspect-ratio: 4 / 3; height: auto; }
@@ -289,7 +289,7 @@ body::after {
 .desc-col b, .desc-col strong { color: var(--ink); font-weight: 600; }
 
 .gallery { display: grid; gap: clamp(12px, 1.4vw, 20px); }
-.shot { margin: 0; border-radius: var(--r); overflow: hidden; background: var(--paper-2); cursor: zoom-in; }
+.shot { margin: 0; border-radius: calc(var(--r) / 2); overflow: hidden; background: var(--paper-2); cursor: zoom-in; }
 .shot img, .shot video { width: 100%; }
 
 .pager { display: grid; grid-template-columns: 1fr 1.7fr; gap: clamp(12px, 1.4vw, 20px); padding-top: clamp(80px, 10vw, 140px); padding-bottom: clamp(24px, 3vw, 40px); }
