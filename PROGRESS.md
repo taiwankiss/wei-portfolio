@@ -31,7 +31,7 @@
    - ✅ Nameserver 已生效、Cloudflare 顯示 Active（2026-11-04）。
    - ✅ Pages `wei-portfolio` →「Custom domains」已加 `weilee01.com` 與 `www.weilee01.com`。加的時候 Cloudflare 自動把根網域 2 A + 2 AAAA、`www` 的 Hostinger CNAME 換成指向 `wei-portfolio.pages.dev` 的 CNAME（Proxied）。
    - ✅ 驗證（直接對 Cloudflare IP 測）：首頁、www、作品頁、About 都 200 且內容與 pages.dev 相同；HTTPS 憑證 CN=weilee01.com；http 會 301 到 https；`_redirects` 的 `/contact/`、`/blog/*`、`/portfolio-category/:cat/`、`/portfolio/` 轉址正確。部分公共 DNS（如 1.1.1.1）當天仍快取舊的 Hostinger 紀錄，最多 48 小時內會全部更新。
-   - ⏳ 還剩 `ftp` A 紀錄（145.79.25.98，指向 Hostinger）沒刪 — 等使用者決定（取消 Hostinger 後就沒用了）。
+   - ⏳ 還剩 `ftp` A 紀錄（145.79.25.98，指向 Hostinger）先留著（使用者決定，2026-11-04），取消 Hostinger 時再刪。
    - 注意：Cloudflare 預設開「Email Address Obfuscation」，會把頁面上的 mailto 改成 `/cdn-cgi/l/email-protection`（有 JS 時照常可點）。要關可到 weilee01.com →「Security」→「Settings」。
    - 之後：網域註冊轉移到 Cloudflare（Hostinger 取得 EPP 授權碼 → Cloudflare「Transfer Domains」→ 使用者本人付款約 US$10.44，到期日會從 2027-03-08 延到 2028-03-08）；開 Auto-renew。網域是 Hostinger 方案送的，Hostinger 續約價 146.99（幣別看起來是人民幣）。
    - 最後才取消 Hostinger 主機方案。
