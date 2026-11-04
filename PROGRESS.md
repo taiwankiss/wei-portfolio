@@ -1,6 +1,6 @@
 # 進度紀錄 — Wei's Portfolio
 
-更新：2026-11-03
+更新：2026-11-04
 
 ## 已完成
 - 從 WordPress（weilee01.com）搬出 37 件作品、292 張圖，轉成靜態網站（`build.py` 產生 `public/`）。
@@ -22,11 +22,18 @@
 - `about-style`：同 `main`
 
 ## 下一步
-1. **網域**：把 weilee01.com 的 DNS 移到 Cloudflare（在 Hostinger 改 nameserver），於 Pages 加上自訂網域；確認上線後再取消 Hostinger 方案。
-2. 從後台上傳的新圖片不會自動壓縮 — 若常上傳，可在 `build.py` 加自動縮圖。
+1. 從後台實際新增一件作品並存檔：確認檔名是 `<slug>.json`、格式正確、網站上排在第一個；測完刪掉。
+2. 在真的瀏覽器用滑鼠點首頁圓標的 W，確認會開到後台（程式檢查已確認 W 是最上層可點元素）。
+3. 後台作品列表右上的「新增資料夾」按鈕用不到：可在 `.pages.yml` 的 projects 加 `subfolders: false`。
+4. **網域**：把 weilee01.com 接到 Cloudflare Pages（Cloudflare 帳號側欄已看到 `weilee01.com`，可能已在 Cloudflare 上），於 Pages 加自訂網域；確認上線後再取消 Hostinger 方案。
+5. 從後台上傳的新圖片不會自動壓縮 — 若常上傳，可在 `build.py` 加自動縮圖。
+
+## 注意事項
+- Pages CMS 改設定後第一次打開常顯示舊快取（空清單或錯誤），重新整理一兩次即可；**空清單時不要按 Save**，會蓋掉資料。
+- Pages CMS 不支援在頂層陣列檔案上設 `collapsible`（會變成空白表單）。
 
 ## 重要檔案
-- `content/projects.json`（格式 `{"projects": [...]}`，包一層才能讓後台收合並顯示作品名）、`content/site.json`：內容
+- `content/projects/*.json`（一件一檔，`build.py` 依 `date` 新到舊排序）、`content/site.json`：內容
 - `build.py`：產生網站、複製履歷成 About（找不到 `../Resume` 時保留現有 `public/about-me/`）
 - `public/assets/style.css`、`public/assets/main.js`：樣式與互動
 - `public/_redirects`、`public/_headers`：Cloudflare 轉址與快取
