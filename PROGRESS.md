@@ -25,11 +25,14 @@
 - `about-style`：同 `main`
 
 ## 下一步
-1. **網域搬遷（進行中，2026-11-04 開始）**
+1. **網域搬遷（進行中，2026-11-04 開始；新網站已在 weilee01.com 上線）**
    - ✅ Cloudflare 已加入 `weilee01.com`（Free 方案）。從 Hostinger 匯入 6 筆紀錄（`ftp` A、根網域 2 筆 A + 2 筆 AAAA、`www` CNAME 指向 `www.weilee01.com.cdn.hstgr.net`），**全部設成 DNS only（灰雲）**，讓舊 WordPress 在過渡期照常運作。沒有 MX（無網域信箱），DNSSEC 原本就是關的。
    - ✅ Hostinger 名稱伺服器已改成 `desiree.ns.cloudflare.com`、`ram.ns.cloudflare.com`（Hostinger 後台內建瀏覽器無法登入，改用 Claude in Chrome 操作）。
-   - ⏳ 等 Cloudflare 顯示 Active（`dig NS weilee01.com @a.gtld-servers.net` 出現 cloudflare 即已更新；Cloudflare 會寄信）。
-   - 下一步：Cloudflare →「Workers & Pages」→ `wei-portfolio` →「Custom domains」加 `weilee01.com` 與 `www.weilee01.com`；刪掉指向 Hostinger 的舊 A/AAAA/CNAME（與 `ftp`）；驗證首頁、作品頁、舊 WordPress 網址轉址（`public/_redirects`）。
+   - ✅ Nameserver 已生效、Cloudflare 顯示 Active（2026-11-04）。
+   - ✅ Pages `wei-portfolio` →「Custom domains」已加 `weilee01.com` 與 `www.weilee01.com`。加的時候 Cloudflare 自動把根網域 2 A + 2 AAAA、`www` 的 Hostinger CNAME 換成指向 `wei-portfolio.pages.dev` 的 CNAME（Proxied）。
+   - ✅ 驗證（直接對 Cloudflare IP 測）：首頁、www、作品頁、About 都 200 且內容與 pages.dev 相同；HTTPS 憑證 CN=weilee01.com；http 會 301 到 https；`_redirects` 的 `/contact/`、`/blog/*`、`/portfolio-category/:cat/`、`/portfolio/` 轉址正確。部分公共 DNS（如 1.1.1.1）當天仍快取舊的 Hostinger 紀錄，最多 48 小時內會全部更新。
+   - ⏳ 還剩 `ftp` A 紀錄（145.79.25.98，指向 Hostinger）沒刪 — 等使用者決定（取消 Hostinger 後就沒用了）。
+   - 注意：Cloudflare 預設開「Email Address Obfuscation」，會把頁面上的 mailto 改成 `/cdn-cgi/l/email-protection`（有 JS 時照常可點）。要關可到 weilee01.com →「Security」→「Settings」。
    - 之後：網域註冊轉移到 Cloudflare（Hostinger 取得 EPP 授權碼 → Cloudflare「Transfer Domains」→ 使用者本人付款約 US$10.44，到期日會從 2027-03-08 延到 2028-03-08）；開 Auto-renew。網域是 Hostinger 方案送的，Hostinger 續約價 146.99（幣別看起來是人民幣）。
    - 最後才取消 Hostinger 主機方案。
 2. 從後台上傳的新圖片不會自動壓縮 — 若常上傳，可在 `build.py` 加自動縮圖。
