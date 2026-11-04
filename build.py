@@ -19,9 +19,25 @@ OUT = ROOT / "public"
 RESUME = ROOT.parent / "Resume"
 ACCENT = "#F4A711"
 site = json.loads((ROOT / "content/site.json").read_text())
+def load_project(f):
+    """Read one project file. Pages CMS leaves out optional fields that were left
+    blank (gallery, link, categories) and saves an empty editor as "<p></p>"."""
+    p = json.loads(f.read_text())
+    p.setdefault("categories", [])
+    p.setdefault("gallery", [])
+    for lang in ("zh", "en"):
+        text = p.get(lang) or ""
+        p[lang] = text if re.sub(r"<[^>]+>|&nbsp;|\s", "", text) else ""
+    link = p.get("link") or {}
+    if link.get("url") and not link.get("label"):
+        link["label"] = "Visit"
+    p["link"] = link
+    return p
+
+
 # One file per project (Pages CMS collection); newest first.
 projects = sorted(
-    (json.loads(f.read_text()) for f in (ROOT / "content/projects").glob("*.json")),
+    (load_project(f) for f in (ROOT / "content/projects").glob("*.json")),
     key=lambda p: p["date"], reverse=True,
 )
 
