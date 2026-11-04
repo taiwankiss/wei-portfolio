@@ -1,0 +1,11 @@
+{
+  "slug": "cms-test",
+  "title": "CMS 測試作品",
+  "categories": [
+    "Graphic"
+  ],
+  "cover": "/media/bf-logo/cover.webp",
+  "zh": "<p>這是後台測試用的作品，測完會刪除。</p>",
+  "en": "<p></p>",
+  "date": "2026-11-04T09:57"
+}
