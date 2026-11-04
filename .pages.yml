@@ -15,6 +15,7 @@ content:
     path: content/projects
     format: json
     filename: "{fields.slug}.json"
+    subfolders: false
     view:
       fields: [title, categories, date]
       primary: title
