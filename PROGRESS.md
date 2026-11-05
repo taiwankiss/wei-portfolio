@@ -49,3 +49,6 @@
 - `public/_redirects`、`public/_headers`：Cloudflare 轉址與快取
 - `.pages.yml`：後台設定
 - `photo/`：hero 原始照片（不進 git）
+
+## 2026-11-05：/my-score 轉址
+- `public/_redirects` 加了 `/my-score`、`/my-score/*` → https://my-score-share.pages.dev/ （302）。My Score 分享版已從 Hostinger 搬到 Cloudflare Pages 專案 `my-score-share`，取消 Hostinger 不會影響它。
