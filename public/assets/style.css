@@ -348,6 +348,17 @@ body::after {
 .hero-404 { min-height: 60vh; padding-top: 10vh; display: grid; align-content: start; gap: 24px; }
 .hero-404 .hero-lede { text-align: left; justify-self: start; }
 
+/* Fit the two-column hero inside one screen (header is ~64px) */
+@media (min-width: 901px) {
+  .hero { padding-top: clamp(16px, 2vw, 28px); padding-bottom: clamp(40px, 5vw, 72px); }
+  .hero-copy { gap: clamp(18px, 3vh, 36px); padding-top: clamp(8px, 2vh, 24px); }
+  .hero-title { font-size: min(32cqi, 220px, 19vh); }
+  .hero-stats { padding-top: clamp(16px, 2.4vh, 28px); }
+  .hero-stats b { font-size: min(clamp(64px, 7vw, 112px), 10vh); }
+  .hero-card { min-height: 0; max-height: calc(100svh - 64px - clamp(16px, 2vw, 28px) - 24px); }
+  .hero-portrait { object-position: 58% 0%; transform-origin: 60% 0%; }
+}
+
 /* Responsive */
 @media (max-width: 1100px) {
   .status { display: none; }
