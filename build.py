@@ -17,6 +17,9 @@ ROOT = Path(__file__).parent
 OUT = ROOT / "public"
 # The About page is the résumé site, copied in at build time when that project is present.
 RESUME = ROOT.parent / "Resume"
+# the old address (wei-portfolio.pages.dev) moves visitors to weilee01.com/ai-free/;
+# the weilee01.com router fetches these same files but never runs scripts
+OLD_HOST_REDIRECT = "<script>if (location.hostname === 'wei-portfolio.pages.dev') location.replace('https://weilee01.com/ai-free' + location.pathname + location.search + location.hash);</script>\n"
 ACCENT = "#F4A711"
 site = json.loads((ROOT / "content/site.json").read_text())
 def load_project(f):
@@ -127,7 +130,7 @@ def page(path, title, body, desc=None, image=None, active=""):
     html = f"""<!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
+{OLD_HOST_REDIRECT}<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{escape(full_title)}</title>
 <meta name="description" content="{escape(desc)}">
@@ -351,6 +354,7 @@ def build_about():
 
     html = (RESUME / "index.html").read_text()
     html = re.sub(r'<link rel="(?:icon|apple-touch-icon|manifest)"[^>]*>\n', "", html)
+    html = html.replace("<head>\n", "<head>\n" + OLD_HOST_REDIRECT, 1)
     html = html.replace(
         "<title>Resume</title>",
         f'<title>About — Wei Lee</title>\n<link rel="canonical" href="{site["url"]}/about-me/">\n'
