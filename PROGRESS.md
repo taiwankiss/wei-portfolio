@@ -52,3 +52,8 @@
 
 ## 2026-11-05：/my-score 轉址
 - `public/_redirects` 加了 `/my-score`、`/my-score/*` → https://my-score-share.pages.dev/ （302）。My Score 分享版已從 Hostinger 搬到 Cloudflare Pages 專案 `my-score-share`，取消 Hostinger 不會影響它。
+
+## 2026-11-05：weilee01.com 根目錄改給 Ai Work，這個作品集搬到 /ai-free/
+- Cloudflare Worker `weilee01-router`（`~/Documents/WEI/Ai/weilee01-router`，README 有完整對照表）掛在 `weilee01.com/*`、`www.weilee01.com/*`，網址列保持 weilee01.com。根目錄是 Ai Work，本站在 **weilee01.com/ai-free/**（Worker 從 wei-portfolio.pages.dev 取內容，HTML 裡 `/` 開頭的路徑自動加上 `/ai-free`）。
+- 舊網址 `/portfolio/…`、`/portfolio-category/…`、`/about-me/`、`/contact/`、`/blog/…` 由 Worker 301 到 `/ai-free/…`；`/my-score` → `/myscore/`。本站 `public/_redirects` 在 weilee01.com 上已不會被用到（wei-portfolio.pages.dev 上仍有效）。
+- Pages 的自訂網域 weilee01.com 沒拿掉；Worker 路由在它前面。
