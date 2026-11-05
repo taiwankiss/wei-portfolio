@@ -3,3 +3,5 @@
 /blog/*                         /                        301
 /portfolio-category/:cat/       /?filter=:cat#work       301
 /portfolio/                     /#work                   301
+/my-score                       https://my-score-share.pages.dev/         302
+/my-score/*                     https://my-score-share.pages.dev/:splat   302
