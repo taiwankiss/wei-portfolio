@@ -92,8 +92,8 @@ content:
         type: string
         hidden: true
       - name: title
+        label: 首頁分頁標題（後面會自動加「— Wei Lee」）
         type: string
-        hidden: true
       - name: url
         type: string
         hidden: true

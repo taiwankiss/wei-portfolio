@@ -118,7 +118,7 @@ def media(src, cls="", eager=False):
 
 def page(path, title, body, desc=None, image=None, active=""):
     desc = desc or site["hero"]["lede"]
-    full_title = f"{title} — Wei Lee" if title else "Wei Lee — Visual Designer"
+    full_title = f"{title} — Wei Lee" if title else f"{site['title']} — Wei Lee"
     og = site["url"] + (image or "/media/snest/cover.webp")
     nav = "".join(
         f'<a href="{href}"{" aria-current=page" if key == active else ""}>{label}</a>'
