@@ -368,7 +368,11 @@ body::after {
 @media (max-width: 900px) {
   .hero { grid-template-columns: 1fr; }
   .hero-copy { padding-top: 8px; }
-  .hero-card { min-height: 0; aspect-ratio: 1 / 1.02; }
+  .hero { gap: 20px; padding-top: 16px; }
+  .hero-copy { gap: 24px; }
+  /* Phone: photo first, sized so photo + title fit the first screen */
+  .hero-card { order: -1; min-height: 0; aspect-ratio: auto; height: clamp(220px, calc(100svh - 64px - 16px - 20px - 8px - 20px - 24px - 0.576 * (100vw - 2 * var(--gutter)) - 24px), 520px); }
+  .hero-portrait { object-position: 58% 12%; }
   .hero-badge { width: 78px; height: 78px; right: 14px; top: 14px; }
   .hero-badge-mark { width: 32px; height: 32px; right: 37px; top: 37px; }
   .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
