@@ -17,6 +17,13 @@
 - 後台新增作品實測（2026-11-04）：「Add an entry」存成 `content/projects/<slug>.json`，`date` 自動填入現在時間，網站首頁排第一；刪除後網站恢復。實測發現沒填作品圖時 CMS 會整個省略 `gallery`（`link`、`categories` 同理）、空的英文介紹存成 `<p></p>`，原本會讓 build 失敗，已在 `build.py` 的 `load_project` 補預設值。
 - 首頁圓標 W：滑鼠實點會以新分頁（`target="_blank"`）開後台。
 - `.pages.yml` 的 projects 已加 `subfolders: false`，後台列表不再有「新增資料夾」按鈕。
+- 2026-11-05 版面調整：
+  - 首頁大標改成「AI-free Portfolio.」；首頁分頁標題改讀 `content/site.json` 的 `title`（現為「AI-free Portfolio — Wei Lee」），後台「首頁設定」可改。
+  - 作品卡片與作品頁圖片圓角 24px → 12px（`.card-media`、`.shot`）。
+  - Helix2h Icon System（封面＋5 張）與 Helix2h Box（6 張作品圖）原本是透明 PNG 轉的 webp，已直接合成白底重存。
+  - 桌機 hero 壓在一屏內（`style.css` 的 `@media (min-width: 901px)` 區塊：標題、數字依 vh 縮放，照片卡最高一屏、照片從頂端裁到胸腰）。
+  - 手機 hero：照片排在最上面（`order: -1`），高度依螢幕高度算，照片＋大標題都在第一屏（375×812、375×667 實測）。
+  - Ai Work（`~/Documents/WEI/Ai/Ai Portfolio`）裡本專案的 `aifree-1`、`aifree-2`、`aifree-m` 截圖和 `aifree.mp4`、`aifree-m.mp4` 錄影已換成新版面（Playwright 逐格截圖＋ffmpeg）。之後版面再大改要記得重拍。
 
 ## 分支
 - `main`：目前定版（= `about-style`）
