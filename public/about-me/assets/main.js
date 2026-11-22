@@ -5,21 +5,6 @@
 
   if (reduced) $$('video[autoplay]').forEach(v => { v.removeAttribute('autoplay'); v.pause(); });
 
-  // crosshair marks on the background grid
-  const marks = $('.bg__marks');
-  const colW = () => parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--col')) || 160;
-  function buildMarks() {
-    const step = innerWidth <= 700 ? innerWidth / 4 : colW();
-    let html = '';
-    for (let x = step; x < innerWidth + step * 2; x += step * 2) {
-      for (let y = 180; y < innerHeight; y += 180) {
-        html += `<b style="left:${x}px;top:${y}px;animation-delay:${-((x * 13 + y * 7) % 97) / 97 * 3.4}s"></b>`;
-      }
-    }
-    marks.innerHTML = html;
-  }
-  buildMarks();
-  addEventListener('resize', buildMarks);
 
   // marquee rows (content duplicated so a -50% loop is seamless)
   const sep = '<span class="sep"></span>';
@@ -73,22 +58,4 @@
   requestAnimationFrame(() => $('.hero').classList.add('in'));
   $$('.hero .ln').forEach(el => el.parentElement.classList.add('in'));
 
-  // chrome follows the section under it; progress + index
-  const secs = $$('.sec');
-  const prog = $('.chrome__prog'), idx = $('#idx'), lbl = $('#lbl');
-  let ticking = false;
-  function onScroll() {
-    ticking = false;
-    const h = document.documentElement;
-    prog.style.transform = `scaleX(${h.scrollTop / Math.max(1, h.scrollHeight - innerHeight)})`;
-    const probe = $('.chrome').offsetHeight + 1;
-    let cur = secs[0], ci = 0;
-    secs.forEach((s, i) => { if (s.getBoundingClientRect().top <= probe) { cur = s; ci = i; } });
-    document.body.classList.toggle('is-dark', cur.classList.contains('sec--dark'));
-    document.body.classList.toggle('is-hot', cur.classList.contains('sec--hot'));
-    idx.textContent = String(ci + 1).padStart(2, '0');
-    lbl.textContent = cur.dataset.label;
-  }
-  addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, { passive: true });
-  onScroll();
 })();

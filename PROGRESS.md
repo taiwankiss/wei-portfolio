@@ -1,6 +1,6 @@
 # 進度紀錄 — Wei's Portfolio
 
-更新：2026-11-04
+更新：2026-11-23
 
 ## 已完成
 - 從 WordPress（weilee01.com）搬出 37 件作品、292 張圖，轉成靜態網站（`build.py` 產生 `public/`）。
@@ -26,7 +26,8 @@
   - Ai Work（`~/Documents/WEI/Ai/Ai Portfolio`）裡本專案的 `aifree-1`、`aifree-2`、`aifree-m` 截圖和 `aifree.mp4`、`aifree-m.mp4` 錄影已換成新版面（Playwright 逐格截圖＋ffmpeg）。之後版面再大改要記得重拍。
 
 ## 分支
-- `main`：目前定版（= `about-style`）
+- `main`：目前定版（2026-11-23 起 = `taste` 改版）
+- `taste`：taste-skill 改版（已合併進 main）
 - `light`：淺色版（米色底、粗體無襯線）
 - `dark-theme`：深色、粗體無襯線版
 - `about-style`：同 `main`
@@ -64,3 +65,16 @@
 - Cloudflare Worker `weilee01-router`（`~/Documents/WEI/Ai/weilee01-router`，README 有完整對照表）掛在 `weilee01.com/*`、`www.weilee01.com/*`，網址列保持 weilee01.com。根目錄是 Ai Work，本站在 **weilee01.com/ai-free/**（Worker 從 wei-portfolio.pages.dev 取內容，HTML 裡 `/` 開頭的路徑自動加上 `/ai-free`）。
 - 舊網址 `/portfolio/…`、`/portfolio-category/…`、`/about-me/`、`/contact/`、`/blog/…` 由 Worker 301 到 `/ai-free/…`；`/my-score` → `/myscore/`。本站 `public/_redirects` 在 weilee01.com 上已不會被用到（wei-portfolio.pages.dev 上仍有效）。
 - Pages 的自訂網域 weilee01.com 沒拿掉；Worker 路由在它前面。
+
+## 2026-11-23：taste-skill 改版（https://github.com/Leonxlnx/taste-skill）
+- 字體：Instrument Serif / Noto Serif TC 全部換成 Geist（英文）＋ Noto Sans TC（中文），全站與 About 一致。
+- 拿掉：「01 — 作品集」類編號小標、所有「—」破折號、飄移格線與十字記號、橘色光暈、狀態圓點、About 的大型 01/02/03 與右下角區段指示、直排「李建緯」。
+- 圓角統一：圖片 12px、大區塊 16px、可點的都是膠囊或圓形。
+- 深色／淺色兩種模式：預設跟系統，頁首圓形太陽／月亮按鈕可切換（存 localStorage `aifree-theme`）。淺色用履歷紙色 `#EFEBE3`，小字橘色在淺色版改 `#9a5f00`。
+- 頁首：Work／About 是會左右滑動的膠囊（換頁前先滑、下一頁接著滑進來）；Email 是圓形信封 icon。icon 用 PulsoIcon 的靜態 SVG（sun、moon、mail），hover 動畫用 CSS 重做。
+- Email 連結按下去會同時複製信箱並跳出提示（沒有郵件 App 時 mailto 不會有反應）。
+- 首頁 hero：照片改正方形（到腰部）、右欄變窄；拿掉介紹下的兩顆按鈕（跟頁首重複）；分隔線移到「Selected Work」上方。
+- 進度條與照片捲動漂移改用 CSS scroll timeline（不再監聽 scroll 事件）；不支援的瀏覽器不顯示進度條。
+- About 頁改版寫在 `about-taste.css`，`build.py` 的 `build_about()` 複製履歷網站後套上（含 HTML 替換、移除背景標記與 scroll 監聽的 JS），`../Resume` 本身沒動。
+- 共用互動在 `public/assets/ui.js`（主題按鈕、Email 複製提示、Work/About 滑動）。
+- 待辦：作品介紹文字（後台內容）裡還有「—」，例如 hualien、citizen-judge、helix2h 系列，沒動。Ai Work 裡本專案的截圖／錄影（aifree-1、aifree-2、aifree-m、aifree.mp4、aifree-m.mp4）是舊版面，要重拍。

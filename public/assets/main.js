@@ -2,19 +2,6 @@ document.documentElement.classList.add("js");
 
 const calm = matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-// Header border, reading progress and a slow drift on the hero photo
-const header = document.querySelector(".site-header");
-const portrait = document.querySelector(".hero-portrait");
-let ticking = false;
-const onScroll = () => {
-  const max = document.documentElement.scrollHeight - innerHeight;
-  header.style.setProperty("--p", max > 0 ? Math.min(scrollY / max, 1) : 0);
-  if (portrait && !calm && scrollY < innerHeight * 1.2) portrait.style.setProperty("--py", `${scrollY * 0.08}px`);
-  ticking = false;
-};
-addEventListener("scroll", () => { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, { passive: true });
-onScroll();
-
 // Hero numbers count up once
 document.querySelectorAll("[data-count]").forEach((el) => {
   const end = Number(el.dataset.count);
@@ -87,14 +74,14 @@ if (heroCard && warpMap && finePointer) {
   heroCard.addEventListener("pointerleave", () => { target = 0; start(); });
 }
 
-// Hero: letters near the pointer lift and turn orange; the circle links lean toward it
+// Hero: letters near the pointer lift and turn orange; the hero buttons lean toward it
 const letters = [...document.querySelectorAll(".hero-title .ch")];
-const magnets = [...document.querySelectorAll(".circles a")];
+const magnets = [...document.querySelectorAll(".hero-actions a")];
 const hero = document.querySelector(".hero");
 if (hero && finePointer) {
   let frame = 0;
   const reset = () => {
-    letters.forEach((l) => { l.style.transform = ""; l.style.color = ""; l.style.fontStyle = ""; });
+    letters.forEach((l) => { l.style.transform = ""; l.style.color = ""; });
     magnets.forEach((m) => { m.style.transform = ""; });
   };
   hero.addEventListener("pointermove", (e) => {
@@ -106,7 +93,6 @@ if (hero && finePointer) {
         const pull = Math.max(0, 1 - d / 220);
         l.style.transform = pull ? `translateY(${-pull * 0.12}em)` : "";
         l.style.color = pull > 0.55 ? "var(--acc)" : "";
-        l.style.fontStyle = pull > 0.55 ? "italic" : "";
       }
       for (const m of magnets) {
         const r = m.getBoundingClientRect();

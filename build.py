@@ -21,6 +21,31 @@ RESUME = ROOT.parent / "Resume"
 # the weilee01.com router fetches these same files but never runs scripts
 OLD_HOST_REDIRECT = "<script>if (location.hostname === 'wei-portfolio.pages.dev') location.replace('https://weilee01.com/ai-free' + location.pathname + location.search + location.hash);</script>\n"
 ACCENT = "#F4A711"
+# Theme is set before first paint (saved choice, else the system setting); the button
+# and everything else interactive that every page shares lives in /assets/ui.js
+THEME_INIT = (
+    "<script>(()=>{const t=localStorage.getItem('aifree-theme')||(matchMedia('(prefers-color-scheme: light)').matches?'light':'dark');"
+    "document.documentElement.dataset.theme=t;addEventListener('DOMContentLoaded',()=>{const c=document.querySelector('meta[name=theme-color]');"
+    "if(c)c.content=t==='light'?'#efebe3':'#0f0e0d'})})();</script>\n"
+)
+# Sun and moon from PulsoIcon (static SVG; their hover motion is redone in CSS)
+SUN = (
+    '<svg class="i-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" '
+    'stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle class="core" cx="12" cy="12" r="4"/>'
+    '<g class="rays"><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/>'
+    '<path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></g></svg>'
+)
+MOON = (
+    '<svg class="i-moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" '
+    'stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'
+    '<path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"/></svg>'
+)
+MAIL = (
+    '<svg class="i-mail" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" '
+    'stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path class="flap" d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/>'
+    '<rect class="env" x="2" y="4" width="20" height="16" rx="2"/></svg>'
+)
+THEME_BTN = f'<button class="theme-btn" type="button" aria-label="Switch theme">{SUN}{MOON}</button>'
 site = json.loads((ROOT / "content/site.json").read_text())
 def load_project(f):
     """Read one project file. Pages CMS leaves out optional fields that were left
@@ -47,9 +72,8 @@ projects = sorted(
 FONTS = (
     '<link rel="preconnect" href="https://fonts.googleapis.com">'
     '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
-    '<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400..900'
-    '&family=Instrument+Serif:ital@0;1&family=Geist+Mono:wght@400;500&family=Noto+Serif+TC:wght@400;600;900'
-    '&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">'
+    '<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400..800'
+    '&family=Geist+Mono:wght@400;500&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">'
 )
 MARK = '<img src="/assets/img/mark.svg" width="36" height="36" alt="">'
 ARROW = (
@@ -121,7 +145,7 @@ def media(src, cls="", eager=False):
 
 def page(path, title, body, desc=None, image=None, active=""):
     desc = desc or site["hero"]["lede"]
-    full_title = f"{title} — Wei Lee" if title else f"{site['title']} — Wei Lee"
+    full_title = f"{title} | Wei Lee" if title else f"{site['title']} | Wei Lee"
     og = site["url"] + (image or "/media/snest/cover.webp")
     nav = "".join(
         f'<a href="{href}"{" aria-current=page" if key == active else ""}>{label}</a>'
@@ -130,7 +154,7 @@ def page(path, title, body, desc=None, image=None, active=""):
     html = f"""<!doctype html>
 <html lang="en">
 <head>
-{OLD_HOST_REDIRECT}<meta charset="utf-8">
+{OLD_HOST_REDIRECT}{THEME_INIT}<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{escape(full_title)}</title>
 <meta name="description" content="{escape(desc)}">
@@ -148,16 +172,15 @@ def page(path, title, body, desc=None, image=None, active=""):
 {FONTS}
 <link rel="stylesheet" href="{asset("/assets/style.css")}">
 <script src="{asset("/assets/main.js")}" defer></script>
+<script src="{asset("/assets/ui.js")}" defer></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<div class="glow" aria-hidden="true"></div>
-<div class="bgrid" aria-hidden="true"></div>
 <header class="site-header">
   <div class="site-header__inner">
     <a class="brand" href="/" aria-label="Wei Lee, home">{MARK}<span>Wei Lee</span></a>
     <nav class="nav">{nav}</nav>
-    <a class="status" href="mailto:{site['email']}"><span class="dot"></span>Open to work</a>
+    <div class="head-end">{THEME_BTN}<a class="status round-btn" href="mailto:{site['email']}" aria-label="Email Wei" title="Email">{MAIL}</a></div>
   </div>
   <span class="progress" aria-hidden="true"></span>
 </header>
@@ -177,8 +200,7 @@ def footer():
     return f"""<footer class="site-footer" id="contact">
   <div class="wrap">
     <div class="cta">
-      <p class="kick"><b>03</b> — 聯絡 / Say hello</p>
-      <h2 class="display cta-title reveal">Let's <i>talk.</i></h2>
+      <h2 class="display cta-title reveal">Let's talk.</h2>
       <a class="cta-mail" href="mailto:{site['email']}">{site['email']}</a>
     </div>
     <div class="footer-bottom">
@@ -206,8 +228,8 @@ def card(p, i):
 </li>"""
 
 
-def section_head(kick, title, extra=""):
-    return f'<div class="section-head"><p class="kick">{kick}</p><h2 class="display section-title reveal">{title}</h2>{extra}</div>'
+def section_head(title, extra=""):
+    return f'<div class="section-head"><h2 class="display section-title reveal">{title}</h2>{extra}</div>'
 
 
 def build_home():
@@ -223,20 +245,14 @@ def build_home():
     body = f"""
 <section class="hero wrap">
   <div class="hero-copy">
-    <p class="kick"><b>01</b> — 作品集 / Portfolio</p>
     <h1 class="display hero-title" aria-label="{escape(" ".join(hero["title"]))}">{"".join(
         f'<span class="ln" aria-hidden="true"><span style="--i:{n}">'
         + "".join(f'<span class="ch">{escape(c)}</span>' for c in line)
-        + ('<i class="ch stop">.</i>' if n == len(hero["title"]) - 1 else "")
+        + ('<span class="ch stop">.</span>' if n == len(hero["title"]) - 1 else "")
         + "</span></span>"
         for n, line in enumerate(hero["title"])
     )}</h1>
     <div class="hero-row">
-      <div class="circles">
-        <a href="mailto:{site['email']}">mail</a>
-        <a href="/about-me/">cv</a>
-        <a href="#work">work</a>
-      </div>
       <p class="hero-lede">{escape(hero['lede'])}</p>
     </div>
     <ul class="hero-stats">{stats}</ul>
@@ -258,7 +274,7 @@ def build_home():
   </div>
 </section>
 <section class="work wrap" id="work">
-  {section_head("<b>02</b> — 作品 / Work", "Selected Work", f'<div class="chips" role="group" aria-label="Filter by category">{chips}</div>')}
+  {section_head("Selected Work", f'<div class="chips" role="group" aria-label="Filter by category">{chips}</div>')}
   <ul class="grid">{"".join(card(p, i) for i, p in enumerate(projects))}</ul>
 </section>"""
     page("/", "", body, active="work")
@@ -316,7 +332,7 @@ def build_about():
     dest = OUT / "about-me"
     shutil.rmtree(dest, ignore_errors=True)
     (dest / "assets/logos").mkdir(parents=True)
-    for name in ["main.js", "avatar3.jpg", "avatar-loop.mp4"]:
+    for name in ["avatar3.jpg", "avatar-loop.mp4"]:
         shutil.copy(RESUME / "assets" / name, dest / "assets" / name)
     for logo in (RESUME / "assets/logos").iterdir():
         shutil.copy(logo, dest / "assets/logos" / logo.name)
@@ -334,30 +350,25 @@ def build_about():
         ".pf-nav a[aria-current] { background: var(--ink); color: var(--paper); }\n"
         "body.is-dark .pf-nav a[aria-current] { background: var(--paper); color: var(--ink); }\n"
         ".pf-status { justify-self: end; display: flex; align-items: center; font-size: 13px; color: inherit; text-decoration: none; }\n"
-        "@media (max-width: 1100px) { .chrome__inner.pf { grid-template-columns: auto 1fr; } .pf-nav { justify-self: end; } .pf-status { display: none; } }\n"
+        "@media (max-width: 1100px) { .chrome__inner.pf { grid-template-columns: auto 1fr; } .pf-nav { justify-self: end; } }\n"
         "@media (max-width: 720px) { .pf-brand span { display: none; } }\n"
     )
-    css += (
-        "\n/* dark theme */\n"
-        ":root { --paper: #0f0e0d; --ink: #efebe3; --muted: #8d877c; --line: rgba(239, 235, 227, 0.1); }\n"
-        ".sec--dark { --ink: #1a1815; --paper: #efebe3; }\n"
-        ".sec--hot { --ink: #121212; --paper: #efebe3; }\n"
-        "main::before { mix-blend-mode: soft-light; opacity: .5; }\n"
-        ".grain { mix-blend-mode: screen; filter: invert(1); opacity: .09; }\n"
-        "body.is-dark .chrome { background: color-mix(in srgb, #1a1815 85%, transparent); color: #efebe3; }\n"
-        "body.is-hot .chrome { color: #121212; }\n"
-        "body.is-dark .pf-nav a[aria-current] { background: #efebe3; color: #121212; }\n"
-        ".pf-nav a:hover { color: #121212; }\n"
-        ".profile p { color: #e6e1d6; }\n"
-    )
+    css += "\n" + (ROOT / "about-taste.css").read_text()
     (dest / "assets/style.css").write_text(css)
+
+    js = (RESUME / "assets/main.js").read_text()
+    # background crosshair marks and the scroll listener (header colour, section index) are gone;
+    # the progress bar is a CSS scroll timeline now
+    js = re.sub(r"  // crosshair marks.*?addEventListener\('resize', buildMarks\);\n", "", js, flags=re.S)
+    js = re.sub(r"  // chrome follows the section.*?  onScroll\(\);\n", "", js, flags=re.S)
+    (dest / "assets/main.js").write_text(js)
 
     html = (RESUME / "index.html").read_text()
     html = re.sub(r'<link rel="(?:icon|apple-touch-icon|manifest)"[^>]*>\n', "", html)
     html = html.replace("<head>\n", "<head>\n" + OLD_HOST_REDIRECT, 1)
     html = html.replace(
         "<title>Resume</title>",
-        f'<title>About — Wei Lee</title>\n<link rel="canonical" href="{site["url"]}/about-me/">\n'
+        f'<title>About | Wei Lee</title>\n<link rel="canonical" href="{site["url"]}/about-me/">\n'
         '<link rel="icon" href="/favicon.svg" type="image/svg+xml">\n'
         '<link rel="icon" href="/favicon.png" type="image/png" sizes="32x32">\n'
         '<link rel="apple-touch-icon" href="/apple-touch-icon.png">',
@@ -368,7 +379,7 @@ def build_about():
         '<div class="chrome__inner pf">'
         '<a class="pf-brand" href="/" aria-label="Wei Lee, home"><img src="/assets/img/mark.svg" alt=""><span>Wei Lee</span></a>'
         '<nav class="pf-nav"><a href="/#work">Work</a><a href="/about-me/" aria-current="page">About</a></nav>'
-        f'<a class="pf-status" href="mailto:{site["email"]}"><span class="dot"></span>Open to work</a>'
+        f'<a class="pf-status" href="mailto:{site["email"]}">Get in touch</a>'
         "</div>\n",
         html,
         count=1,
@@ -384,6 +395,41 @@ def build_about():
         count=1,
         flags=re.S,
     )
+
+    # --- taste pass: one theme, sans type, no decorative grid/dots/numbers, no em-dashes ---
+    html = html.replace(OLD_HOST_REDIRECT, OLD_HOST_REDIRECT + THEME_INIT, 1)
+    html = html.replace("</head>", f'<script src="{asset("/assets/ui.js")}" defer></script>\n</head>', 1)
+    html = html.replace('<meta name="theme-color" content="#EFEBE3">', '<meta name="theme-color" content="#0f0e0d">')
+    html = re.sub(r'<link href="https://fonts\.googleapis\.com/css2\?[^"]*" rel="stylesheet">',
+                  '<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400..800&family=Geist+Mono:wght@400;500'
+                  '&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">', html, count=1)
+    html = re.sub(r'<div class="bg" aria-hidden="true">.*?<div class="bg__marks"></div>\n  </div>\n</div>\n', "", html, count=1, flags=re.S)
+    html = html.replace(f'<a class="pf-status" href="mailto:{site["email"]}">Get in touch</a>',
+                        f'<div class="pf-end">{THEME_BTN}<a class="pf-status round-btn" href="mailto:{site["email"]}" aria-label="Email Wei" title="Email">{MAIL}</a></div>')
+    html = re.sub(r'\s*<span class="avatar__live"[^>]*></span>', "", html)
+    html = re.sub(r'\s*<span class="job__ghost"[^>]*>\d+</span>', "", html)
+    html = re.sub(r'\s*<p class="hero__meta[^"]*">.*?</p>', "", html)
+    html = re.sub(r'\s*<footer class="foot mono">.*?</footer>', "", html, flags=re.S)
+    # numbered labels: plain headings where the section has no headline of its own, gone elsewhere
+    def kick(m):
+        cls, num, zh, en = m.group(1), m.group(2), m.group(3).strip(), m.group(4).strip()
+        if num in ("03", "04", "05"):
+            extra = " wrap" if "wrap" in cls else ""
+            return f'<h2 class="sec-h{extra} reveal">{zh}<span>{en}</span></h2>'
+        return ""
+    html = re.sub(r'\s*<p class="(kick[^"]*)"><b>(\d+)</b> — ([^/<]+)/([^<]+)</p>',
+                  lambda m: ("\n      " + kick(m)) if kick(m) else "", html)
+    html = html.replace('<i class="c c--dot"', '<span class="c c--dot"').replace('.</i></span></span>\n      </h1>', '.</span></span></span>\n      </h1>')
+    html = html.replace('<span class="ln"><span class="up"><i>clear.</i></span></span>', '<span class="ln"><span class="up"><span class="acc">clear.</span></span></span>')
+    html = re.sub(r'<a class="otw mono reveal" href="[^"]*"><span class="dot dot--blink"></span>Open to work</a>',
+                  f'<a class="otw reveal" href="mailto:{site["email"]}">Get in touch</a>', html)
+    html = html.replace("Crowdfunding · Biotech · Smart parking", "Crowdfunding, biotech, smart parking")
+    html = html.replace("李建緯 Wei Lee — 視覺設計師", "李建緯 Wei Lee，視覺設計師")
+    html = html.replace("</span>Wei Lee — Visual Designer", "</span>Wei Lee, Visual Designer")
+    html = html.replace("—", "-").replace("–", "-")
+    stamp = lambda name: hashlib.md5((dest / "assets" / name).read_bytes()).hexdigest()[:8]
+    html = re.sub(r'\./assets/style\.css\?v=\w+', f'./assets/style.css?v={stamp("style.css")}', html)
+    html = re.sub(r'\./assets/main\.js\?v=\w+', f'./assets/main.js?v={stamp("main.js")}', html)
     (dest / "index.html").write_text(html)
 
 

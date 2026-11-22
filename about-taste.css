@@ -1,0 +1,162 @@
+
+/* ==========================================================================
+   Portfolio layer on top of the copied résumé stylesheet (added by build.py).
+   Same rules as the rest of the site: sans display type (Geist + Noto Sans TC),
+   one theme per page (dark or light, following the system or the header button),
+   no decorative grid, dots or section numbers.
+   ========================================================================== */
+:root {
+  --paper: #0f0e0d; --ink: #efebe3; --ink-2: #c4beb2; --muted: #8d877c;
+  --line: rgba(239, 235, 227, 0.1); --surface: #1a1815; --acc-text: var(--acc);
+  --serif: 'Geist', 'Noto Sans TC', sans-serif;
+  --sans: 'Geist', 'Noto Sans TC', sans-serif;
+  --zhs: 'Noto Sans TC', sans-serif;
+  --zh: 'Noto Sans TC', sans-serif;
+  color-scheme: dark;
+}
+:root[data-theme="light"] {
+  --paper: #efebe3; --ink: #141413; --ink-2: #3f3c36; --muted: #6d685f;
+  --line: rgba(20, 20, 19, 0.12); --surface: #e5e0d6; --acc-text: #9a5f00;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme]) {
+    --paper: #efebe3; --ink: #141413; --ink-2: #3f3c36; --muted: #6d685f;
+    --line: rgba(20, 20, 19, 0.12); --surface: #e5e0d6; --acc-text: #9a5f00;
+    color-scheme: light;
+  }
+}
+
+/* texture: works the other way round on light paper */
+main::before { mix-blend-mode: soft-light; opacity: .5; }
+.grain { mix-blend-mode: screen; filter: invert(1); opacity: .09; }
+:root[data-theme="light"] main::before { mix-blend-mode: multiply; opacity: .24; }
+:root[data-theme="light"] .grain { mix-blend-mode: multiply; filter: none; opacity: .07; }
+
+/* sections keep the page theme: "dark" ones are just a tinted surface now */
+.sec--dark { background: var(--surface); color: var(--ink); --line: inherit; }
+.sec--dark::before, .sec--hot::before { display: none; }
+.sec--hot { --ink: #141413; --paper: #efebe3; color: #141413; }
+
+/* header */
+.chrome { color: var(--ink); }
+.chrome__inner.pf { font-family: var(--sans); }
+.pf-nav a:hover { background: var(--acc); color: #141413; }
+.pf-nav a[aria-current], .pf-nav a[aria-current]:hover { background: var(--ink); color: var(--paper); }
+.pf-end { justify-self: end; display: flex; align-items: center; gap: 8px; }
+.pf-status { padding: 10px 16px; border-radius: 999px; border: 1px solid var(--line); transition: background .2s, color .2s, border-color .2s; }
+.pf-status:hover { background: var(--acc); border-color: var(--acc); color: #141413; }
+@media (max-width: 1100px) { .chrome__inner.pf { grid-template-columns: auto 1fr auto; } }
+@supports (animation-timeline: scroll()) {
+  .chrome__prog { animation: prog linear both; animation-timeline: scroll(root); }
+  @keyframes prog { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+}
+@supports not (animation-timeline: scroll()) { .chrome__prog { display: none; } }
+
+/* plain section headings (replace the numbered "03 — 經歷" labels) */
+.sec-h { font: 600 clamp(26px, 2.6vw, 40px)/1.15 var(--sans); letter-spacing: -.03em; margin-bottom: clamp(28px, 4vw, 56px); }
+.sec-h span { color: var(--muted); font-weight: 400; margin-left: .35em; }
+.sec--hot .sec-h span { color: rgba(20, 20, 19, .6); }
+
+/* hero */
+.hero__name { font: 600 clamp(84px, 18vw, 300px)/.92 var(--sans); letter-spacing: -.055em; }
+.hero__name .c:hover { font-style: normal; }
+.hero__name .c--dot { color: var(--acc); }
+.hero__zh {
+  position: static; writing-mode: horizontal-tb; margin-top: clamp(10px, 1.2vw, 18px);
+  font: 700 clamp(26px, 2.6vw, 42px)/1 var(--zh); letter-spacing: .3em;
+}
+.hero__role { font-weight: 500; letter-spacing: -.02em; }
+.hero__tags li:hover { color: #141413; }
+
+/* about */
+.statement { font: 700 clamp(38px, 7vw, 132px)/1.2 var(--zh); letter-spacing: -.01em; }
+.statement__en { font: 500 clamp(20px, 2.2vw, 36px)/1.2 var(--sans); letter-spacing: -.02em; }
+.num__n { font: 600 clamp(88px, 12vw, 200px)/1 var(--sans); letter-spacing: -.055em; }
+.profile p { color: var(--ink-2); }
+.profile p:first-child::first-letter { font: inherit; float: none; margin: 0; color: inherit; }
+
+/* experience */
+.job { border-top-color: var(--line); }
+.job:last-child { border-bottom-color: var(--line); }
+.job__yr { font: 600 clamp(56px, 7.5vw, 136px)/1 var(--sans); letter-spacing: -.055em; }
+.job__co { font: 700 clamp(28px, 3.2vw, 56px)/1.25 var(--zh); }
+.job__ro { color: var(--acc-text); }
+.job__pts li { color: var(--ink-2); }
+:root[data-theme="light"] .job__logo { filter: brightness(0); opacity: .8; }
+@media (prefers-color-scheme: light) { :root:not([data-theme]) .job__logo { filter: brightness(0); opacity: .8; } }
+
+/* skills marquee */
+.marquee__row--3 { font: 600 clamp(64px, 11vw, 200px)/1.05 var(--sans); letter-spacing: -.05em; }
+.marquee em { font: inherit; font-weight: 400; letter-spacing: inherit; padding: 0 .12em; }
+
+/* education + off the clock */
+.edu__yr { font: 600 clamp(40px, 4.4vw, 76px)/1 var(--sans); letter-spacing: -.05em; }
+.edu__deg { font: 700 clamp(22px, 2.2vw, 36px)/1.3 var(--zh); }
+.clock__zh { font: 700 clamp(36px, 4vw, 70px)/1.3 var(--zh); }
+.clock__en { font: 500 clamp(20px, 2.1vw, 36px)/1.2 var(--sans); letter-spacing: -.02em; color: var(--acc-text); }
+
+/* contact */
+.contact__big { font: 600 clamp(56px, 9vw, 164px)/1 var(--sans); letter-spacing: -.055em; }
+.contact__big .acc { color: var(--acc); }
+.contact__who span { font-family: var(--zh); font-weight: 700; }
+.otw {
+  font: 600 15px/1 var(--sans); letter-spacing: 0; text-transform: none; white-space: nowrap;
+  background: var(--acc); color: #141413; border: 0; padding: 16px 26px;
+  transition: background .2s, color .2s, transform .15s;
+}
+.otw:hover { background: var(--ink); color: var(--paper); }
+.otw:active { transform: scale(.98); }
+.contact { padding-bottom: clamp(80px, 10vw, 140px); }
+
+/* Note shown after clicking an email link (address copied) */
+.copy-toast {
+  position: fixed; left: 50%; bottom: 24px; z-index: 300; transform: translate(-50%, 16px); opacity: 0; pointer-events: none;
+  font: 500 14px/1.3 var(--sans); background: var(--ink); color: var(--paper); padding: 12px 18px; border-radius: 999px;
+  box-shadow: 0 12px 30px -12px rgba(0, 0, 0, .45); transition: opacity .25s, transform .35s cubic-bezier(.2, .7, .2, 1);
+}
+.copy-toast.on { opacity: 1; transform: translate(-50%, 0); }
+
+/* Light / dark: round button, sun in dark mode, moon in light mode (PulsoIcon glyphs) */
+.theme-btn {
+  position: relative; display: grid; place-items: center; width: 40px; height: 40px; min-width: 0; padding: 0;
+  border-radius: 50%; border: 1px solid var(--line); background: transparent; color: var(--ink); cursor: pointer;
+  transition: border-color .2s, background .2s, transform .15s;
+}
+.theme-btn:hover { border-color: var(--ink); }
+.theme-btn:active { transform: scale(.94); }
+.theme-btn svg { grid-area: 1 / 1; transition: opacity .35s, transform .5s cubic-bezier(.2, .9, .25, 1.2); }
+.theme-btn .i-moon { opacity: 0; transform: rotate(-90deg) scale(.5); }
+:root[data-theme="light"] .theme-btn .i-sun { opacity: 0; transform: rotate(90deg) scale(.5); }
+:root[data-theme="light"] .theme-btn .i-moon { opacity: 1; transform: none; }
+.theme-btn .rays, .theme-btn .i-moon path { transform-box: view-box; transform-origin: 12px 12px; transition: transform .6s cubic-bezier(.2, .9, .25, 1.1); }
+.theme-btn:hover .rays, .theme-btn:focus-visible .rays { transform: rotate(90deg); }
+.theme-btn:hover .i-moon path, .theme-btn:focus-visible .i-moon path { animation: moon-swing .7s ease-in-out; }
+@keyframes moon-swing { 25% { transform: rotate(-20deg); } 60% { transform: rotate(12deg); } 100% { transform: none; } }
+
+/* Work / About switch: a pill slides between the two (ui.js); without JS the current one is filled */
+.pf-nav { position: relative; }
+.pf-nav a { position: relative; z-index: 1; }
+.pf-nav .nav-pill {
+  position: absolute; z-index: 0; left: 3px; top: 3px; bottom: 3px; border-radius: 999px; background: var(--ink);
+  transition: transform .42s cubic-bezier(.3, 1.25, .5, 1), width .42s cubic-bezier(.3, 1.25, .5, 1);
+}
+.pf-nav.still .nav-pill { transition: none; }
+.pf-nav.ready a[aria-current], .pf-nav.ready a[aria-current]:hover { background: transparent; color: inherit; }
+.pf-nav.ready a { transition: color .3s; }
+.pf-nav.ready a.on, .pf-nav.ready a.on:hover { color: var(--paper); background: transparent; }
+.pf-nav.ready a:not(.on):hover { background: transparent; color: var(--acc-text); }
+
+/* Email: same round button as the theme switch (PulsoIcon mail; the flap folds on hover) */
+.round-btn {
+  display: grid; place-items: center; width: 40px; height: 40px; padding: 0 !important; border-radius: 50%;
+  border: 1px solid var(--line); color: var(--ink); background: transparent; text-decoration: none;
+  transition: border-color .2s, background .2s, color .2s, transform .15s;
+}
+.round-btn:hover { background: var(--acc); border-color: var(--acc); color: #141413; }
+.round-btn:active { transform: scale(.94); }
+.round-btn .flap, .round-btn .env { transform-box: view-box; transition: transform .45s cubic-bezier(.2, .9, .25, 1.2); }
+.round-btn .flap { transform-origin: 12px 7px; }
+.round-btn .env { transform-origin: 12px 12px; }
+.round-btn:hover .flap, .round-btn:focus-visible .flap { transform: scaleY(-.6) translateY(-1px); }
+.round-btn:hover .env, .round-btn:focus-visible .env { transform: scale(.96); }
