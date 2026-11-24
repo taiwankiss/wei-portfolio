@@ -33,7 +33,7 @@
 - `about-style`：同 `main`
 
 ## 下一步
-1. **網域搬遷（進行中，2026-11-04 開始；新網站已在 weilee01.com 上線）**
+1. **網域搬遷（✅ 2026-11-24 全部完成）**
    - ✅ Cloudflare 已加入 `weilee01.com`（Free 方案）。從 Hostinger 匯入 6 筆紀錄（`ftp` A、根網域 2 筆 A + 2 筆 AAAA、`www` CNAME 指向 `www.weilee01.com.cdn.hstgr.net`），**全部設成 DNS only（灰雲）**，讓舊 WordPress 在過渡期照常運作。沒有 MX（無網域信箱），DNSSEC 原本就是關的。
    - ✅ Hostinger 名稱伺服器已改成 `desiree.ns.cloudflare.com`、`ram.ns.cloudflare.com`（Hostinger 後台內建瀏覽器無法登入，改用 Claude in Chrome 操作）。
    - ✅ Nameserver 已生效、Cloudflare 顯示 Active（2026-11-04）。
@@ -44,7 +44,7 @@
    - 之後：網域註冊轉移到 Cloudflare（Hostinger 取得 EPP 授權碼 → Cloudflare「Transfer Domains」→ 使用者本人付款約 US$10.44，到期日會從 2027-03-08 延到 2028-03-08）；開 Auto-renew。網域是 Hostinger 方案送的，Hostinger 續約價 146.99（幣別看起來是人民幣）。
    - ✅ 網域註冊已轉到 Cloudflare（2026-11-24 WHOIS 確認：Registrar = Cloudflare, Inc.，到期日 2028-03-08）。轉移後 5 天內 WHOIS 會顯示 `transferperiod`，屬正常。
    - ✅ Hostinger 主機方案已取消（使用者 2026-11-24 自行操作）。
-   - ⏳ Cloudflare DNS 的 `ftp` A 紀錄（145.79.25.98，舊 Hostinger 主機）已無用，待使用者刪除。
+   - ✅ Cloudflare DNS 的 `ftp` A 紀錄（145.79.25.98，舊 Hostinger 主機）已刪除（2026-11-24，使用者授權）。DNS 只剩 `weilee01.com`、`www` 兩筆指向 `wei-portfolio.pages.dev` 的 CNAME。網域搬遷全部完成。
 2. 從後台上傳的新圖片不會自動壓縮 — 若常上傳，可在 `build.py` 加自動縮圖。
 
 ## 注意事項
