@@ -80,4 +80,4 @@
 - About 頁改版寫在 `about-taste.css`，`build.py` 的 `build_about()` 複製履歷網站後套上（含 HTML 替換、移除背景標記與 scroll 監聽的 JS），`../Resume` 本身沒動。
 - 共用互動在 `public/assets/ui.js`（主題按鈕、Email 複製提示、Work/About 滑動）。
 - 2026-11-24：作品介紹文字裡的「—」全部清掉（25 個作品檔、48 處，使用者逐處確認過）。中文「——」改成「，」或「：」（ttri 改寫成「B2B「高間距織物（Spacer Fabric）」技術」）；英文成對的插入語改成逗號，單個的改成逗號（jpbc 改冒號）；uspace-video 改成 `point: “Can’t find a parking spot?”, and`，順便把反的開頭引號改正。
-- 待辦：Ai Work 裡本專案的截圖／錄影（aifree-1、aifree-2、aifree-m、aifree.mp4、aifree-m.mp4）是舊版面，要重拍。
+- 2026-11-24：Ai Work 裡本專案的 9 個截圖／錄影（aifree-1～4、aifree-m／m2／m3、aifree.mp4、aifree-m.mp4）其實 11/23 改版後就重拍成新版面，只是沒 commit；已在 Ai Portfolio commit 4c98050 上線。taste 改版待辦全部完成。
