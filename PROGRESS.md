@@ -1,6 +1,6 @@
 # 進度紀錄 — Wei's Portfolio
 
-更新：2026-11-23
+更新：2026-11-24
 
 ## 已完成
 - 從 WordPress（weilee01.com）搬出 37 件作品、292 張圖，轉成靜態網站（`build.py` 產生 `public/`）。
@@ -78,4 +78,5 @@
 - 進度條與照片捲動漂移改用 CSS scroll timeline（不再監聽 scroll 事件）；不支援的瀏覽器不顯示進度條。
 - About 頁改版寫在 `about-taste.css`，`build.py` 的 `build_about()` 複製履歷網站後套上（含 HTML 替換、移除背景標記與 scroll 監聽的 JS），`../Resume` 本身沒動。
 - 共用互動在 `public/assets/ui.js`（主題按鈕、Email 複製提示、Work/About 滑動）。
-- 待辦：作品介紹文字（後台內容）裡還有「—」，例如 hualien、citizen-judge、helix2h 系列，沒動。Ai Work 裡本專案的截圖／錄影（aifree-1、aifree-2、aifree-m、aifree.mp4、aifree-m.mp4）是舊版面，要重拍。
+- 2026-11-24：作品介紹文字裡的「—」全部清掉（25 個作品檔、48 處，使用者逐處確認過）。中文「——」改成「，」或「：」（ttri 改寫成「B2B「高間距織物（Spacer Fabric）」技術」）；英文成對的插入語改成逗號，單個的改成逗號（jpbc 改冒號）；uspace-video 改成 `point: “Can’t find a parking spot?”, and`，順便把反的開頭引號改正。
+- 待辦：Ai Work 裡本專案的截圖／錄影（aifree-1、aifree-2、aifree-m、aifree.mp4、aifree-m.mp4）是舊版面，要重拍。
