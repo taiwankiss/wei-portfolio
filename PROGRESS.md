@@ -43,7 +43,8 @@
    - 注意：Cloudflare 預設開「Email Address Obfuscation」，會把頁面上的 mailto 改成 `/cdn-cgi/l/email-protection`（有 JS 時照常可點）。要關可到 weilee01.com →「Security」→「Settings」。
    - 之後：網域註冊轉移到 Cloudflare（Hostinger 取得 EPP 授權碼 → Cloudflare「Transfer Domains」→ 使用者本人付款約 US$10.44，到期日會從 2027-03-08 延到 2028-03-08）；開 Auto-renew。網域是 Hostinger 方案送的，Hostinger 續約價 146.99（幣別看起來是人民幣）。
    - ✅ 網域註冊已轉到 Cloudflare（2026-11-24 WHOIS 確認：Registrar = Cloudflare, Inc.，到期日 2028-03-08）。轉移後 5 天內 WHOIS 會顯示 `transferperiod`，屬正常。
-   - 最後才取消 Hostinger 主機方案（取消前先刪 Cloudflare DNS 的 `ftp` A 紀錄）。
+   - ✅ Hostinger 主機方案已取消（使用者 2026-11-24 自行操作）。
+   - ⏳ Cloudflare DNS 的 `ftp` A 紀錄（145.79.25.98，舊 Hostinger 主機）已無用，待使用者刪除。
 2. 從後台上傳的新圖片不會自動壓縮 — 若常上傳，可在 `build.py` 加自動縮圖。
 
 ## 注意事項
